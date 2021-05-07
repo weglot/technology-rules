@@ -1,0 +1,14 @@
+{
+  "name": "@weglot/definitions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:weglot/definitions.git",
+  "author": "Weglot <support@weglot.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ajv": "^8.2.0"
+  },
+  "scripts": {
+    "test": "node test/schemas.spec.js"
+  }
+}

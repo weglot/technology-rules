@@ -1,0 +1,166 @@
+{
+  "$schema": "../schemas/definition.schema.json",
+  "title": "Shopify",
+  "definitions": [
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 2
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "^\\/payments\\/config"
+          }
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$.paymentInstruments.checkoutConfig.domain",
+            "$.paymentInstruments.shopifyPayConfig.domain",
+            "$.paymentInstruments.amazonPayConfig.domain"
+          ],
+          "hostnameReplacement": true
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 2
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "\\/products\\.json$"
+          }
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$.products[*].title",
+            "$.products[*].body_html",
+            "$.products[*].product_type",
+            "$.products[*].variants[*].title",
+            "$.products[*].variants[*].option1",
+            "$.products[*].variants[*].option2",
+            "$.products[*].variants[*].option3",
+            "$.products[*].options[*].name",
+            "$.products[*].options[*].values[*]"
+          ],
+          "wordType": 1
+        },
+        {
+          "paths": [
+            "$.products[*].images[*].src",
+            "$.products[*].image[*].src"
+          ],
+          "wordType": 6
+        },
+        {
+          "paths": [
+            "$.products[*].images[*].alt",
+            "$.products[*].image[*].alt"
+          ],
+          "wordType": 7
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 2
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "\\/products\\/.+\\.json$"
+          }
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$.product.title",
+            "$.product.body_html",
+            "$.product.product_type",
+            "$.product.variants[*].title",
+            "$.product.variants[*].option1",
+            "$.product.variants[*].option2",
+            "$.product.variants[*].option3",
+            "$.product.options[*].name",
+            "$.product.options[*].values[*]"
+          ],
+          "wordType": 1
+        },
+        {
+          "paths": ["$.product.images[*].src", "$.product.image[*].src"],
+          "wordType": 6
+        },
+        {
+          "paths": ["$.product.images[*].alt", "$.product.image[*].alt"],
+          "wordType": 7
+        }
+      ]
+    },
+    {
+      "type": "XML",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 2
+        },
+        {
+          "type": "XML_ROOT_ELEMENT_NAME",
+          "payload": {
+            "selector": "products"
+          }
+        }
+      ],
+      "entryContext": "product",
+      "value": [
+        {
+          "paths": ["title", "description"],
+          "wordType": 1
+        }
+      ]
+    },
+    {
+      "type": "XML",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 2
+        },
+        {
+          "type": "XML_ROOT_ELEMENT_NAME",
+          "payload": {
+            "selector": "hash"
+          }
+        }
+      ],
+      "entryContext": "hash",
+      "value": [
+        {
+          "paths": ["title", "body-html", "product-type", "alt"],
+          "wordType": 1
+        },
+        {
+          "paths": ["src"],
+          "wordType": 6
+        }
+      ]
+    }
+  ]
+}

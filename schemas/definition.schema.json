@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "definition.schema.json",
+  "title": "HTML Resource",
+  "description": "This type of plugin defines how we should translate JSON files.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "title": {
+      "$ref": "common.schema.json#/definitions/PluginName"
+    },
+    "examples": {
+      "$ref": "common.schema.json#/definitions/ExamplesURL"
+    },
+    "definitions": {
+      "title": "All definitions",
+      "type": "array",
+      "items": {
+        "title": "",
+        "description": "",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "$ref": "common.schema.json#/definitions/Type"
+          },
+          "condition": {
+            "$ref": "condition.schema.json#/definitions/ConditionArray"
+          },
+          "entryContext": {
+            "type": "string",
+            "description": "XML specific - Leave empty for root"
+          },
+          "value": {
+            "$ref": "value.schema.json#/definitions/ValueArray"
+          }
+        },
+        "required": ["type", "value"]
+      }
+    }
+  },
+  "required": ["$schema", "title", "definitions"],
+  "definitions": {}
+}

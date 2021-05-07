@@ -1,0 +1,39 @@
+{
+  "$schema": "../schemas/technologies.schema.json",
+  "title": "Shopify",
+  "condition": [
+    {
+      "type": "HEADERS_SIGNATURE",
+      "payload": {
+        "headerName": "x-shopify-stage"
+      }
+    }
+  ],
+  "technology_id": 2,
+  "hostnameReplacements": [],
+  "proxyHosts": ["feeds.datafeedwatch.com", "feeds.adwordsrobot.com"],
+  "settings": [
+    {
+      "name": "Mollie checkout exclusion",
+      "condition": [
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "/checkouts/([\\w]+)/forward"
+          }
+        }
+      ],
+      "value": [
+        {
+          "type": "excluded_blocks",
+          "payload": [
+            {
+              "value": "#payment-form"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

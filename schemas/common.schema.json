@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "common.schema.json",
+  "definitions": {
+    "PluginName": {
+      "title": "Plugin Name",
+      "description": "The name of the plugin. It's only used for reporting and analytics",
+      "type": "string",
+      "default": "Change me!"
+    },
+    "ExamplesURL": {
+      "title": "Example URL",
+      "description": "Provide examples URL to the resource you want to translate, if possible",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "Type": {
+      "title": "Definition type",
+      "description": "Values will be applied on this resource type",
+      "type": "string",
+      "oneOf": [
+        {
+          "const": "HTML",
+          "title": "Apply on HTML document"
+        },
+        {
+          "const": "JSON",
+          "title": "Apply on JSON document"
+        },
+        {
+          "const": "XML",
+          "title": "Apply on XML document"
+        }
+      ]
+    },
+    "TechnologyID": {
+      "description": "A Weglot Technology ID",
+      "type": "integer",
+      "oneOf": [
+        { "const": 1, "title": "1 (WordPress)" },
+        { "const": 2, "title": "2 (Shopify)" },
+        { "const": 3, "title": "3 (BigCommerce)" },
+        { "const": 4, "title": "4 (Jimdo)" },
+        { "const": 5, "title": "5 (Squarespace)" },
+        { "const": 6, "title": "6 (Wix)" },
+        { "const": 7, "title": "7 (Laravel)" },
+        { "const": 8, "title": "8 (Symfony)" },
+        { "const": 9, "title": "9 (Weebly)" },
+        { "const": 10, "title": "10 (Drupal)" },
+        { "const": 11, "title": "11 (OctoberCMS)" },
+        { "const": 12, "title": "12 (Other)" },
+        { "const": 13, "title": "13 (Webflow)" },
+        { "const": 14, "title": "14 (Prestashop)" },
+        { "const": 15, "title": "15 (Magento)" }
+      ]
+    },
+    "BodyReplacement": {
+      "type": "object",
+      "properties": {
+        "regex": {
+          "type": "string",
+          "description": "Everything should be captured. The second capture group should be the host to replace"
+        },
+        "slash": {
+          "type": "string",
+          "default": "/",
+          "enum": ["/", "\\/"],
+          "description": "The slash character in that context. Sometimes, the slash character needs to be escaped"
+        }
+      }
+    }
+  }
+}

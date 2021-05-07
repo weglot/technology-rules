@@ -1,0 +1,44 @@
+{
+  "$schema": "../schemas/technologies.schema.json",
+  "title": "Wix",
+  "technology_id": 6,
+  "condition": [
+    {
+      "type": "HEADERS_SIGNATURE",
+      "payload": {
+        "headerName": "x-wix-request-id"
+      }
+    }
+  ],
+  "hostnameReplacements": [
+    {
+      "slash": "/",
+      "regex": "(https:\\/\\/)(siteassets\\.parastorage\\.com)(\\/pages)"
+    },
+    {
+      "slash": "\\/",
+      "regex": "({\"baseUrl\":\")(siteassets\\.parastorage\\.com)(\\\\\\/pages\")"
+    },
+    {
+      "slash": "\\/",
+      "regex": "(\"siteAssetsUrl\":\"https:\\\\/\\\\/)(siteassets\\.parastorage\\.com)(\")"
+    },
+    {
+      "slash": "\\/",
+      "regex": "(\"https:\\\\/\\\\/)(pages\\.wixstatic\\.com)(\")"
+    },
+    {
+      "slash": "\\/",
+      "regex": "(\"productPageBaseUrl\":\"https:\\\\\\/\\\\\\/)(static\\.parastorage\\.com)(\\\\\\/services\\\\\\/wixstores-client-product-page\\\\\\/)"
+    },
+    {
+      "slash": "\\/",
+      "regex": "(https:\\\\/\\\\/)(wixlabs-wix-faq-11\\.appspot\\.com)(\\\\/)"
+    },
+    {
+      "slash": "\\/",
+      "regex": "(\"translationsBaseUrl\":\"https:\\\\\\/\\\\\\/)(static\\.parastorage\\.com)(\\\\\\/services\\\\\\/communities-blog-translations\\\\\\/)"
+    }
+  ],
+  "proxyHosts": ["siteassets.parastorage.com"]
+}

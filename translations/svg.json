@@ -1,0 +1,23 @@
+{
+  "$schema": "../schemas/definition.schema.json",
+  "title": "RSS",
+  "definitions": [
+    {
+      "type": "XML",
+      "condition": [
+        {
+          "type": "XML_ROOT_ELEMENT_NAME",
+          "payload": {
+            "selector": "svg"
+          }
+        }
+      ],
+      "value": [
+        {
+          "paths": ["text", "text tspan"],
+          "wordType": 1
+        }
+      ]
+    }
+  ]
+}

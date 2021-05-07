@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "technologies.schema.json",
+  "title": "Technology",
+  "description": "This type of plugin applies the right technology_id to any resource that we need to translate later on. It also allows for defining 'proxy hosts', which Weglot connect uses to fake a domain and to replace hosts in the payloads. It's applied earlier in the process",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "title": {
+      "title": "Technology name",
+      "description": "Give a name to that technology",
+      "$ref": "common.schema.json#/definitions/PluginName"
+    },
+    "technology_id": {
+      "$ref": "common.schema.json#/definitions/TechnologyID"
+    },
+    "condition": {
+      "$ref": "condition.schema.json#/definitions/ConditionArray"
+    },
+    "hostnameReplacements": {
+      "title": "Replacements of hostnames",
+      "description": "Any string going through Connect will replace with the regexes you set",
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "common.schema.json#/definitions/BodyReplacement"
+      }
+    },
+    "proxyHosts": {
+      "type": "array",
+      "title": "Proxy hosts",
+      "description": "Each entry is a hostname that Connect should proxy. Don't forget to create body replacements",
+      "default": [],
+      "items": {
+        "type": "string"
+      }
+    },
+    "settings": {
+      "type": "array",
+      "title": "Default settings to add to this technology",
+      "description": "",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "$ref": "condition.schema.json#/definitions/ConditionArray"
+            }
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "$schema",
+    "title",
+    "condition",
+    "hostnameReplacements",
+    "proxyHosts"
+  ],
+  "definitions": {
+    "HTMLAction": {
+      "type": "object",
+      "title": "HTML Action",
+      "description": "A set of conditions and resulting actions",
+      "properties": {
+        "conditions": {
+          "type": "array",
+          "minLength": 1,
+          "items": {
+            "$ref": "#/definitions/ResourceCall"
+          }
+        },
+        "actions": {
+          "type": "array",
+          "minLength": 1,
+          "items": {
+            "$ref": "#/definitions/ResourceCall"
+          }
+        }
+      }
+    },
+    "SearchConfig": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "description": "Exact path, without parameters",
+          "type": "string"
+        },
+        "parameter": {
+          "type": "string",
+          "description": "Usually 'q'"
+        }
+      }
+    },
+    "ResourceCall": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string",
+          "description": "Name of the method to call on the resource",
+          "enum": ["has", "addWeglotJS"]
+        },
+        "arg": {}
+      },
+      "required": ["method", "arg"],
+      "dependencies": {
+        "method": {
+          "oneOf": [
+            {
+              "properties": {
+                "method": {
+                  "const": "has"
+                },
+                "arg": {
+                  "type": "string",
+                  "description": "A CSS Selector that should return something"
+                }
+              }
+            },
+            {
+              "properties": {
+                "method": {
+                  "const": "addWeglotJS"
+                },
+                "arg": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

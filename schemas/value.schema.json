@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "value.schema.json",
+  "definitions": {
+    "ValueArray": {
+      "title": "If condition was true, apply these definitions",
+      "type": "array",
+      "description": "Put here definitions to translate",
+      "items": {
+        "$ref": "#/definitions/Value"
+      }
+    },
+    "Value": {
+      "title": "",
+      "description": "",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Identify this definition to refer it later",
+          "type": "string"
+        },
+        "selector": {
+          "title": "CSS selector",
+          "type": "string"
+        },
+        "regex": {
+          "title": "A regular expression",
+          "type": "string"
+        },
+        "paths": {
+          "title": "",
+          "description": "List of JSONPath strings that match this word type",
+          "$ref": "#/definitions/JSONPathArray"
+        },
+        "wordType": {
+          "title": "Word Type",
+          "description": "",
+          "$ref": "#/definitions/WordType"
+        },
+        "hostnameReplacement": {
+          "title": "Replace host with translation host",
+          "description": "",
+          "type": "boolean"
+        },
+        "type": {
+          "title": "Parser type",
+          "description": "Parse found matches with this parser type",
+          "$ref": "#/definitions/ParserType"
+        }
+      }
+    },
+    "JSONPathArray": {
+      "description": "List of JSONPath strings",
+      "type": "array",
+      "uniqueItems": true,
+      "default": [],
+      "items": {
+        "type": "string"
+      }
+    },
+    "WordType": {
+      "title": "WordType",
+      "description": "A Weglot Word Type",
+      "type": "integer",
+      "oneOf": [
+        { "const": 1, "title": "1 - General text (used most of the time)" },
+        {
+          "const": 2,
+          "title": "2 - The value of an input tag'svalueattribute"
+        },
+        {
+          "const": 3,
+          "title": "3 - The value of an input tag's placeholderattribute"
+        },
+        {
+          "const": 4,
+          "title": "4 - The value of a meta tags' content attribute"
+        },
+        { "const": 5, "title": "5 - The src link to a page used in an iframe" },
+        { "const": 6, "title": "6 - The srcvalue of an imgtag" },
+        { "const": 7, "title": "7 - The alt value of an imgtag" },
+        { "const": 8, "title": "8 - A URL pointing to a PDF document" },
+        { "const": 9, "title": "9 - The main resource title" },
+        { "const": 10, "title": "10 - An external URL" }
+      ]
+    },
+    "ParserType": {
+      "title": "ParserType",
+      "description": "A Weglot available Parser Type",
+      "type": "string",
+      "oneOf": [
+        { "const": "HTML", "title": "HTML parser" },
+        { "const": "JSON", "title": "JSON parser" },
+        { "const": "XML", "title": "XML parser" }
+      ]
+    }
+  }
+}

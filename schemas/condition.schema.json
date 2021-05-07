@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "condition.schema.json",
+  "definitions": {
+    "ConditionArray": {
+      "title": "Conditions",
+      "description": "List of all the conditions that are needed to be fulfilled for the plugin to activate",
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "#/definitions/Condition"
+      }
+    },
+    "Condition": {
+      "description": "The following condition has to be fulfilled for it to be applied on the page",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "title": "Condition type",
+          "type": "string",
+          "oneOf": [
+            {
+              "const": "FROM_DEFINITION_ID",
+              "title": "Check if it comes from a definition"
+            },
+            {
+              "const": "PATH_MATCH",
+              "title": "Path Match"
+            },
+            {
+              "const": "URI_MATCH",
+              "title": "Original URL Match"
+            },
+            {
+              "const": "TECHNOLOGY_ID",
+              "title": "Weglot Technology"
+            },
+            {
+              "const": "HEADERS_SIGNATURE",
+              "title": "Match incoming headers"
+            },
+            {
+              "const": "XML_ATTRIBUTE_VALUE",
+              "title": "Check an attribute value on XML resources"
+            },
+            {
+              "const": "XML_ROOT_ELEMENT_NAME",
+              "title": "Check if element is present and at document's root"
+            }
+          ]
+        },
+        "payload": {
+          "title": ""
+        }
+      },
+      "dependencies": {
+        "type": {
+          "oneOf": [
+            {
+              "properties": {
+                "type": {
+                  "const": "FROM_DEFINITION_ID"
+                },
+                "payload": {
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "URI_MATCH"
+                },
+                "payload": {
+                  "description": "The URL of the resource we want to translate (without query string) needs to be in the list",
+                  "$ref": "#/definitions/PathMatch"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "PATH_MATCH"
+                },
+                "payload": {
+                  "description": "The path of the resource we want to translate needs to fulfill a criteria",
+                  "$ref": "#/definitions/PathMatch"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "TECHNOLOGY_ID"
+                },
+                "payload": {
+                  "description": "Only applies for pages served by the selected technology",
+                  "$ref": "common.schema.json#/definitions/TechnologyID"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "HEADERS_SIGNATURE"
+                },
+                "payload": {
+                  "description": "Detect using the incoming headers from the source",
+                  "$ref": "#/definitions/HeadersSignature"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "XML_ATTRIBUTE_VALUE"
+                },
+                "payload": {
+                  "type": "object",
+                  "properties": {
+                    "selector": {
+                      "type": "string"
+                    },
+                    "attr": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "XML_ROOT_ELEMENT_NAME"
+                },
+                "payload": {
+                  "type": "object",
+                  "properties": {
+                    "selector": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": ["payload", "type"]
+    },
+    "PathMatch": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "title": "Path Match mode",
+          "type": "string",
+          "enum": [
+            "START_WITH",
+            "END_WITH",
+            "CONTAIN",
+            "IS_EXACTLY",
+            "MATCH_REGEX"
+          ],
+          "description": "Please refer to https://app.gitbook.com/@weglot/s/weglot-ninjas/core/api-reference for their exact meaning"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string",
+          "description": "Like '/blog', or '.json'"
+        }
+      },
+      "required": ["type", "value"],
+      "title": "Path Match"
+    },
+    "HeadersSignature": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "headerName": {
+          "title": "Header name",
+          "type": "string"
+        },
+        "regexMatch": {
+          "title": "",
+          "type": "string",
+          "description": "If provided, the header value should match this RegExp string. Leave empty to only check for presence"
+        }
+      },
+      "required": ["headerName"]
+    }
+  }
+}

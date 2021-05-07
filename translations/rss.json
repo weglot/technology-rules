@@ -1,0 +1,30 @@
+{
+  "$schema": "../schemas/definition.schema.json",
+  "title": "SVG",
+  "definitions": [
+    {
+      "type": "XML",
+      "condition": [
+        {
+          "type": "XML_ATTRIBUTE_VALUE",
+          "payload": {
+            "selector": "rss",
+            "attr": "xmlns:media",
+            "value": "http://search.yahoo.com/mrss/"
+          }
+        }
+      ],
+      "entryContext": "item",
+      "value": [
+        {
+          "paths": ["title", "description"],
+          "wordType": 1
+        },
+        {
+          "paths": ["media:content", "media:thumbnail"],
+          "wordType": 6
+        }
+      ]
+    }
+  ]
+}

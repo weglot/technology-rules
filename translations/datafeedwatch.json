@@ -1,0 +1,47 @@
+{
+  "$schema": "../schemas/definition.schema.json",
+  "title": "application/ld+json",
+  "definitions": [
+    {
+      "type": "XML",
+      "condition": [
+        {
+          "type": "XML_ATTRIBUTE_VALUE",
+          "payload": {
+            "selector": "feed",
+            "attr": "xmlns:g",
+            "value": "http://base.google.com/ns/1.0"
+          }
+        }
+      ],
+      "entryContext": "entry",
+      "value": [
+        {
+          "paths": [
+            "title",
+            "title_org",
+            "g:brand",
+            "description",
+            "g:product_type",
+            "category1_title",
+            "category1_breadcrumbs",
+            "category2_title",
+            "category2_breadcrumbs",
+            "variant_title",
+            "g:material",
+            "g:color"
+          ],
+          "wordType": 1
+        },
+        {
+          "paths": ["link", "category1_url", "category2_url"],
+          "wordType": 5
+        },
+        {
+          "paths": ["g:image_link", "g:additional_image_link"],
+          "wordType": 6
+        }
+      ]
+    }
+  ]
+}

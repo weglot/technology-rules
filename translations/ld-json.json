@@ -1,0 +1,40 @@
+{
+  "$schema": "../schemas/definition.schema.json",
+  "title": "application/ld+json",
+  "definitions": [
+    {
+      "type": "HTML",
+      "value": [
+        {
+          "id": "application-ld-json",
+          "selector": "script[type='application/ld+json']",
+          "type": "JSON"
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "FROM_DEFINITION_ID",
+          "payload": "application-ld-json"
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$.name",
+            "$.description",
+            "$.headline",
+            "$.offers[*].itemOffered.name"
+          ],
+          "wordType": 1
+        },
+        {
+          "paths": ["$.url", "$.offers[*].url", "$.offers[*].itemOffered.url"],
+          "hostnameReplacement": true
+        }
+      ]
+    }
+  ]
+}

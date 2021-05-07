@@ -1,0 +1,135 @@
+{
+  "$schema": "../schemas/definition.schema.json",
+  "title": "Squarespace",
+  "examples": ["https://weglot-translate-sq.com/"],
+  "definitions": [
+    {
+      "type": "HTML",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 5
+        }
+      ],
+      "value": [
+        {
+          "id": "squarespace-context",
+          "selector": "script[data-name=\"static-context\"]",
+          "regex": "SQUARESPACE_CONTEXT = (?<json>.+);"
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "FROM_DEFINITION_ID",
+          "payload": "squarespace-context"
+        },
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 5
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$.collection.title",
+            "$.cookieSettings.cookieBannerText",
+            "$.cookieSettings.cookieBannerCtaText",
+            "$.cookieSettings.cookieBannerOptOutCtaText",
+            "$.website.siteTitle",
+            "$.website.fullSiteTitle",
+            "$.website.siteTagLine",
+            "$.website.siteDescription",
+            "$.websiteSettings.storeSettings.mailingListDescription",
+            "$.websiteSettings.storeSettings.merchandisingSettings.customScarcityMessage",
+            "$.websiteSettings.storeSettings.merchandisingSettings.customSoldOutText",
+            "$.websiteSettings.storeSettings.orderRefundedMessage",
+            "$.websiteSettings.storeSettings.orderRefundedSubjectFormat",
+            "$.websiteSettings.storeSettings.orderRefundedTitleFormat",
+            "$.websiteSettings.storeSettings.termsOfService"
+          ],
+          "wordType": 1
+        },
+        {
+          "paths": ["$.website.socialAccounts..profileUrl"],
+          "wordType": 10
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 5
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "END_WITH",
+            "value": "/api/search/GeneralSearch"
+          }
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$.items[*].title",
+            "$.items[*].body",
+            "$.items[*].highlight[*]"
+          ],
+          "wordType": 1
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 5
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "END_WITH",
+            "value": "/api/commerce/shopping-cart"
+          }
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$.entries[*].title",
+            "$.entries[*].chosenVariant.optionValues[*].optionName"
+          ],
+          "wordType": 1
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 5
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "/api/popup-overlay/render"
+          }
+        }
+      ],
+      "value": [
+        {
+          "paths": ["$.renderedHtml"],
+          "wordType": 1
+        }
+      ]
+    }
+  ]
+}
