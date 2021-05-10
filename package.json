@@ -9,6 +9,7 @@
     "ajv": "^8.2.0"
   },
   "scripts": {
+    "build": "node bin/build.js",
     "test": "node test/schemas.spec.js"
   }
 }
