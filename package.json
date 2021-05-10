@@ -5,6 +5,9 @@
   "repository": "git@github.com:weglot/definitions.git",
   "author": "Weglot <support@weglot.com>",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "devDependencies": {
     "ajv": "^8.2.0"
   },
