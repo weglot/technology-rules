@@ -6,12 +6,14 @@ if (!fs.existsSync(buildDir)) {
   fs.mkdirSync(buildDir);
 }
 
-const translations = [];
-for (const filename of fs.readdirSync(`${root}/translations`)) {
-  const { translations } = require(`${root}/translations/${filename}`, "utf-8");
-  translations.push(...translations);
+for (const type of ["translations", "slugs"]) {
+  const acc = [];
+  for (const filename of fs.readdirSync(`${root}/${type}`)) {
+    const definition = require(`${root}/${type}/${filename}`, "utf-8");
+    acc.push(...definition[type]);
+  }
+  fs.writeFileSync(`${buildDir}/${type}.json`, JSON.stringify(acc));
 }
-fs.writeFileSync(`${buildDir}/translations.json`, JSON.stringify(translations));
 
 const technologies = [];
 for (const filename of fs.readdirSync(`${root}/technologies`)) {
