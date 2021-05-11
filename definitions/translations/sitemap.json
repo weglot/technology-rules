@@ -1,7 +1,7 @@
 {
-  "$schema": "../schemas/definition.schema.json",
+  "$schema": "../schemas/translations.schema.json",
   "title": "Sitemaps",
-  "definitions": [
+  "translations": [
     {
       "type": "XML",
       "condition": [

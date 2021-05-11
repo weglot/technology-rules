@@ -1,7 +1,7 @@
 {
-  "$schema": "../schemas/definition.schema.json",
+  "$schema": "../schemas/translations.schema.json",
   "title": "application/ld+json",
-  "definitions": [
+  "translations": [
     {
       "type": "XML",
       "condition": [

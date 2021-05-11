@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "definition.schema.json",
-  "title": "Definition",
-  "description": "This type of plugin defines how we should translate JSON files.",
+  "$id": "translations.schema.json",
+  "title": "Translation definitions",
+  "description": "This type of plugin defines how we should translate resources.",
   "type": "object",
   "additionalProperties": false,
   "properties": {
@@ -15,8 +15,8 @@
     "examples": {
       "$ref": "common.schema.json#/definitions/ExamplesURL"
     },
-    "definitions": {
-      "title": "All definitions",
+    "translations": {
+      "title": "All translation definitions",
       "type": "array",
       "items": {
         "title": "",
@@ -42,7 +42,7 @@
       }
     }
   },
-  "required": ["$schema", "title", "definitions"],
+  "required": ["$schema", "title", "translations"],
   "definitions": {
     "ValueArray": {
       "title": "If condition was true, apply these definitions",

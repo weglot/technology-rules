@@ -1,8 +1,8 @@
 {
-  "$schema": "../schemas/definition.schema.json",
+  "$schema": "../schemas/translations.schema.json",
   "title": "Squarespace",
   "examples": ["https://weglot-translate-sq.com/"],
-  "definitions": [
+  "translations": [
     {
       "type": "HTML",
       "condition": [
