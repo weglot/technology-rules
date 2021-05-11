@@ -2,15 +2,18 @@ name: Weglot Definitions
 
 on:
   push:
-    branches:
-      - "*"
+    paths:
+      - "definitions/**"
     tags:
       - "*"
 
 jobs:
   test:
-    name: Check JSON Schemas
+    name: Check JSON Schemas & publish
     runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: ./definitions
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2

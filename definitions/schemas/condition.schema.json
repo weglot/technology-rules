@@ -49,9 +49,6 @@
               "title": "Check if element is present and at document's root"
             }
           ]
-        },
-        "payload": {
-          "title": ""
         }
       },
       "dependencies": {
