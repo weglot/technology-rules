@@ -5,6 +5,7 @@
   "repository": "git@github.com:weglot/definitions.git",
   "author": "Weglot <support@weglot.com>",
   "license": "MIT",
+  "homepage": "https://weglot.github.io/definitions",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
