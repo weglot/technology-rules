@@ -1,0 +1,46 @@
+name: Weglot Definitions
+
+on:
+  push:
+    paths:
+      - "definition-builder/**"
+
+jobs:
+  deploy_builder:
+    name: Build & publish builder
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: ./definition-builder
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "12"
+          registry-url: https://npm.pkg.github.com/
+          scope: "@weglot"
+      - name: Cache dependencies
+        id: cache-dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache
+            **/node_modules
+          key: ${{ hashFiles('**/yarn.lock') }}
+      - name: Install dependencies
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Deploy playground
+        uses: crazy-max/ghaction-github-pages@v2.2.0
+        with:
+          keep_history: true
+          target-branch: gh-pages
+          build_dir: build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
