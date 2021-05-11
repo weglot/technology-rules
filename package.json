@@ -5,6 +5,9 @@
   "author": "Weglot <support@weglot.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "upgrade-definitions": "yarn workspace @weglot/definitions version"
+  },
   "workspaces": [
     "definitions",
     "definition-builder"

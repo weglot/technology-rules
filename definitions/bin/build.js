@@ -8,8 +8,8 @@ if (!fs.existsSync(buildDir)) {
 
 const translations = [];
 for (const filename of fs.readdirSync(`${root}/translations`)) {
-  const { definitions } = require(`${root}/translations/${filename}`, "utf-8");
-  translations.push(...definitions);
+  const { translations } = require(`${root}/translations/${filename}`, "utf-8");
+  translations.push(...translations);
 }
 fs.writeFileSync(`${buildDir}/translations.json`, JSON.stringify(translations));
 
