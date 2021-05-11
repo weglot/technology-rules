@@ -34,7 +34,6 @@ jobs:
       - name: Deploy playground
         uses: crazy-max/ghaction-github-pages@v2.3.0
         with:
-          keep_history: true
           target-branch: gh-pages
           build_dir: definition-builder/build
         env:
