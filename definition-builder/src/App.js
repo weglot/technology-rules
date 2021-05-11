@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Form from "react-jsonschema-form";
-import definition from "@weglot/definitions/schemas/definition.schema.json";
+import definition from "@weglot/definitions/schemas/translations.schema.json";
 
 import Editor from "./Editor";
 import { resolveRefs } from "./utils";

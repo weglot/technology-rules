@@ -11,7 +11,7 @@
     "build": "react-scripts build"
   },
   "dependencies": {
-    "@weglot/definitions": "^1.1.1",
+    "@weglot/definitions": "^1.2.1",
     "codemirror": "^5.61.0",
     "jsonpath": "^1.1.1",
     "react": "^17.0.2",
