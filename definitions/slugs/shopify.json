@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/slugs.schema.json",
+  "title": "Shopify",
+  "slugs": [
+    {
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 2
+        }
+      ],
+      "value": [
+        {
+          "original": "/(?:[\\d]{4,})/checkouts/(?:[\\w]{32})(/.*)?",
+          "translated": "/checkouts$1"
+        }
+      ]
+    }
+  ]
+}

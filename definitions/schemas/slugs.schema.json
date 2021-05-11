@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "slugs.schema.json",
+  "title": "Slugs definitions",
+  "description": "This type of plugin defines how we should send URL to Weglot API.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "title": {
+      "$ref": "common.schema.json#/definitions/PluginName"
+    },
+    "examples": {
+      "$ref": "common.schema.json#/definitions/ExamplesURL"
+    },
+    "slugs": {
+      "title": "All slugs definitions",
+      "type": "array",
+      "items": {
+        "title": "",
+        "description": "",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "condition": {
+            "$ref": "condition.schema.json#/definitions/ConditionArray"
+          },
+          "value": {
+            "$ref": "#/definitions/ValueArray"
+          }
+        },
+        "required": ["value"]
+      }
+    }
+  },
+  "required": ["$schema", "title", "slugs"],
+  "definitions": {
+    "ValueArray": {
+      "title": "If condition was true, apply these definitions",
+      "type": "array",
+      "description": "Put here definitions to translate",
+      "items": {
+        "$ref": "#/definitions/Value"
+      }
+    },
+    "Value": {
+      "title": "",
+      "description": "",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "original": {
+          "title": "How we should capture original URL path with a regex",
+          "type": "string"
+        },
+        "translated": {
+          "title": "How we should format captured path",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
