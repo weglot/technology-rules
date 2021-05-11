@@ -10,12 +10,9 @@
     "build": "react-scripts build"
   },
   "dependencies": {
-    "@jsonforms/core": "^2.5.0",
-    "@jsonforms/react": "^2.5.0",
-    "ajv": "^8.3.0",
+    "@weglot/definitions": "^1.1.1",
     "codemirror": "^5.61.0",
     "jsonpath": "^1.1.1",
-    "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-codemirror2": "^7.2.1",
     "react-dom": "^17.0.2",

@@ -1,0 +1,32 @@
+{
+  "folders": [
+    {
+      "name": "Definitions",
+      "path": "definitions"
+    },
+    {
+      "name": "Builder",
+      "path": "definition-builder"
+    },
+    {
+      "name": "Global",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": false,
+    "[javascript]": {
+      "editor.formatOnSave": true
+    },
+    "search.exclude": {
+      "**/build": true,
+      "**/logs": true,
+      "**/yarn*": true,
+      "**/node_modules": true
+    }
+  },
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  }
+}
