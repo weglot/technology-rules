@@ -1,7 +1,7 @@
 {
-  "$schema": "../schemas/slugs.schema.json",
+  "$schema": "../schemas/urls.schema.json",
   "title": "Shopify",
-  "slugs": [
+  "urls": [
     {
       "condition": [
         {

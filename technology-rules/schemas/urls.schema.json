@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "slugs.schema.json",
-  "title": "Slugs definitions",
+  "$id": "urls.schema.json",
+  "title": "URLs definitions",
   "description": "This type of plugin defines how we should send URL to Weglot API.",
   "type": "object",
   "additionalProperties": false,
@@ -15,8 +15,8 @@
     "examples": {
       "$ref": "common.schema.json#/definitions/ExamplesURL"
     },
-    "slugs": {
-      "title": "All slugs definitions",
+    "urls": {
+      "title": "All urls definitions",
       "type": "array",
       "items": {
         "title": "",
@@ -35,7 +35,7 @@
       }
     }
   },
-  "required": ["$schema", "title", "slugs"],
+  "required": ["$schema", "title", "urls"],
   "definitions": {
     "ValueArray": {
       "title": "If condition was true, apply these definitions",
