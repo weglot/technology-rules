@@ -28,4 +28,4 @@ yarn
 
 ### Version
 
-`yarn version --(major|minor|patch)`
+`yarn rules version --(major|minor|patch)`
