@@ -11,6 +11,6 @@
   },
   "workspaces": [
     "technology-rules",
-    "rule-builder"
+    "rules-builder"
   ]
 }

@@ -26,4 +26,6 @@ cd technology-rules
 yarn
 ```
 
+### Version
 
+`yarn version --(major|minor|patch)`
