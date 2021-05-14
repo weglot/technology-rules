@@ -1,9 +1,9 @@
-name: Weglot Definitions
+name: Weglot Rules Builder
 
 on:
   push:
     paths:
-      - "definition-builder/**"
+      - "rules-builder/**"
 
 jobs:
   deploy_builder:
@@ -29,12 +29,12 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build
-        run: yarn workspace definition-builder build
+        run: yarn workspace rules-builder build
 
       - name: Deploy playground
         uses: crazy-max/ghaction-github-pages@v2.3.0
         with:
           target-branch: gh-pages
-          build_dir: definition-builder/build
+          build_dir: rules-builder/build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

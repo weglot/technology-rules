@@ -1,7 +1,7 @@
 import jp from "jsonpath";
 
-import common from "@weglot/definitions/schemas/common.schema.json";
-import condition from "@weglot/definitions/schemas/condition.schema.json";
+import common from "@weglot/technology-rules/schemas/common.schema.json";
+import condition from "@weglot/technology-rules/schemas/condition.schema.json";
 
 export function resolveRefs(schema) {
   const refs = { common, condition };

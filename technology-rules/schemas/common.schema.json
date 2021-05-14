@@ -17,7 +17,7 @@
       }
     },
     "Type": {
-      "title": "Definition type",
+      "title": "Resource type",
       "description": "Values will be applied on this resource type",
       "type": "string",
       "oneOf": [

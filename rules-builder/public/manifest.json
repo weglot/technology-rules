@@ -1,6 +1,6 @@
 {
-  "short_name": "Connect Definition",
-  "name": "Weglot Connect - Definition Builder",
+  "short_name": "Rules Builder",
+  "name": "Weglot - Rules Builder",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

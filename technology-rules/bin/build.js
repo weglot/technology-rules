@@ -9,8 +9,8 @@ if (!fs.existsSync(buildDir)) {
 for (const type of ["translations", "slugs"]) {
   const acc = [];
   for (const filename of fs.readdirSync(`${root}/${type}`)) {
-    const definition = require(`${root}/${type}/${filename}`, "utf-8");
-    acc.push(...definition[type]);
+    const rules = require(`${root}/${type}/${filename}`, "utf-8");
+    acc.push(...rules[type]);
   }
   fs.writeFileSync(`${buildDir}/${type}.json`, JSON.stringify(acc));
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Form from "react-jsonschema-form";
-import definition from "@weglot/definitions/schemas/translations.schema.json";
+import translations from "@weglot/technology-rules/schemas/translations.schema.json";
 
 import Editor from "./Editor";
 import { resolveRefs } from "./utils";
@@ -16,7 +16,7 @@ export default function App() {
         </div>
         <div className="col-md-6 col-sm-12">
           <Form
-            schema={resolveRefs(definition)}
+            schema={resolveRefs(translations)}
             onChange={({ formData }) => setFormData(formData)}
             formData={formData}
           />

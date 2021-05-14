@@ -1,17 +1,17 @@
 {
-  "name": "definition-builder",
+  "name": "rules-builder",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:weglot/definitions.git",
+  "repository": "git@github.com:weglot/technology-rules.git",
   "author": "Weglot <support@weglot.com>",
   "license": "MIT",
-  "homepage": "https://weglot.github.io/definitions",
+  "homepage": "https://weglot.github.io/technology-rules",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
   "dependencies": {
-    "@weglot/definitions": "^1.2.1",
+    "@weglot/technology-rules": "^1.2.1",
     "codemirror": "^5.61.0",
     "jsonpath": "^1.1.1",
     "react": "^17.0.2",

@@ -1,12 +1,12 @@
 {
   "folders": [
     {
-      "name": "Definitions",
-      "path": "definitions"
+      "name": "Rules",
+      "path": "technology-rules"
     },
     {
-      "name": "Builder",
-      "path": "definition-builder"
+      "name": "Rules Builder",
+      "path": "rules-builder"
     },
     {
       "name": "Global",
