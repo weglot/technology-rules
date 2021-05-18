@@ -54,7 +54,7 @@ export default function Editor({ formData, onChange }) {
         value={schema}
         autoCursor={false}
         options={cmOptions}
-        onChange={(_, __, code) => code !== schema && onEdit(code)}
+        onChange={(cm, meta, code) => code !== schema && onEdit(code)}
       />
     </div>
   );

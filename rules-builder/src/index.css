@@ -24,3 +24,7 @@ ul.error-detail > li:first-child {
 button[type="submit"] {
   display: none;
 }
+
+.CodeMirror {
+  height: 100%;
+}
