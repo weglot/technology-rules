@@ -55,7 +55,7 @@
           "title": "How we should capture original URL path with a regex",
           "type": "string"
         },
-        "translated": {
+        "formatted": {
           "title": "How we should format captured path",
           "type": "string"
         }

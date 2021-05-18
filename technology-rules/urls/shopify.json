@@ -12,7 +12,7 @@
       "value": [
         {
           "original": "/(?:[\\d]{4,})/checkouts/(?:[\\w]{32})(/.*)?",
-          "translated": "/checkouts$1"
+          "formatted": "/checkouts$1"
         }
       ]
     }
