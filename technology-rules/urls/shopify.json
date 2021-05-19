@@ -11,8 +11,12 @@
       ],
       "value": [
         {
-          "original": "/(?:[\\d]{4,})/checkouts/(?:[\\w]{32})(/.*)?",
+          "original": "^/(?:[\\d]{4,})/checkouts/(?:[\\w]{32})(/.*)?$",
           "formatted": "/checkouts$1"
+        },
+        {
+          "original": "^/(.+)\\.(json|xml)$",
+          "formatted": "/$1"
         }
       ]
     }
