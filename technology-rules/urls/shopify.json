@@ -15,6 +15,14 @@
           "formatted": "/checkouts$1"
         },
         {
+          "original": "^/account/(orders|activate)/(?:[\\w]{32})$",
+          "formatted": "/account/orders/"
+        },
+        {
+          "original": "^/wallets/checkouts/(?:.*)$",
+          "formatted": "/wallets/checkouts/"
+        },
+        {
           "original": "^/(.+)\\.(json|xml)$",
           "formatted": "/$1"
         }
