@@ -11,12 +11,16 @@
       ],
       "value": [
         {
-          "original": "^/(?:[\\d]{4,})/checkouts/(?:[\\w]{32})(/.*)?$",
+          "original": "^/checkouts/(?:[\\w]{32})(/.*)?$",
           "formatted": "/checkouts$1"
         },
         {
           "original": "^/account/(orders|activate)/(?:[\\w]{32})$",
           "formatted": "/account/orders/"
+        },
+        {
+          "original": "^/orders/(?:[\\w]{32})$",
+          "formatted": "/orders/"
         },
         {
           "original": "^/wallets/checkouts/(?:.*)$",
