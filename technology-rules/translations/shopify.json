@@ -19,12 +19,8 @@
       ],
       "value": [
         {
-          "paths": [
-            "$.paymentInstruments.checkoutConfig.domain",
-            "$.paymentInstruments.shopifyPayConfig.domain",
-            "$.paymentInstruments.amazonPayConfig.domain"
-          ],
-          "hostnameReplacement": true
+          "paths": ["$.paymentInstruments.*.domain"],
+          "type": "URL"
         }
       ]
     },
