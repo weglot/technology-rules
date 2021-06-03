@@ -86,9 +86,9 @@
           "type": "boolean"
         },
         "type": {
-          "title": "Parser type",
-          "description": "Parse found matches with this parser type",
-          "$ref": "#/definitions/ParserType"
+          "title": "Target type",
+          "description": "Parse found matches with this type",
+          "$ref": "#/definitions/TargetType"
         }
       }
     },
@@ -135,6 +135,17 @@
         { "const": "HTML", "title": "HTML parser" },
         { "const": "JSON", "title": "JSON parser" },
         { "const": "XML", "title": "XML parser" }
+      ]
+    },
+    "TargetType": {
+      "title": "TargetType",
+      "description": "A Weglot available Parser Type",
+      "type": "string",
+      "oneOf": [
+        { "const": "HTML", "title": "HTML parser" },
+        { "const": "JSON", "title": "JSON parser" },
+        { "const": "XML", "title": "XML parser" },
+        { "const": "URL", "title": "URL parser" }
       ]
     }
   }
