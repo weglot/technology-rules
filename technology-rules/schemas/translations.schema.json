@@ -89,6 +89,11 @@
           "title": "Target type",
           "description": "Parse found matches with this type",
           "$ref": "#/definitions/TargetType"
+        },
+        "format": {
+          "title": "URL format",
+          "description": "Parse URL with this format",
+          "$ref": "#/definitions/URLFormat"
         }
       }
     },
@@ -147,6 +152,13 @@
         { "const": "XML", "title": "XML parser" },
         { "const": "URL", "title": "URL parser" }
       ]
+    },
+    "URLFormat": {
+      // TODO: define the actual format
+      "title": "URLFormat",
+      "description": "The format of the URL for the URL parser",
+      "type": "string",
+      "default": null
     }
   }
 }
