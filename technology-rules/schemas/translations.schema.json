@@ -90,10 +90,10 @@
           "description": "Parse found matches with this type",
           "$ref": "#/definitions/TargetType"
         },
-        "format": {
-          "title": "URL format",
+        "forceURLFormat": {
+          "title": "URL format to force",
           "description": "Parse URL with this format",
-          "$ref": "#/definitions/URLFormat"
+          "$ref": "#/definitions/ForceURLFormat"
         }
       }
     },
@@ -153,12 +153,16 @@
         { "const": "URL", "title": "URL parser" }
       ]
     },
-    "URLFormat": {
-      // TODO: define the actual format
-      "title": "URLFormat",
+    "ForceURLFormat": {
+      "title": "ForceURLFormat",
       "description": "The format of the URL for the URL parser",
       "type": "string",
-      "default": null
+      "default": null,
+      "oneOf": [
+        { "const": "proxy", "title": "Proxy" },
+        { "const": "shopifyProxy", "title": "Shopify proxy" },
+        { "const": "siteSettings", "title": "Site settings" }
+      ]
     }
   }
 }
