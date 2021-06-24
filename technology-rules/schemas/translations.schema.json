@@ -89,6 +89,11 @@
           "title": "Target type",
           "description": "Parse found matches with this type",
           "$ref": "#/definitions/TargetType"
+        },
+        "forceURLFormat": {
+          "title": "URL format to force",
+          "description": "Parse URL with this format",
+          "$ref": "#/definitions/ForceURLFormat"
         }
       }
     },
@@ -146,6 +151,17 @@
         { "const": "JSON", "title": "JSON parser" },
         { "const": "XML", "title": "XML parser" },
         { "const": "URL", "title": "URL parser" }
+      ]
+    },
+    "ForceURLFormat": {
+      "title": "ForceURLFormat",
+      "description": "The format of the URL for the URL parser",
+      "type": "string",
+      "default": null,
+      "oneOf": [
+        { "const": "proxy", "title": "Proxy" },
+        { "const": "shopifyProxy", "title": "Shopify proxy" },
+        { "const": "siteSettings", "title": "Site settings" }
       ]
     }
   }
