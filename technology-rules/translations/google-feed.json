@@ -20,6 +20,14 @@
             "attr": "xmlns:g",
             "value": "http://base.google.com/ns/1.0"
           }
+        },
+        {
+          "type": "XML_ATTRIBUTE_VALUE",
+          "payload": {
+            "selector": "g:rss",
+            "attr": "xmlns:g",
+            "value": "http://base.google.com/ns/1.0"
+          }
         }
       ],
       "entryContext": "entry",
