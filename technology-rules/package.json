@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "build": "node bin/build.js",
-    "test": "node test/schemas.spec.js"
+    "test": "node test/schemas.spec.js",
+    "postversion": "git push --tags && git push && echo \"Successfully released version $npm_package_version!\""
   },
   "devDependencies": {
     "ajv": "^8.5.0"
