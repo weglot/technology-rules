@@ -16,7 +16,7 @@
         },
         {
           "original": "^/account/(orders|activate)/(?:[\\w]{32})$",
-          "formatted": "/account/orders/"
+          "formatted": "/account/$1/"
         },
         {
           "original": "^/orders/(?:[\\w]{32})$",
