@@ -26,6 +26,13 @@ cd technology-rules
 yarn
 ```
 
+Development usage
+
+```
+yarn rules link
+yarn link "@weglot/technology-rules"
+```
+
 ### Version
 
 `yarn rules version --(major|minor|patch)`
