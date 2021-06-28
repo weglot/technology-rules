@@ -7,7 +7,9 @@
   "private": true,
   "scripts": {
     "builder": "yarn workspace rules-builder",
-    "rules": "yarn workspace @weglot/technology-rules"
+    "rules": "yarn workspace @weglot/technology-rules",
+    "postinstall": "yarn rules build",
+    "postversion": "git push --tags && git push && echo \"Successfully released version $npm_package_version!\""
   },
   "workspaces": [
     "technology-rules",
