@@ -51,13 +51,15 @@
             "g:availability",
             "g:product_type",
             "g:sex",
-            "g:custom_label_0"
+            "g:custom_label_0",
+            "g:google_product_category"
           ],
           "wordType": 1
         },
         {
           "paths": ["link", "category1_url", "category2_url"],
-          "wordType": 5
+          "type": "URL",
+          "forceURLFormat": "siteSettings"
         },
         {
           "paths": ["g:image_link", "g:additional_image_link"],
