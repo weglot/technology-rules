@@ -32,7 +32,8 @@
         },
         {
           "paths": ["$.url", "$.offers[*].url", "$.offers[*].itemOffered.url"],
-          "hostnameReplacement": true
+          "type": "URL",
+          "forceURLFormat": "siteSettings"
         }
       ]
     }

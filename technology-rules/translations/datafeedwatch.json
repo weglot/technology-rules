@@ -35,7 +35,8 @@
         },
         {
           "paths": ["link", "category1_url", "category2_url"],
-          "wordType": 5
+          "type": "URL",
+          "forceURLFormat": "siteSettings"
         },
         {
           "paths": ["g:image_link", "g:additional_image_link"],
