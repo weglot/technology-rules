@@ -179,7 +179,33 @@
       ],
       "value": [
         {
-          "paths": ["$[*].title", "$[*].excerpt", "$.content.blocks[*].text"],
+          "paths": [
+            "$[*].title",
+            "$[*].excerpt",
+            "$[*].content.blocks[*].text"
+          ],
+          "wordType": 1
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 6
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "START_WITH",
+            "value": "/_api/communities-blog-node-api/_api/posts/content"
+          }
+        }
+      ],
+      "value": [
+        {
+          "paths": ["$.title", "$.excerpt", "$.content.blocks[*].text"],
           "wordType": 1
         }
       ]
