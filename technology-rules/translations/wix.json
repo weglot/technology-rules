@@ -4,6 +4,40 @@
   "examples": ["https://fr.weglot-translate-wix.com/"],
   "translations": [
     {
+      "type": "HTML",
+      "value": [
+        {
+          "id": "wix-viewer-model",
+          "selector": "script#wix-viewer-model",
+          "type": "JSON"
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "FROM_DEFINITION_ID",
+          "payload": "wix-viewer-model"
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$.siteFeaturesConfigs.tpaCommons.widgetsClientSpecMapData..mobileUrl",
+            "$.siteFeaturesConfigs.tpaCommons.widgetsClientSpecMapData..widgetUrl",
+            "$.siteAssets.clientTopology.pageJsonServerUrls[*]",
+            "$.siteAssets.clientTopology.siteAssetsUrl",
+            "$.siteFeaturesConfigs.tpaCommons.appsClientSpecMapData..appFields.platform.baseUrls.translationsBaseUrl",
+            "$.siteFeaturesConfigs.platform.bootstrapData.appsUrlData..baseUrls.translationsBaseUrl",
+            "$.siteAssets.siteScopeParams.anonymousClientSpecMap..appFields.platform.baseUrls.translationsBaseUrl"
+          ],
+          "type": "URL",
+          "forceURLFormat": "proxy"
+        }
+      ]
+    },
+    {
       "type": "JSON",
       "condition": [
         {

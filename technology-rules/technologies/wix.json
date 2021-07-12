@@ -10,35 +10,6 @@
       }
     }
   ],
-  "hostnameReplacements": [
-    {
-      "slash": "/",
-      "regex": "(https:\\/\\/)(siteassets\\.parastorage\\.com)(\\/pages)"
-    },
-    {
-      "slash": "\\/",
-      "regex": "({\"baseUrl\":\")(siteassets\\.parastorage\\.com)(\\\\\\/pages\")"
-    },
-    {
-      "slash": "\\/",
-      "regex": "(\"siteAssetsUrl\":\"https:\\\\/\\\\/)(siteassets\\.parastorage\\.com)(\")"
-    },
-    {
-      "slash": "\\/",
-      "regex": "(\"https:\\\\/\\\\/)(pages\\.wixstatic\\.com)(\")"
-    },
-    {
-      "slash": "\\/",
-      "regex": "(\"productPageBaseUrl\":\"https:\\\\\\/\\\\\\/)(static\\.parastorage\\.com)(\\\\\\/services\\\\\\/wixstores-client-product-page\\\\\\/)"
-    },
-    {
-      "slash": "\\/",
-      "regex": "(https:\\\\/\\\\/)(wixlabs-wix-faq-11\\.appspot\\.com)(\\\\/)"
-    },
-    {
-      "slash": "\\/",
-      "regex": "(\"translationsBaseUrl\":\"https:\\\\\\/\\\\\\/)(static\\.parastorage\\.com)(\\\\\\/services\\\\\\/communities-blog-translations\\\\\\/)"
-    }
-  ],
+  "hostnameReplacements": [],
   "proxyHosts": ["siteassets.parastorage.com"]
 }
