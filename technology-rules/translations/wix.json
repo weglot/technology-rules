@@ -107,6 +107,10 @@
           "wordType": 1
         },
         {
+          "paths": ["$.props.render..link.href"],
+          "wordType": 10
+        },
+        {
           "paths": ["$..advancedSeoData"],
           "type": "JSON"
         }
