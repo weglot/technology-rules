@@ -32,6 +32,10 @@
         {
           "const": "XML",
           "title": "Apply on XML document"
+        },
+        {
+          "const": "RAW",
+          "title": "Apply on RAW document (js, ...)"
         }
       ]
     },
