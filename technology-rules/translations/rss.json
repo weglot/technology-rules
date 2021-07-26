@@ -8,7 +8,7 @@
         {
           "type": "XML_ATTRIBUTE_VALUE",
           "payload": {
-            "selector": "rss",
+            "path": "//rss",
             "attr": "xmlns:media",
             "value": "http://search.yahoo.com/mrss/"
           }
@@ -17,11 +17,11 @@
       "entryContext": "item",
       "value": [
         {
-          "paths": ["title", "description"],
+          "paths": ["//title", "//description"],
           "wordType": 1
         },
         {
-          "paths": ["media:content", "media:thumbnail"],
+          "paths": ["//media:content", "//media:thumbnail"],
           "wordType": 6
         }
       ]

@@ -119,7 +119,7 @@
                 "payload": {
                   "type": "object",
                   "properties": {
-                    "selector": {
+                    "path": {
                       "type": "string"
                     },
                     "attr": {
@@ -140,7 +140,7 @@
                 "payload": {
                   "type": "object",
                   "properties": {
-                    "selector": {
+                    "path": {
                       "type": "string"
                     }
                   }

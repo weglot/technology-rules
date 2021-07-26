@@ -8,7 +8,7 @@
         {
           "type": "XML_ATTRIBUTE_VALUE",
           "payload": {
-            "selector": "urlset",
+            "path": "//urlset",
             "attr": "xmlns",
             "value": "http://www.sitemaps.org/schemas/sitemap/0.9"
           }
@@ -17,15 +17,15 @@
       "entryContext": "url",
       "value": [
         {
-          "paths": ["loc"],
+          "paths": ["//loc"],
           "hostnameReplacement": true
         },
         {
-          "paths": ["image:title", "image:caption"],
+          "paths": ["//image:title", "//image:caption"],
           "wordType": 1
         },
         {
-          "paths": ["image:loc"],
+          "paths": ["//image:loc"],
           "wordType": 6
         }
       ]

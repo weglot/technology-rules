@@ -120,14 +120,14 @@
         {
           "type": "XML_ROOT_ELEMENT_NAME",
           "payload": {
-            "selector": "products"
+            "path": "/products"
           }
         }
       ],
       "entryContext": "product",
       "value": [
         {
-          "paths": ["title", "description"],
+          "paths": ["//title", "//description"],
           "wordType": 1
         }
       ]
@@ -142,18 +142,18 @@
         {
           "type": "XML_ROOT_ELEMENT_NAME",
           "payload": {
-            "selector": "hash"
+            "path": "/hash"
           }
         }
       ],
       "entryContext": "hash",
       "value": [
         {
-          "paths": ["title", "body-html", "product-type", "alt"],
+          "paths": ["//title", "//body-html", "/product-type", "//image/alt"],
           "wordType": 1
         },
         {
-          "paths": ["src"],
+          "paths": ["//image/src"],
           "wordType": 6
         }
       ]

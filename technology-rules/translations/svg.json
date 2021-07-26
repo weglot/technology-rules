@@ -8,13 +8,13 @@
         {
           "type": "XML_ROOT_ELEMENT_NAME",
           "payload": {
-            "selector": "svg"
+            "path": "/svg"
           }
         }
       ],
       "value": [
         {
-          "paths": ["text", "text tspan"],
+          "paths": ["//text", "//text tspan"],
           "wordType": 1
         }
       ]
