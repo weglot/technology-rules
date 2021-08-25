@@ -7,7 +7,6 @@ ajv.addKeyword("translations");
 ajv.addKeyword("urls");
 ajv.addKeyword("condition");
 ajv.addKeyword("technology_id");
-ajv.addKeyword("hostnameReplacements");
 ajv.addKeyword("proxyHosts");
 ajv.addKeyword("settings");
 
