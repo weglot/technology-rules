@@ -157,6 +157,22 @@
           "wordType": 6
         }
       ]
+    },
+    {
+      "type": "HTML",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 2
+        }
+      ],
+      "value": [
+        {
+          "id": "shopify-cart-template",
+          "selector": "script#CartTemplate",
+          "regex": "action=\"(?<url>[^\"]+)\""
+        }
+      ]
     }
   ]
 }
