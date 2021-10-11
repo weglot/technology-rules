@@ -18,7 +18,8 @@
       "value": [
         {
           "paths": ["loc"],
-          "hostnameReplacement": true
+          "type": "URL",
+          "forceURLFormat": "siteSettings"
         },
         {
           "paths": ["image:title", "image:caption"],

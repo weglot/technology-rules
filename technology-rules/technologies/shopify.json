@@ -10,7 +10,6 @@
     }
   ],
   "technology_id": 2,
-  "hostnameReplacements": [],
   "proxyHosts": ["feeds.datafeedwatch.com", "feeds.adwordsrobot.com"],
   "settings": [
     {

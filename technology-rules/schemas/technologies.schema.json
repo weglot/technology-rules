@@ -20,15 +20,6 @@
     "condition": {
       "$ref": "condition.schema.json#/definitions/ConditionArray"
     },
-    "hostnameReplacements": {
-      "title": "Replacements of hostnames",
-      "description": "Any string going through Connect will replace with the regexes you set",
-      "type": "array",
-      "default": [],
-      "items": {
-        "$ref": "common.schema.json#/definitions/BodyReplacement"
-      }
-    },
     "proxyHosts": {
       "type": "array",
       "title": "Proxy hosts",
@@ -74,7 +65,6 @@
     "$schema",
     "title",
     "condition",
-    "hostnameReplacements",
     "proxyHosts"
   ],
   "definitions": {

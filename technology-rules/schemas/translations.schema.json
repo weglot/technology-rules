@@ -80,11 +80,6 @@
           "description": "",
           "$ref": "#/definitions/WordType"
         },
-        "hostnameReplacement": {
-          "title": "Replace host with translation host",
-          "description": "",
-          "type": "boolean"
-        },
         "type": {
           "title": "Target type",
           "description": "Parse found matches with this type",
