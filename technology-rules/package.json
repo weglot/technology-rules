@@ -11,7 +11,7 @@
     "postversion": "git push --tags && git push && echo \"Successfully released version $npm_package_version!\""
   },
   "devDependencies": {
-    "ajv": "^8.5.0"
+    "ajv": "^8.6.3"
   },
   "files": [
     "dist/",
