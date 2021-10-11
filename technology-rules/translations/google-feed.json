@@ -8,7 +8,7 @@
         {
           "type": "XML_ATTRIBUTE_VALUE",
           "payload": {
-            "selector": "feed",
+            "path": "//feed",
             "attr": "xmlns:g",
             "value": "http://base.google.com/ns/1.0"
           }
@@ -16,7 +16,7 @@
         {
           "type": "XML_ATTRIBUTE_VALUE",
           "payload": {
-            "selector": "rss",
+            "path": "//rss",
             "attr": "xmlns:g",
             "value": "http://base.google.com/ns/1.0"
           }
@@ -24,7 +24,7 @@
         {
           "type": "XML_ATTRIBUTE_VALUE",
           "payload": {
-            "selector": "g:rss",
+            "path": "//g:rss",
             "attr": "xmlns:g",
             "value": "http://base.google.com/ns/1.0"
           }
@@ -34,35 +34,35 @@
       "value": [
         {
           "paths": [
-            "title",
-            "title_org",
-            "description",
-            "category1_title",
-            "category1_breadcrumbs",
-            "category2_title",
-            "category2_breadcrumbs",
-            "variant_title",
-            "g:material",
-            "g:brand",
-            "g:color",
-            "g:title",
-            "g:description",
-            "g:condition",
-            "g:availability",
-            "g:product_type",
-            "g:sex",
-            "g:custom_label_0",
-            "g:google_product_category"
+            "//title",
+            "//title_org",
+            "//description",
+            "//category1_title",
+            "//category1_breadcrumbs",
+            "//category2_title",
+            "//category2_breadcrumbs",
+            "//variant_title",
+            "//g:material",
+            "//g:brand",
+            "//g:color",
+            "//g:title",
+            "//g:description",
+            "//g:condition",
+            "//g:availability",
+            "//g:product_type",
+            "//g:sex",
+            "//g:custom_label_0",
+            "//g:google_product_category"
           ],
           "wordType": 1
         },
         {
-          "paths": ["link", "category1_url", "category2_url"],
+          "paths": ["//link", "//category1_url", "//category2_url"],
           "type": "URL",
           "forceURLFormat": "siteSettings"
         },
         {
-          "paths": ["g:image_link", "g:additional_image_link"],
+          "paths": ["//g:image_link", "//g:additional_image_link"],
           "wordType": 6
         }
       ]
