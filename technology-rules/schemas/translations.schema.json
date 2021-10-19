@@ -145,7 +145,8 @@
         { "const": "HTML", "title": "HTML parser" },
         { "const": "JSON", "title": "JSON parser" },
         { "const": "XML", "title": "XML parser" },
-        { "const": "URL", "title": "URL parser" }
+        { "const": "URL", "title": "URL parser" },
+        { "const": "RAW", "title": "RAW parser" }
       ]
     },
     "ForceURLFormat": {
