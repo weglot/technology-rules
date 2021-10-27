@@ -34,7 +34,9 @@
             "$..54d912c5-52cb-4657-b8fa-e1a4cda8ed01..controllerUrl",
             "$..54d912c5-52cb-4657-b8fa-e1a4cda8ed01..controllerUrlTemplate",
             "$..54d912c5-52cb-4657-b8fa-e1a4cda8ed01..componentUrl",
-            "$..54d912c5-52cb-4657-b8fa-e1a4cda8ed01..componentUrlTemplate"
+            "$..54d912c5-52cb-4657-b8fa-e1a4cda8ed01..componentUrlTemplate",
+            "$..1380b703-ce81-ff05-f115-39571d94dfcd..viewerScriptUrl",
+            "$..appsScripts.urls.1380b703-ce81-ff05-f115-39571d94dfcd[0]"
           ],
           "type": "URL",
           "forceURLFormat": "proxy"
@@ -325,6 +327,147 @@
       "value": [
         {
           "regex": "\"(?<url_proxy>https://static.parastorage.com/services/bookings-calendar-widget/(.+)/)\""
+        }
+      ]
+    },
+    {
+      "type": "RAW",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 6
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "wixstores-client-worker/(.+)/viewerScript.bundle.min.js$"
+          }
+        }
+      ],
+      "value": [
+        {
+          "regex": "\"(?<url_proxy>https://ecom.wix.com/storefront/cartwidgetPopup)\""
+        }
+      ]
+    },
+    {
+      "type": "HTML",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 6
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "CONTAIN",
+            "value": "storefront/cartwidgetPopup"
+          }
+        }
+      ],
+      "value": [
+        {
+          "regex": "\"(?<url_proxy>//static.parastorage.com/services/wix-ecommerce-cart/(.*)/assets/locale/cart/messages_en.js)\""
+        }
+      ]
+    },
+    {
+      "type": "RAW",
+      "condition": [
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "wix-ecommerce-cart/(.*)/assets/locale/cart/messages_en.js$"
+          }
+        }
+      ],
+      "value": [
+        {
+          "id": "cartwidget-messages",
+          "regex": "translations = (?<json>(.|\n)+});"
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "FROM_DEFINITION_ID",
+          "payload": "cartwidget-messages"
+        },
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 6
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$.CART_TABLE_TOTAL_TITLE",
+            "$.SUBTOTAL_TITLE",
+            "$.SKU_TITLE",
+            "$.OUT_OF_STOCK_TITLE",
+            "$.REMOVE_PRODUCT_BUTTON_TITLE",
+            "$.CART_WIDGET_CART_TITLE",
+            "$.CART_WIDGET_CLOSE_BUTTON_TITLE",
+            "$.CART_WIDGET_VIEW_CART_BUTTON",
+            "$.CART_WIDGET_EMPTY_CART_MESSAGE",
+            "$.CART_WIDGET_QUANTITY_TITLE",
+            "$.cartWidget.sr.PRODUCT_WAS_REMOVED",
+            "$.cartWidget.sr.PRODUCT_PRICE_BEFORE_DISCOUNT",
+            "$.cartWidget.sr.PRODUCT_PRICE_AFTER_DISCOUNT",
+            "$.cartWidget.sr.PRODUCT_PRICE_WHEN_THERE_IS_NO_DISCOUNT",
+            "$.CART_WIDGET_CLOSE_CTA",
+            "$.CART_WIDGET_CURRENCY_CONVERTER_DISCLAIMER"
+          ],
+          "wordType": 1
+        }
+      ]
+    },
+    {
+      "type": "HTML",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 6
+        },
+        {
+          "type": "URI_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "ecom.wixapps.net/storefront/checkout"
+          }
+        }
+      ],
+      "value": [
+        {
+          "regex": "window.__BASE_STATIC_URL__ = '(?<url_proxy>.+)';"
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 6
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "wixstores-client-checkout/(.+)/assets/locale/checkout/messages_en.json$"
+          }
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$[*]"
+          ],
+          "wordType": 1
         }
       ]
     }
