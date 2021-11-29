@@ -124,7 +124,6 @@
           }
         }
       ],
-      "entryContext": "product",
       "value": [
         {
           "paths": ["title", "description"],
@@ -146,7 +145,6 @@
           }
         }
       ],
-      "entryContext": "hash",
       "value": [
         {
           "paths": ["title", "body-html", "product-type", "alt"],

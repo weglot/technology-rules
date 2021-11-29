@@ -12,9 +12,16 @@
             "attr": "xmlns",
             "value": "http://www.sitemaps.org/schemas/sitemap/0.9"
           }
+        },
+        {
+          "type": "XML_ATTRIBUTE_VALUE",
+          "payload": {
+            "selector": "sitemapindex",
+            "attr": "xmlns",
+            "value": "http://www.sitemaps.org/schemas/sitemap/0.9"
+          }
         }
       ],
-      "entryContext": "url",
       "value": [
         {
           "paths": ["loc"],
