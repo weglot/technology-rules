@@ -30,10 +30,6 @@
           "condition": {
             "$ref": "condition.schema.json#/definitions/ConditionArray"
           },
-          "entryContext": {
-            "type": "string",
-            "description": "XML specific - Leave empty for root"
-          },
           "value": {
             "$ref": "#/definitions/ValueArray"
           }
