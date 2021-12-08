@@ -29,8 +29,11 @@ yarn
 Development usage
 
 ```
-yarn rules link
-yarn link "@weglot/technology-rules"
+In technology-rules repo: 
+$ yarn rules link
+
+In connect-edge repo:
+$ yarn link "@weglot/technology-rules"
 ```
 
 ### Version
