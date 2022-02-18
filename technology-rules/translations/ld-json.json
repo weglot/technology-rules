@@ -1,4 +1,4 @@
-{
+{ 
   "$schema": "../schemas/translations.schema.json",
   "title": "application/ld+json",
   "translations": [
@@ -24,6 +24,8 @@
         {
           "paths": [
             "$.name",
+            "$[*]['name']",
+            "$.itemListElement[*].item.name",
             "$.description",
             "$.headline",
             "$.offers[*].itemOffered.name"
@@ -31,7 +33,7 @@
           "wordType": 1
         },
         {
-          "paths": ["$.url", "$.offers[*].url", "$.offers[*].itemOffered.url"],
+          "paths": ["$.url", "$[*]['url']", "$.offers[*].url", "$.itemListElement[*].item['@id']", "$.offers[*].itemOffered.url"],
           "type": "URL",
           "forceURLFormat": "siteSettings"
         }
