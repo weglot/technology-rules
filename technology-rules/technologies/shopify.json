@@ -33,6 +33,31 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Shopify Checkout page",
+      "condition": [
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "/(\\d+)\/checkouts\/(\\w{32})"
+          }
+        }
+      ],
+      "value": [
+        {
+          "type": "whitelist",
+          "payload": [
+            {
+              "value": "table.product-table .product__description__name"
+            },
+            {
+              "value": "aside.sidebar #icons_text_section section div.description"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
