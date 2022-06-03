@@ -19,7 +19,9 @@
       ],
       "value": [
         {
-          "paths": ["$.paymentInstruments.*.domain"],
+          "paths": [
+            "$.paymentInstruments.*.domain"
+          ],
           "type": "URL"
         }
       ]
@@ -101,11 +103,17 @@
           "wordType": 1
         },
         {
-          "paths": ["$.product.images[*].src", "$.product.image[*].src"],
+          "paths": [
+            "$.product.images[*].src",
+            "$.product.image[*].src"
+          ],
           "wordType": 6
         },
         {
-          "paths": ["$.product.images[*].alt", "$.product.image[*].alt"],
+          "paths": [
+            "$.product.images[*].alt",
+            "$.product.image[*].alt"
+          ],
           "wordType": 7
         }
       ]
@@ -126,7 +134,10 @@
       ],
       "value": [
         {
-          "paths": ["title", "description"],
+          "paths": [
+            "title",
+            "description"
+          ],
           "wordType": 1
         }
       ]
@@ -147,11 +158,18 @@
       ],
       "value": [
         {
-          "paths": ["title", "body-html", "product-type", "alt"],
+          "paths": [
+            "title",
+            "body-html",
+            "product-type",
+            "alt"
+          ],
           "wordType": 1
         },
         {
-          "paths": ["src"],
+          "paths": [
+            "src"
+          ],
           "wordType": 6
         }
       ]
@@ -169,6 +187,10 @@
           "id": "shopify-cart-template",
           "selector": "script#CartTemplate",
           "regex": "action=\"(?<url>[^\"]+)\""
+        },
+        {
+          "selector": "script",
+          "regex": "Shopify.routes.root = \"(?<url>[^\"]+)\""
         }
       ]
     }
