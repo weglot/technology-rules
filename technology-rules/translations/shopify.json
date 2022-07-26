@@ -190,6 +190,10 @@
         },
         {
           "selector": "script",
+          "regex": "Shopify.locale = \"(?<localeCode>[^\"]+)\";?"
+        },
+        {
+          "selector": "script",
           "regex": "Shopify.routes.root = \"(?<url>[^\"]+)\""
         }
       ]
