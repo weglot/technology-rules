@@ -191,6 +191,10 @@
         {
           "selector": "script",
           "regex": "Shopify.routes.root = \"(?<url>[^\"]+)\""
+        },
+        {
+          "selector": "script",
+          "regex": "(?:addToCart|soldOut|lowStock|quantityLabel|product_page_text|onSale|unavailable|added|viewProduct|percentOff|description|title|text): \"(?<wordType1>[^\"]+)"
         }
       ]
     }
