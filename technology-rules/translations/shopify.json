@@ -194,7 +194,23 @@
         },
         {
           "selector": "script",
-          "regex": "(?:addToCart|soldOut|lowStock|quantityLabel|product_page_text|onSale|unavailable|added|viewProduct|percentOff|description|title|text): \"(?<wordType1>[^\"]+)"
+          "regex": "strings(?:[: =]*)(?<json>[^}]+\\})(?:,|;|\n])",
+          "id": "shopify-strings"
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "FROM_DEFINITION_ID",
+          "payload": "shopify-strings"
+        }	
+      ],
+      "value": [
+        {
+          "paths": ["addToCart","soldOut","lowStock","quantityLabel","product_page_text","onSale","unavailable","added","viewProduct","percentOff","description","title","text"],
+          "wordType": 1
         }
       ]
     }
