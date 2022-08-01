@@ -200,6 +200,11 @@
           "selector": "script",
           "regex": "strings(?:[: =]*)(?<json>[^}]+\\})(?:,|;|\n])",
           "id": "shopify-strings"
+        },
+        {
+          "selector": "button",
+          "attribute": "data-add-to-cart-text",
+          "wordType": 1
         }
       ]
     },
