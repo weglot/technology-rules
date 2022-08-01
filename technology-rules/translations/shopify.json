@@ -194,10 +194,6 @@
         },
         {
           "selector": "script",
-          "regex": "Shopify.routes.root = \"(?<url>[^\"]+)\""
-        },
-        {
-          "selector": "script",
           "regex": "strings(?:[: =]*)(?<json>[^}]+\\})(?:,|;|\n])",
           "id": "shopify-strings"
         },
@@ -205,6 +201,25 @@
           "selector": "button",
           "attribute": "data-add-to-cart-text",
           "wordType": 1
+        }
+      ]
+    },
+    {
+      "type": "HTML",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 2
+        },
+        {
+          "type": "URL_TYPE",
+          "payload": "subdirectory"
+        }
+      ],
+      "value": [
+        {
+          "selector": "script",
+          "regex": "Shopify.routes.root = \"(?<url>[^\"]+)\""
         }
       ]
     },
