@@ -1,0 +1,31 @@
+{ 
+  "$schema": "../schemas/translations.schema.json",
+  "title": "Default JSON",
+  "translations": [
+    {
+      "type": "JSON",
+      "value": [
+        {
+          "paths": [
+            "$..name",
+            "$..description",
+            "$..headline",
+            "$..title",
+            "$..subtitle",
+            "$..btn_text",
+            "$..category",
+            "$..keyword",
+            "$..text",
+            "$..product_title"
+          ],
+          "wordType": 1
+        },
+        {
+          "paths": ["$..url"],
+          "type": "URL",
+          "forceURLFormat": "siteSettings"
+        }
+      ]
+    }
+  ]
+}
