@@ -205,6 +205,11 @@
           "selector": "button",
           "attribute": "data-add-to-cart-text",
           "wordType": 1
+        },
+        {
+          "selector": "button",
+          "attribute": "data-label",
+          "wordType": 1
         }
       ]
     },
