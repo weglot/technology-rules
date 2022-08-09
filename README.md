@@ -38,4 +38,4 @@ $ yarn link "@weglot/technology-rules"
 
 ### Version
 
-`yarn rules version --(major|minor|patch)`
+Upgrade package version in right workspace and create a tag `vX.X.X`
