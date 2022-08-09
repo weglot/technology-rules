@@ -22,17 +22,6 @@
       ],
       "value": [
         {
-          "paths": [
-            "$.name",
-            "$[*]['name']",
-            "$.itemListElement[*].item.name",
-            "$.description",
-            "$.headline",
-            "$.offers[*].itemOffered.name"
-          ],
-          "wordType": 1
-        },
-        {
           "paths": ["$.url", "$[*]['url']", "$.offers[*].url", "$.itemListElement[*].item['@id']", "$.offers[*].itemOffered.url"],
           "type": "URL",
           "forceURLFormat": "siteSettings"
