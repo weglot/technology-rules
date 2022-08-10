@@ -47,6 +47,10 @@
             {
               "const": "XML_ROOT_ELEMENT_NAME",
               "title": "Check if element is present and at document's root"
+            },
+            {
+              "const": "URL_TYPE",
+              "title": "Check if it comes from subdomain or subdirectory"
             }
           ]
         },
@@ -144,6 +148,17 @@
                       "type": "string"
                     }
                   }
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "URL_TYPE"
+                },
+                "payload": {
+                  "type": "string",
+                  "enum": ["subdirectory", "subdomain"]
                 }
               }
             }
