@@ -62,6 +62,10 @@
           "title": "CSS selector",
           "type": "string"
         },
+        "attribute": {
+          "title": "HTML attribute to translate",
+          "type": "string"
+        },
         "regex": {
           "title": "A regular expression",
           "type": "string"

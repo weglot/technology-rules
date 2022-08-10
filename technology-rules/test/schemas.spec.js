@@ -18,6 +18,7 @@ fs.readdirSync(`${root}/schemas/`)
 for (const schema of ["translations", "technologies", "urls"]) {
   for (const filename of fs.readdirSync(`${root}/${schema}`)) {
     const rules = require(`${root}/${schema}/${filename}`, "utf-8");
+    console.log(`- ${schema}/${filename}`);
     const valid = ajv.validate(rules);
     if (!valid) {
       console.log(`invalid schema: ${filename}`);
