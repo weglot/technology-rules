@@ -1,6 +1,7 @@
 name: Weglot Technology Rules
 
 on:
+  pull_request:
   push:
     paths:
       - "technology-rules/**"
