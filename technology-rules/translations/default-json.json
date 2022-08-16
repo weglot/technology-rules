@@ -7,9 +7,7 @@
       "value": [
         {
           "paths": [
-            "$..name",
             "$..description",
-            "$..headline",
             "$..title",
             "$..subtitle",
             "$..btn_text",
