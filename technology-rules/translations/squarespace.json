@@ -130,6 +130,23 @@
           "wordType": 1
         }
       ]
+    },
+    {
+      "type": "HTML",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 5
+        }
+      ],
+      "value": [
+        {
+          "selector": "iframe[data-iframe-translate]",
+          "attribute": "src",
+          "type": "URL",
+          "forceURLFormat": "proxy"
+        }
+      ]
     }
   ]
 }
