@@ -1,22 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "translations.schema.json",
-  "title": "Translation definitions",
-  "description": "This type of plugin defines how we should translate resources.",
+  "description": "",
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "$schema": {
-      "type": "string"
-    },
-    "title": {
-      "$ref": "common.schema.json#/definitions/PluginName"
-    },
-    "examples": {
-      "$ref": "common.schema.json#/definitions/ExamplesURL"
-    },
-    "translations": {
-      "title": "All translation definitions",
+    "definitions": {
+      "title": "",
       "type": "array",
       "items": {
         "title": "",
