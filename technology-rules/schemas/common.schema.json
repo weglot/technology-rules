@@ -8,6 +8,14 @@
       "type": "string",
       "default": "Change me!"
     },
+    "ExamplesURL": {
+      "title": "Example URL",
+      "description": "Provide examples URL to the resource you want to translate, if possible",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "Type": {
       "title": "Resource type",
       "description": "What kind of page(s) do you want the rule to apply to?",

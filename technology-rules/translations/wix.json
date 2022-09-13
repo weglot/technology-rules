@@ -1,7 +1,4 @@
 {
-  "$schema": "../schemas/translations.schema.json",
-  "title": "Wix",
-  "examples": ["https://fr.weglot-translate-wix.com/"],
   "translations": [
     {
       "type": "HTML",

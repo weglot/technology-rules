@@ -1,6 +1,4 @@
 { 
-  "$schema": "../schemas/translations.schema.json",
-  "title": "Default JSON",
   "translations": [
     {
       "type": "JSON",

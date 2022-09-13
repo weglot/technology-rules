@@ -54,7 +54,10 @@
               "title": "Check if the site is on subdirectory or subdomain integration"
             }
           ]
-        }
+        },
+      "payload": {
+        "title": ""
+      }
       },
       "dependencies": {
         "type": {
