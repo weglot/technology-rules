@@ -18,24 +18,25 @@
     },
     "Type": {
       "title": "Resource type",
-      "description": "Values will be applied on this resource type",
+      "description": "What kind of page(s) do you want the rule to apply to?",
       "type": "string",
+      "default": "HTML",
       "oneOf": [
         {
           "const": "HTML",
-          "title": "Apply on HTML document"
+          "title": "HTML"
         },
         {
           "const": "JSON",
-          "title": "Apply on JSON document"
+          "title": "JSON"
         },
         {
           "const": "XML",
-          "title": "Apply on XML document"
+          "title": "XML"
         },
         {
           "const": "RAW",
-          "title": "Apply on RAW document (js, ...)"
+          "title": "RAW (.js, .txt)"
         }
       ]
     },

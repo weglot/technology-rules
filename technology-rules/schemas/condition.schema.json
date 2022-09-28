@@ -4,7 +4,7 @@
   "definitions": {
     "ConditionArray": {
       "title": "Conditions",
-      "description": "List of all the conditions that are needed to be fulfilled for the plugin to activate",
+      "description": "Conditions to be satisfied before the rule is applied",
       "type": "array",
       "default": [],
       "items": {
@@ -12,29 +12,30 @@
       }
     },
     "Condition": {
-      "description": "The following condition has to be fulfilled for it to be applied on the page",
+      "description": "",
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "type": {
           "title": "Condition type",
           "type": "string",
+          "default": "FROM_DEFINITION_ID",
           "oneOf": [
             {
               "const": "FROM_DEFINITION_ID",
-              "title": "Check if it comes from a definition"
+              "title": "Comes from a specific parent definition"
             },
             {
               "const": "PATH_MATCH",
-              "title": "Path Match"
+              "title": "URL path match"
             },
             {
               "const": "URI_MATCH",
-              "title": "Original URL Match"
+              "title": "Original URL match"
             },
             {
               "const": "TECHNOLOGY_ID",
-              "title": "Weglot Technology"
+              "title": "Website CMS technology"
             },
             {
               "const": "HEADERS_SIGNATURE",
@@ -42,21 +43,21 @@
             },
             {
               "const": "XML_ATTRIBUTE_VALUE",
-              "title": "Check an attribute value on XML resources"
+              "title": "Check an XML attribute value on XML resources"
             },
             {
               "const": "XML_ROOT_ELEMENT_NAME",
-              "title": "Check if element is present and at document's root"
+              "title": "Check if XML element is present and at document's root"
             },
             {
               "const": "URL_TYPE",
-              "title": "Check if it comes from subdomain or subdirectory"
+              "title": "Check if the site is on subdirectory or subdomain integration"
             }
           ]
         },
-        "payload": {
-          "title": ""
-        }
+      "payload": {
+        "title": ""
+      }
       },
       "dependencies": {
         "type": {
@@ -67,7 +68,8 @@
                   "const": "FROM_DEFINITION_ID"
                 },
                 "payload": {
-                  "type": "string"
+                  "type": "string",
+                  "title": "ID of the parent definition"
                 }
               }
             },
@@ -174,6 +176,7 @@
         "type": {
           "title": "Path Match mode",
           "type": "string",
+          "default": "START_WITH",
           "enum": [
             "START_WITH",
             "END_WITH",
@@ -181,12 +184,12 @@
             "IS_EXACTLY",
             "MATCH_REGEX"
           ],
-          "description": "Please refer to https://app.gitbook.com/@weglot/s/weglot-ninjas/core/api-reference for their exact meaning"
+          "description": "Refer to https://app.gitbook.com/@weglot/s/weglot-ninjas/core/api-reference for the meaning of each option"
         },
         "value": {
           "title": "Value",
           "type": "string",
-          "description": "Like '/blog', or '.json'"
+          "description": "E.g: /blog"
         }
       },
       "required": ["type", "value"],
