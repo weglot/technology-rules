@@ -1,0 +1,93 @@
+{
+    "translations": [
+        {
+            "type": "HTML",
+            "condition": [
+                {
+                    "type": "TECHNOLOGY_ID",
+                    "payload": 17
+                },
+                {
+                    "type": "URL_TYPE",
+                    "payload": "subdirectory"
+                }
+            ],
+            "value": [
+                {
+                    "selector": "script[src*=\"dynamic_js\"]",
+                    "attribute": "src",
+                    "type": "URL",
+                    "forceURLFormat": "siteSettings"
+                }
+            ]
+        },
+        {
+            "type": "RAW",
+            "condition": [
+                {
+                    "type": "TECHNOLOGY_ID",
+                    "payload": 17
+                },
+                {
+                    "type": "PATH_MATCH",
+                    "payload": {
+                        "type": "MATCH_REGEX",
+                        "value": "\/dynamic_js\/.*?dynamic\\.js$"
+                    }
+                }
+            ],
+            "value": [
+                {
+                    "regex": "\\[\"%el\"\\]\\[\"[a-zA-Z0-9]{5,6}\"\\] = (?<json>.*?);a",
+                    "id": "bubble-dynamic-js"
+                }
+            ]
+        },
+        {
+            "type": "JSON",
+            "condition": [
+                {
+                    "type": "TECHNOLOGY_ID",
+                    "payload": 17
+                },
+                {
+                    "type": "FROM_DEFINITION_ID",
+                    "payload": "bubble-dynamic-js"
+                }
+            ],
+            "value": [
+                {
+                    "paths": [
+                        "$..%3.%e.0",
+                        "$..%ps.%e.0",
+                        "$..%3.%e.2",
+                        "$.._api_c2_title",
+                        "$.._api_c2_description",
+                        "$..tagline",
+                        "$...description_seo__text",
+                        "$...tag_line_text",
+                        "$...description1_text",
+                        "$.._api_c2_name",
+                        "$.._api_c2_tagline",
+                        "$..[\"_api_c2_content.ctaBody\"]",
+                        "$..[\"_api_c2_content.ctaTitle\"]",
+                        "$..[\"_api_c2_content.image3.title\"]",
+                        "$..[\"_api_c2_content.implementationBody\"]",
+                        "$..[\"_api_c2_content.implementationTitle\"]",
+                        "$..[\"_api_c2_content.metadata.description\"]",
+                        "$..[\"_api_c2_content.metadata.title\"]",
+                        "$..[\"_api_c2_content.strategyBody\"]",
+                        "$..[\"_api_c2_content.strategyTitle\"]",
+                        "$..[\"_api_c2_content.testimonial.content.testimonialFull\"]",
+                        "$..[\"_api_c2_content.testimonial.content.testimonialShort\"]",
+                        "$..[\"_api_c2_content.intro\"]",
+                        "$..[\"_api_c2_content.title\"]",
+                        "$..[\"_api_c2_content.linkText\"]",
+                        "$..[\"_api_c2_content.summary\"]"
+                    ],
+                    "wordType": 1
+                }
+            ]
+        }
+    ]
+}
