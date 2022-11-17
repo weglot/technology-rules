@@ -18,5 +18,16 @@
     }
   ],
   "technology_id": 5,
-  "proxyHosts": []
+  "proxyHosts": [],
+  "settings": [
+    {
+      "name": "Password protected page",
+      "value": [
+        {
+          "type": "disable_cookie_encoding",
+          "payload": [ "Locked" ]
+        }
+      ]
+    }
+  ]
 }
