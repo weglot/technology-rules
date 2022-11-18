@@ -14,9 +14,25 @@
         {
           "type": "XML_ATTRIBUTE_VALUE",
           "payload": {
+            "selector": "urlset",
+            "attr": "xmlns",
+            "value": "https://www.sitemaps.org/schemas/sitemap/0.9"
+          }
+        },
+        {
+          "type": "XML_ATTRIBUTE_VALUE",
+          "payload": {
             "selector": "sitemapindex",
             "attr": "xmlns",
             "value": "http://www.sitemaps.org/schemas/sitemap/0.9"
+          }
+        },
+        {
+          "type": "XML_ATTRIBUTE_VALUE",
+          "payload": {
+            "selector": "sitemapindex",
+            "attr": "xmlns",
+            "value": "https://www.sitemaps.org/schemas/sitemap/0.9"
           }
         }
       ],
