@@ -35,6 +35,30 @@
           "type": "PATH_MATCH",
           "payload": {
             "type": "MATCH_REGEX",
+            "value": "^\\/checkouts\\/(unstable|[\\d-]+)\\/graphql"
+          }
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$..classicThankYouPageUrl"
+          ],
+          "type": "URL"
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 2
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
             "value": "\\/products\\.json$"
           }
         }
