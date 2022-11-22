@@ -4,11 +4,20 @@
   "definitions": {
     "ConditionArray": {
       "title": "Conditions",
-      "description": "Conditions to be satisfied before the rule is applied",
+      "description": "These are the conditions that must be satisfied before your custom translation rule is applied.",
       "type": "array",
       "default": [],
       "items": {
         "$ref": "#/definitions/Condition"
+      }
+    },
+    "ConditionArrayXml": {
+      "title": "Conditions",
+      "description": "These are the conditions that must be satisfied before your custom translation rule is applied.",
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "#/definitions/ConditionXml"
       }
     },
     "Condition": {
@@ -19,35 +28,27 @@
         "type": {
           "title": "Condition type",
           "type": "string",
-          "default": "FROM_DEFINITION_ID",
+          "description": "What kind of condition do you want to match for?",
           "oneOf": [
             {
               "const": "FROM_DEFINITION_ID",
-              "title": "Comes from a specific parent definition"
+              "title": "Match the defintion that created this resource"
             },
             {
               "const": "PATH_MATCH",
-              "title": "URL path match"
+              "title": "Match the URL path"
             },
             {
               "const": "URI_MATCH",
-              "title": "Original URL match"
+              "title": "Match the whole original URL"
             },
             {
               "const": "TECHNOLOGY_ID",
-              "title": "Website CMS technology"
+              "title": "Match the technology of the website CMS"
             },
             {
               "const": "HEADERS_SIGNATURE",
-              "title": "Match incoming headers"
-            },
-            {
-              "const": "XML_ATTRIBUTE_VALUE",
-              "title": "Check an XML attribute value on XML resources"
-            },
-            {
-              "const": "XML_ROOT_ELEMENT_NAME",
-              "title": "Check if XML element is present and at document's root"
+              "title": "Check the incoming website headers"
             },
             {
               "const": "URL_TYPE",
@@ -55,9 +56,9 @@
             }
           ]
         },
-      "payload": {
-        "title": ""
-      }
+        "payload": {
+          "title": ""
+        }
       },
       "dependencies": {
         "type": {
@@ -79,7 +80,7 @@
                   "const": "URI_MATCH"
                 },
                 "payload": {
-                  "description": "The URL of the resource we want to translate (without query string) needs to be in the list",
+                  "description": "Match the full URL of the resource we want to translate (without query string)",
                   "$ref": "#/definitions/PathMatch"
                 }
               }
@@ -90,7 +91,134 @@
                   "const": "PATH_MATCH"
                 },
                 "payload": {
-                  "description": "The path of the resource we want to translate needs to fulfill a criteria",
+                  "description": "Match the path of the resource we want to translate",
+                  "$ref": "#/definitions/PathMatch"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "TECHNOLOGY_ID"
+                },
+                "payload": {
+                  "description": "Only applies for pages served by the selected technology",
+                  "$ref": "common.schema.json#/definitions/TechnologyID"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "HEADERS_SIGNATURE"
+                },
+                "payload": {
+                  "description": "Detect using the incoming headers from the source",
+                  "$ref": "#/definitions/HeadersSignature"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "URL_TYPE"
+                },
+                "payload": {
+                  "type": "string",
+                  "enum": [
+                    "subdirectory",
+                    "subdomain"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "payload",
+        "type"
+      ]
+    },
+    "ConditionXml": {
+      "description": "",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "title": "Condition type",
+          "type": "string",
+          "oneOf": [
+            {
+              "const": "FROM_DEFINITION_ID",
+              "title": "Match the defintion that created this resource"
+            },
+            {
+              "const": "PATH_MATCH",
+              "title": "Match the URL path"
+            },
+            {
+              "const": "URI_MATCH",
+              "title": "Match the entire original URL"
+            },
+            {
+              "const": "TECHNOLOGY_ID",
+              "title": "Match the technology of the website CMS"
+            },
+            {
+              "const": "HEADERS_SIGNATURE",
+              "title": "Check the incoming website headers"
+            },
+            {
+              "const": "XML_ATTRIBUTE_VALUE",
+              "title": "Match the value of an XML tag attribute"
+            },
+            {
+              "const": "XML_ROOT_ELEMENT_NAME",
+              "title": "Test if an XML element is present and at the document root"
+            },
+            {
+              "const": "URL_TYPE",
+              "title": "Check if the site is using subdirectory or subdomain"
+            }
+          ]
+        },
+        "payload": {
+          "title": ""
+        }
+      },
+      "dependencies": {
+        "type": {
+          "oneOf": [
+            {
+              "properties": {
+                "type": {
+                  "const": "FROM_DEFINITION_ID"
+                },
+                "payload": {
+                  "type": "string",
+                  "title": "ID of the parent definition"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "URI_MATCH"
+                },
+                "payload": {
+                  "description": "Match the full URL of the resource we want to translate (without query string)",
+                  "$ref": "#/definitions/PathMatch"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "PATH_MATCH"
+                },
+                "payload": {
+                  "description": "Match the path of the resource we want to translate",
                   "$ref": "#/definitions/PathMatch"
                 }
               }
@@ -123,16 +251,20 @@
                   "const": "XML_ATTRIBUTE_VALUE"
                 },
                 "payload": {
+                  "additionalProperties": false,
                   "type": "object",
                   "properties": {
                     "selector": {
+                      "title": "CSS selector",
                       "type": "string"
                     },
                     "attr": {
+                      "title": "Attribute name",
                       "type": "string"
                     },
                     "value": {
-                      "type": "string"
+                      "type": "string",
+                      "title": "Attribute value"
                     }
                   }
                 }
@@ -160,39 +292,61 @@
                 },
                 "payload": {
                   "type": "string",
-                  "enum": ["subdirectory", "subdomain"]
+                  "enum": [
+                    "subdirectory",
+                    "subdomain"
+                  ]
                 }
               }
             }
           ]
         }
       },
-      "required": ["payload", "type"]
+      "required": [
+        "payload",
+        "type"
+      ]
     },
     "PathMatch": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "type": {
-          "title": "Path Match mode",
+          "title": "What check do you want to apply to the path?",
           "type": "string",
-          "default": "START_WITH",
-          "enum": [
-            "START_WITH",
-            "END_WITH",
-            "CONTAIN",
-            "IS_EXACTLY",
-            "MATCH_REGEX"
-          ],
-          "description": "Refer to https://app.gitbook.com/@weglot/s/weglot-ninjas/core/api-reference for the meaning of each option"
+          "oneOf": [
+            {
+              "const": "START_WITH",
+              "title": "The URL starts with..."
+            },
+            {
+              "const": "END_WITH",
+              "title": "The URL ends with..."
+            },
+            {
+              "const": "CONTAIN",
+              "title": "The URL contains..."
+            },
+            {
+              "const": "IS_EXACTLY",
+              "title": "The URL is exactly..."
+            },
+            {
+              "const": "MATCH_REGEX",
+              "title": "The URL matches the regex pattern..."
+            }
+          ]
         },
         "value": {
-          "title": "Value",
-          "type": "string",
-          "description": "E.g: /blog"
+          "title": "Matching string value",
+          "description": "The value you want to apply the test above for, e.g., /blog.",
+          "type": "string"
         }
       },
-      "required": ["type", "value"],
+      "required": [
+        "type",
+        "value"
+      ],
       "title": "Path Match"
     },
     "HeadersSignature": {
@@ -209,7 +363,9 @@
           "description": "If provided, the header value should match this RegExp string. Leave empty to only check for presence"
         }
       },
-      "required": ["headerName"]
+      "required": [
+        "headerName"
+      ]
     }
   }
 }

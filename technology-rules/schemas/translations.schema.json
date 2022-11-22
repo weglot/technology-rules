@@ -16,74 +16,230 @@
         "properties": {
           "type": {
             "$ref": "common.schema.json#/definitions/Type"
-          },
-          "condition": {
-            "$ref": "condition.schema.json#/definitions/ConditionArray"
-          },
-          "value": {
-            "$ref": "#/definitions/ValueArray"
           }
         },
-        "required": ["type", "value"]
+        "dependencies": {
+          "type": {
+            "oneOf": [
+              {
+                "properties": {
+                  "type": {
+                    "const": "HTML"
+                  },
+                  "condition": {
+                    "$ref": "condition.schema.json#/definitions/ConditionArray"
+                  },
+                  "value": {
+                    "$ref": "#/definitions/ValueArrayHtml"
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "type": {
+                    "const": "JSON"
+                  },
+                  "condition": {
+                    "$ref": "condition.schema.json#/definitions/ConditionArray"
+                  },
+                  "value": {
+                    "$ref": "#/definitions/ValueArrayJson"
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "type": {
+                    "const": "XML"
+                  },
+                  "condition": {
+                    "$ref": "condition.schema.json#/definitions/ConditionArrayXml"
+                  },
+                  "value": {
+                    "$ref": "#/definitions/ValueArrayXml"
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "type": {
+                    "const": "RAW"
+                  },
+                  "condition": {
+                    "$ref": "condition.schema.json#/definitions/ConditionArray"
+                  },
+                  "value": {
+                    "$ref": "#/definitions/ValueArrayRaw"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "type"
+        ]
       }
     }
   },
-  "required": ["$schema", "title", "translations"],
+  "required": [
+    "$schema",
+    "title",
+    "translations"
+  ],
   "definitions": {
-    "ValueArray": {
-      "title": "If condition was true, apply these definitions",
+    "ValueArrayHtml": {
+      "title": "Translation options",
       "type": "array",
-      "description": "Put here definitions to translate",
+      "description": "Select the options for translating your page. They will be applied on all HTML pages matching the conditions above.",
       "items": {
-        "$ref": "#/definitions/Value"
+        "$ref": "#/definitions/ValueHtml"
       }
     },
-    "Value": {
+    "ValueArrayRaw": {
+      "title": "Translation options",
+      "type": "array",
+      "description": "Select the options for translating your page. They will be applied on all RAW files matching the conditions above.",
+      "items": {
+        "$ref": "#/definitions/ValueRaw"
+      }
+    },
+    "ValueArrayJson": {
+      "title": "Translation options",
+      "type": "array",
+      "description": "Select the options for translating your page. They will be applied on all JSON files matching the conditions above.",
+      "items": {
+        "$ref": "#/definitions/ValueJson"
+      }
+    },
+    "ValueArrayXml": {
+      "title": "Translation options",
+      "type": "array",
+      "description": "Select the options for translating your page. They will be applied on all XML files matching the conditions above.",
+      "items": {
+        "$ref": "#/definitions/ValueXml"
+      }
+    },
+    "ValueHtml": {
       "title": "",
       "description": "",
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "id": {
-          "title": "Identify this definition to refer it later",
-          "type": "string"
+          "$ref": "#/definitions/DefinitionID"
         },
         "selector": {
-          "title": "CSS selector",
-          "type": "string"
+          "$ref": "#/definitions/DefinitionSelector"
         },
         "attribute": {
-          "title": "HTML attribute to translate",
-          "type": "string"
+          "$ref": "#/definitions/DefinitionHtmlAttribute"
         },
         "regex": {
-          "title": "A regular expression",
-          "type": "string"
-        },
-        "paths": {
-          "title": "",
-          "description": "List of JSONPath strings that match this word type",
-          "$ref": "#/definitions/JSONPathArray"
+          "$ref": "#/definitions/DefinitionRegex"
         },
         "wordType": {
-          "title": "Word Type",
-          "description": "",
-          "$ref": "#/definitions/WordType"
+          "$ref": "#/definitions/DefinitionWordType"
         },
         "type": {
-          "title": "Target type",
-          "description": "Parse found matches with this type",
-          "$ref": "#/definitions/TargetType"
-        },
-        "forceURLFormat": {
-          "title": "URL format to force",
-          "description": "Parse URL with this format",
-          "$ref": "#/definitions/ForceURLFormat"
+          "$ref": "#/definitions/DefinitionTargetType"
+        }
+      },
+      "dependencies": {
+        "type": {
+          "$ref": "#/definitions/DefinitionDependencyType"
         }
       }
     },
-    "JSONPathArray": {
-      "description": "List of JSONPath strings",
+    "ValueJson": {
+      "title": "",
+      "description": "",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/DefinitionID"
+        },
+        "paths": {
+          "$ref": "#/definitions/DefinitionJSONPathArray"
+        },
+        "wordType": {
+          "$ref": "#/definitions/DefinitionWordType"
+        },
+        "type": {
+          "$ref": "#/definitions/DefinitionTargetType"
+        }
+      },
+      "dependencies": {
+        "type": {
+          "$ref": "#/definitions/DefinitionDependencyType"
+        }
+      }
+    },
+    "ValueXml": {
+      "title": "",
+      "description": "",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/DefinitionID"
+        },
+        "paths": {
+          "$ref": "#/definitions/DefinitionXMLPathArray"
+        },
+        "attribute": {
+          "$ref": "#/definitions/DefinitionXmlAttribute"
+        },
+        "wordType": {
+          "$ref": "#/definitions/DefinitionWordType"
+        },
+        "type": {
+          "$ref": "#/definitions/DefinitionXmlTargetType"
+        }
+      },
+      "dependencies": {
+        "type": {
+          "$ref": "#/definitions/DefinitionDependencyType"
+        }
+      }
+    },
+    "ValueRaw": {
+      "title": "",
+      "description": "",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/DefinitionID"
+        },
+        "regex": {
+          "$ref": "#/definitions/DefinitionRegex"
+        }
+      },
+      "dependencies": {
+        "type": {
+          "$ref": "#/definitions/DefinitionDependencyType"
+        }
+      }
+    },
+    "DefinitionDependencyType": {
+      "oneOf": [
+        {
+          "properties": {
+            "type": {
+              "const": "URL"
+            },
+            "forceURLFormat": {
+              "$ref": "#/definitions/DefinitionForceURLFormat"
+            }
+          }
+        }
+      ]
+    },
+    "DefinitionJSONPathArray": {
+      "description": "A list of JSONPath strings to identify the element for translation",
+      "title": "JSON Paths",
       "type": "array",
       "uniqueItems": true,
       "default": [],
@@ -91,64 +247,138 @@
         "type": "string"
       }
     },
-    "WordType": {
-      "title": "WordType",
-      "description": "A Weglot Word Type",
+    "DefinitionXMLPathArray": {
+      "description": "A list of XML path (xpath) strings to identify the element(s) for translation. For more info see: w3schools.com/xml/xpath_syntax.asp",
+      "title": "XML paths",
+      "label": "More stuff",
+      "type": "array",
+      "uniqueItems": true,
+      "default": [],
+      "items": {
+        "type": "string"
+      }
+    },
+    "DefinitionWordType": {
+      "title": "Target word type",
+      "description": "If the target is a simple word: What kind of word is it?",
       "type": "integer",
       "oneOf": [
-        { "const": 1, "title": "1 - General text (used most of the time)" },
+        {
+          "const": 1,
+          "title": "1: General text (used most of the time)"
+        },
         {
           "const": 2,
-          "title": "2 - The value of an input tag'svalueattribute"
+          "title": "2: The value of an input tag's value attribute"
         },
         {
           "const": 3,
-          "title": "3 - The value of an input tag's placeholderattribute"
+          "title": "3: The value of an input tag's placeholder attribute"
         },
         {
           "const": 4,
-          "title": "4 - The value of a meta tags' content attribute"
+          "title": "4: The value of a meta tags' content attribute"
         },
-        { "const": 5, "title": "5 - The src link to a page used in an iframe" },
-        { "const": 6, "title": "6 - The srcvalue of an imgtag" },
-        { "const": 7, "title": "7 - The alt value of an imgtag" },
-        { "const": 8, "title": "8 - A URL pointing to a PDF document" },
-        { "const": 9, "title": "9 - The main resource title" },
-        { "const": 10, "title": "10 - An external URL" }
+        {
+          "const": 5,
+          "title": "5: The src link to a page used in an iframe"
+        },
+        {
+          "const": 6,
+          "title": "6: The srcvalue of an imgtag"
+        },
+        {
+          "const": 7,
+          "title": "7: The alt value of an imgtag"
+        },
+        {
+          "const": 8,
+          "title": "8: A URL pointing to a PDF document"
+        },
+        {
+          "const": 9,
+          "title": "9: The main resource title"
+        },
+        {
+          "const": 10,
+          "title": "10: An external URL"
+        }
       ]
     },
-    "ParserType": {
-      "title": "ParserType",
-      "description": "A Weglot available Parser Type",
+    "DefinitionTargetType": {
+      "title": "Target parsing type",
+      "description": "If the target is itself a more complex resource, how should it be parsed for translation?",
       "type": "string",
       "oneOf": [
-        { "const": "HTML", "title": "HTML parser" },
-        { "const": "JSON", "title": "JSON parser" },
-        { "const": "XML", "title": "XML parser" }
+        {
+          "const": "HTML",
+          "title": "Like a HTML resource"
+        },
+        {
+          "const": "JSON",
+          "title": "Like a JSON resource"
+        },
+        {
+          "const": "XML",
+          "title": "Like an XML resource"
+        },
+        {
+          "const": "URL",
+          "title": "It's a URL"
+        }
       ]
     },
-    "TargetType": {
-      "title": "TargetType",
-      "description": "A Weglot available Parser Type",
+    "DefinitionXmlTargetType": {
+      "title": "Target parsing type",
+      "description": "If the target is itself a more complex resource, how should it be parsed for translation?",
       "type": "string",
       "oneOf": [
-        { "const": "HTML", "title": "HTML parser" },
-        { "const": "JSON", "title": "JSON parser" },
-        { "const": "XML", "title": "XML parser" },
-        { "const": "URL", "title": "URL parser" },
-        { "const": "RAW", "title": "RAW parser" }
+        {
+          "const": "URL",
+          "title": "It's a URL"
+        }
       ]
     },
-    "ForceURLFormat": {
-      "title": "ForceURLFormat",
-      "description": "The format of the URL for the URL parser",
+    "DefinitionForceURLFormat": {
+      "title": "Output URL format",
+      "description": "If the target is a URL, how do you want it to be handled?",
       "type": "string",
-      "default": null,
       "oneOf": [
-        { "const": "proxy", "title": "Proxy" },
-        { "const": "shopifyProxy", "title": "Shopify proxy" },
-        { "const": "siteSettings", "title": "Site settings" }
+        {
+          "const": "siteSettings",
+          "title": "Like any other URL for this site"
+        },
+        {
+          "const": "proxy",
+          "title": "Proxify it (proxy.weglot.com)"
+        },
+        {
+          "const": "shopifyProxy",
+          "title": "(Legacy) Use the Shopify proxy"
+        }
       ]
+    },
+    "DefinitionID": {
+      "title": "Definition ID",
+      "description": "A unique identifier for this translation rule. (Only required if you want to refer to it in another rule later.)",
+      "type": "string"
+    },
+    "DefinitionSelector": {
+      "title": "CSS selector",
+      "type": "string"
+    },
+    "DefinitionHtmlAttribute": {
+      "title": "HTML tag attribute name",
+      "type": "string"
+    },
+    "DefinitionXmlAttribute": {
+      "title": "XML tag attribute name",
+      "type": "string"
+    },
+    "DefinitionRegex": {
+      "title": "Match and translate a regular expression",
+      "description": "Note: You can use named capturing groups in your Regex to force how the target is translated, e.g., (?<json>) or (?<wordType_1>). This supersedes “Target word type” and “Target parsing type” fields below, which are ignored when a Regex is provided.",
+      "type": "string"
     }
   }
 }

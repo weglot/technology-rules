@@ -18,7 +18,7 @@
     },
     "Type": {
       "title": "Resource type",
-      "description": "What kind of page(s) do you want the rule to apply to?",
+      "description": "What kind of page(s) or resource(s) do you want the rule to apply to?",
       "type": "string",
       "default": "HTML",
       "oneOf": [
@@ -44,21 +44,66 @@
       "description": "A Weglot Technology ID",
       "type": "integer",
       "oneOf": [
-        { "const": 1, "title": "1 (WordPress)" },
-        { "const": 2, "title": "2 (Shopify)" },
-        { "const": 3, "title": "3 (BigCommerce)" },
-        { "const": 4, "title": "4 (Jimdo)" },
-        { "const": 5, "title": "5 (Squarespace)" },
-        { "const": 6, "title": "6 (Wix)" },
-        { "const": 7, "title": "7 (Laravel)" },
-        { "const": 8, "title": "8 (Symfony)" },
-        { "const": 9, "title": "9 (Weebly)" },
-        { "const": 10, "title": "10 (Drupal)" },
-        { "const": 11, "title": "11 (OctoberCMS)" },
-        { "const": 12, "title": "12 (Other)" },
-        { "const": 13, "title": "13 (Webflow)" },
-        { "const": 14, "title": "14 (Prestashop)" },
-        { "const": 15, "title": "15 (Magento)" }
+        {
+          "const": 1,
+          "title": "1 (WordPress)"
+        },
+        {
+          "const": 2,
+          "title": "2 (Shopify)"
+        },
+        {
+          "const": 3,
+          "title": "3 (BigCommerce)"
+        },
+        {
+          "const": 4,
+          "title": "4 (Jimdo)"
+        },
+        {
+          "const": 5,
+          "title": "5 (Squarespace)"
+        },
+        {
+          "const": 6,
+          "title": "6 (Wix)"
+        },
+        {
+          "const": 7,
+          "title": "7 (Laravel)"
+        },
+        {
+          "const": 8,
+          "title": "8 (Symfony)"
+        },
+        {
+          "const": 9,
+          "title": "9 (Weebly)"
+        },
+        {
+          "const": 10,
+          "title": "10 (Drupal)"
+        },
+        {
+          "const": 11,
+          "title": "11 (OctoberCMS)"
+        },
+        {
+          "const": 12,
+          "title": "12 (Other)"
+        },
+        {
+          "const": 13,
+          "title": "13 (Webflow)"
+        },
+        {
+          "const": 14,
+          "title": "14 (Prestashop)"
+        },
+        {
+          "const": 15,
+          "title": "15 (Magento)"
+        }
       ]
     },
     "BodyReplacement": {
@@ -71,7 +116,10 @@
         "slash": {
           "type": "string",
           "default": "/",
-          "enum": ["/", "\\/"],
+          "enum": [
+            "/",
+            "\\/"
+          ],
           "description": "The slash character in that context. Sometimes, the slash character needs to be escaped"
         }
       }
