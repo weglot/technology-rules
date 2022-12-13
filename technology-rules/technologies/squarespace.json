@@ -28,6 +28,15 @@
           "payload": [ "Locked" ]
         }
       ]
+    },
+    {
+      "name": "Sale price",
+      "value": [
+        {
+          "type": "merged_selectors_remove",
+          "payload": [ { "value": ".product-price .original-price" } ]
+        }
+      ]
     }
   ]
 }
