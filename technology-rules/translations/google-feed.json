@@ -44,8 +44,6 @@
             "g:color",
             "g:title",
             "g:description",
-            "g:condition",
-            "g:availability",
             "g:product_type",
             "g:sex",
             "g:custom_label_0",
