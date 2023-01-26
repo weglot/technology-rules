@@ -1,6 +1,6 @@
 {
   "name": "@weglot/technology-rules",
-  "version": "3.24.3",
+  "version": "3.24.4",
   "main": "index.js",
   "repository": "git@github.com:weglot/technology-rules.git",
   "author": "Weglot <support@weglot.com>",

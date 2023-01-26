@@ -6,7 +6,6 @@
         {
           "paths": [
             "$..description",
-            "$..title",
             "$..subtitle",
             "$..btn_text",
             "$..category",
