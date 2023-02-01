@@ -264,6 +264,20 @@
           "wordType": 1
         }
       ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 2
+        }
+      ],
+      "value": [
+        {
+          "excluded_paths": ["$..discount.title"]
+        }
+      ]
     }
   ]
 }
