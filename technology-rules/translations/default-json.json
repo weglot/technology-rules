@@ -5,6 +5,7 @@
       "value": [
         {
           "paths": [
+            "$..title",
             "$..description",
             "$..subtitle",
             "$..btn_text",
