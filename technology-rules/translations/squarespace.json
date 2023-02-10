@@ -13,6 +13,46 @@
           "id": "squarespace-context",
           "selector": "script[data-name=\"static-context\"]",
           "regex": "SQUARESPACE_CONTEXT = (?<json>.+);"
+        },
+        {
+          "selector": "iframe[data-iframe-translate]",
+          "attribute": "src",
+          "type": "URL",
+          "forceURLFormat": "proxy"
+        },
+        {
+          "id": "squarespace-product-variants",
+          "selector": ".product-variants",
+          "attribute": "data-variants",
+          "type": "JSON",
+          "transforms": { "name": "html" }
+        },
+        {
+          "selector": ".product-variants option",
+          "attribute": "value",
+          "wordType": 1
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "FROM_DEFINITION_ID",
+          "payload": "squarespace-product-variants"
+        },
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 5
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$.*.optionValues.*.value",
+            "$.*.attributes.*"
+           ],
+          "wordType": 1
         }
       ]
     },
@@ -125,23 +165,6 @@
         {
           "paths": ["$.renderedHtml"],
           "wordType": 1
-        }
-      ]
-    },
-    {
-      "type": "HTML",
-      "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 5
-        }
-      ],
-      "value": [
-        {
-          "selector": "iframe[data-iframe-translate]",
-          "attribute": "src",
-          "type": "URL",
-          "forceURLFormat": "proxy"
         }
       ]
     }
