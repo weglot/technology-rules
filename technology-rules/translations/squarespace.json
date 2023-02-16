@@ -167,6 +167,49 @@
           "wordType": 1
         }
       ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 5
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "END_WITH",
+            "value": "/api/template/GetTemplateSchema"
+          }
+        }
+      ],
+      "value": [
+        {
+          "excluded_paths": ["$.html"]
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 5
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "END_WITH",
+            "value": "/api/comment/GetComments"
+          }
+        }
+      ],
+      "value": [
+        {
+          "paths": ["$.comments.*.body"],
+          "type": "HTML"
+        }
+      ]
     }
   ]
 }
