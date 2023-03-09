@@ -278,6 +278,48 @@
           "excluded_paths": ["$..discount.title"]
         }
       ]
+    },
+    {
+      "type": "HTML",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 2
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "START_WITH",
+            "value": "/checkouts"
+          }
+        }
+      ],
+      "value": [
+        {
+          "selector": "[data-serialized-id=\"graphql\"]",
+          "attribute": "data-serialized-value",
+          "type": "JSON",
+          "transforms": {
+            "name": "html"
+          },
+          "id": "shopify-checkout-graphql"
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "FROM_DEFINITION_ID",
+          "payload": "shopify-checkout-graphql"
+        }
+      ],
+      "value": [
+        {
+          "paths": ["$..merchandise.title", "$..merchandise.subtitle", "$..altText"],
+          "wordType": 1
+        }
+      ]
     }
   ]
 }
