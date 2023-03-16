@@ -37,6 +37,12 @@
           ],
           "type": "URL",
           "forceURLFormat": "proxy"
+        },
+        {
+          "excluded_paths": [
+            "$..14635280-8c8d-5346-b643-691f84f48973.widgetUrl",
+            "$..14635280-8c8d-5346-b643-691f84f48973.mobileUrl"
+          ]
         }
       ]
     },
