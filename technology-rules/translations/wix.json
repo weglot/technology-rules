@@ -41,7 +41,9 @@
         {
           "excluded_paths": [
             "$..14635280-8c8d-5346-b643-691f84f48973.widgetUrl",
-            "$..14635280-8c8d-5346-b643-691f84f48973.mobileUrl"
+            "$..14635280-8c8d-5346-b643-691f84f48973.mobileUrl",
+            "$..13ee10c2-daec-c6d3-c20b-64b8195e9150.widgetUrl",
+            "$..13ee10c2-daec-c6d3-c20b-64b8195e9150.mobileUrl"
           ]
         }
       ]
