@@ -31,6 +31,61 @@
           "selector": ".product-variants option",
           "attribute": "value",
           "wordType": 1
+        },
+        {
+          "selector": "script[src*=extract-css-runtime]",
+          "attribute": "src",
+          "type": "URL",
+          "forceURLFormat": "proxy"
+        },
+        {
+          "selector": "script.sqs-form-block-context",
+          "type": "JSON",
+          "id": "squarespace-form-context"
+        }
+      ]
+    },
+    {
+      "type": "RAW",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 5
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "extract-css-runtime(.+).js$"
+          }
+        }
+      ],
+      "value": [
+        {
+          "regex": "\"(?<url_proxy>https://assets.squarespace.com/universal/scripts-compressed/)\""
+        }
+      ]
+    },
+    {
+      "type": "RAW",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 5
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "\\d+-[0-9a-f]+-min.(.+).js$"
+          }
+        }
+      ],
+      "value": [
+        {
+          "id": "squarespace-form-labels",
+          "regex": [{"value": "\"?[\\da-z]{32}\"?:\"(?<html>[^\"]+)\""}],
+          "transforms": {"name": "templateVariables"}
         }
       ]
     },
@@ -208,6 +263,59 @@
         {
           "paths": ["$.comments.*.body"],
           "type": "HTML"
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "FROM_DEFINITION_ID",
+          "payload": "squarespace-form-context"
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$.formSubmitButtonText",
+            "$.formSubmissionMessage.html",
+            "$..label",
+            "$.localizedStrings.*"
+          ],
+          "wordType": 1
+        },
+        {
+          "paths": [
+            "$.localizedStrings.*.*"
+          ],
+          "type": "HTML",
+          "transforms": {"name": "templateVariables"}
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 5
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "END_WITH",
+            "value": "api/form/SaveFormSubmission"
+          }
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$.error",
+            "$.errors.*",
+            "$.message"
+          ],
+          "wordType": 1
         }
       ]
     }
