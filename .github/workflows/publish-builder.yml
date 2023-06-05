@@ -5,6 +5,9 @@ on:
     paths:
       - "rules-builder/**"
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   deploy_builder:
     name: Build & publish builder
@@ -36,5 +39,3 @@ jobs:
         with:
           target-branch: gh-pages
           build_dir: rules-builder/build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -8,6 +8,9 @@ on:
     tags:
       - "*"
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   test:
     name: Check JSON Schemas, build & publish

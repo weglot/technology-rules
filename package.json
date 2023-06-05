@@ -8,10 +8,14 @@
   "scripts": {
     "builder": "yarn workspace rules-builder",
     "rules": "yarn workspace @weglot/technology-rules",
-    "postinstall": "yarn rules build"
+    "postinstall": "yarn rules build",
+    "release": "integration-release"
   },
   "workspaces": [
     "technology-rules",
     "rules-builder"
-  ]
+  ],
+  "devDependencies": {
+    "@weglot/integration-release": "^1.1.7"
+  }
 }

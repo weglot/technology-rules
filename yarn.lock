@@ -2103,6 +2103,11 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
+"@weglot/integration-release@^1.1.7":
+  version "1.1.7"
+  resolved "https://npm.pkg.github.com/download/@weglot/integration-release/1.1.7/87727d6113ffb127b0019decd0f58ced3b918378#87727d6113ffb127b0019decd0f58ced3b918378"
+  integrity sha512-TX3xmZodLbLBKVB4xqzyT/Pz+vrQZuC6I8yVCheP48PuMpK1srfdD7p8jUrSMCCofJnH6VLkr7FMammMOZ3NbQ==
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"

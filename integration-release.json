@@ -1,0 +1,10 @@
+{
+  "products": [
+    {
+      "label": "Technology Rules",
+      "name": "technology-rules",
+      "workspace": true,
+      "additionalPaths": []
+    }
+  ]
+}
