@@ -1,7 +1,7 @@
 const fs = require("fs");
 
-const root = `${__dirname}/..`;
-const buildDir = `${root}/dist/`;
+const root = `${__dirname}/../rules`;
+const buildDir = `${__dirname}/../dist`;
 if (!fs.existsSync(buildDir)) {
   fs.mkdirSync(buildDir);
 }

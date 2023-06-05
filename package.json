@@ -1,17 +1,23 @@
 {
-  "name": "technology-rules",
-  "version": "2.0.0",
+  "name": "@weglot/technology-rules",
+  "version": "3.25.0",
+  "main": "index.js",
   "repository": "git@github.com:weglot/technology-rules.git",
   "author": "Weglot <support@weglot.com>",
   "license": "MIT",
-  "private": true,
   "scripts": {
-    "builder": "yarn workspace rules-builder",
-    "rules": "yarn workspace @weglot/technology-rules",
-    "postinstall": "yarn rules build"
+    "build": "node bin/build.js",
+    "test": "node test/schemas.spec.js"
   },
-  "workspaces": [
-    "technology-rules",
-    "rules-builder"
-  ]
+  "devDependencies": {
+    "ajv": "^8.11.0",
+    "release-it": "^15.10.5"
+  },
+  "files": [
+    "dist/",
+    "schemas/"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }

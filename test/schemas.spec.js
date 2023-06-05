@@ -10,11 +10,12 @@ ajv.addKeyword("technology_id");
 ajv.addKeyword("proxyHosts");
 ajv.addKeyword("settings");
 
-const root = `${__dirname}/..`;
-fs.readdirSync(`${root}/schemas/`)
-  .map((file) => [file, require(`${root}/schemas/${file}`)])
+const schemas = `${__dirname}/../schemas`;
+fs.readdirSync(schemas)
+  .map((file) => [file, require(`${schemas}/${file}`)])
   .map(([file, schema]) => ajv.addSchema(schema, `../schemas/${file}`));
 
+const root = `${__dirname}/../rules`;
 for (const schema of ["translations", "technologies", "urls"]) {
   for (const filename of fs.readdirSync(`${root}/${schema}`)) {
     const rules = require(`${root}/${schema}/${filename}`, "utf-8");
