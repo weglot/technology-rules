@@ -84,7 +84,24 @@
       "value": [
         {
           "id": "squarespace-form-labels",
-          "regex": [{"value": "\"?[\\da-z]{32}\"?:\"(?<html>[^\"]+)\""}],
+          "regex": [{"value": "exports=(?<json>{.*?\"?[\\da-z]{32}\"?:.*?\"})},"}]
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "condition": [
+        {
+          "type": "FROM_DEFINITION_ID",
+          "payload": "squarespace-form-labels"
+        }
+      ],
+      "value": [
+        {
+          "paths": [
+            "$.*"
+           ],
+          "type": "HTML",
           "transforms": {"name": "templateVariables"}
         }
       ]
