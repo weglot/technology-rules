@@ -202,6 +202,62 @@
         {
           "type": "TECHNOLOGY_ID",
           "payload": 2
+        },
+        {
+          "type": "URL_TYPE",
+          "payload": "subdirectory"
+        }
+      ],
+      "value": [
+        {
+          "selector": "script",
+          "regex": [
+            {
+              "value": "Shopify.locale = \"(?<localeCode>[^\"]+)\";?"
+            },
+            {
+              "value": "Shopify.routes.root = \"(?<url>[^\"]+)\""
+            },
+            {
+              "value": "strings(?:[: =]*)(?<json>[^}]+\\})(?:,|;|\n])"
+            }
+          ],
+          "id": "shopify-vars"
+        }
+      ]
+    },
+    {
+      "type": "HTML",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 2
+        },
+        {
+          "type": "URL_TYPE",
+          "payload": "subdomain"
+        }
+      ],
+      "value": [
+        {
+          "selector": "script",
+          "regex": [
+            {
+              "value": "strings(?:[: =]*)(?<json>[^}]+\\})(?:,|;|\n])"
+            },
+            {
+              "value": "Shopify.locale = \"(?<localeCode>[^\"]+)\";?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "HTML",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 2
         }
       ],
       "value": [
@@ -209,15 +265,6 @@
           "id": "shopify-cart-template",
           "selector": "script#CartTemplate",
           "regex": "action=\"(?<url>[^\"]+)\""
-        },
-        {
-          "selector": "script",
-          "regex": "Shopify.locale = \"(?<localeCode>[^\"]+)\";?"
-        },
-        {
-          "selector": "script",
-          "regex": "strings(?:[: =]*)(?<json>[^}]+\\})(?:,|;|\n])",
-          "id": "shopify-strings"
         },
         {
           "selector": "button",
@@ -232,35 +279,30 @@
       ]
     },
     {
-      "type": "HTML",
-      "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 2
-        },
-        {
-          "type": "URL_TYPE",
-          "payload": "subdirectory"
-        }
-      ],
-      "value": [
-        {
-          "selector": "script",
-          "regex": "Shopify.routes.root = \"(?<url>[^\"]+)\""
-        }
-      ]
-    },
-    {
       "type": "JSON",
       "condition": [
         {
           "type": "FROM_DEFINITION_ID",
-          "payload": "shopify-strings"
-        }	
+          "payload": "shopify-vars"
+        }
       ],
       "value": [
         {
-          "paths": ["addToCart","soldOut","lowStock","quantityLabel","product_page_text","onSale","unavailable","added","viewProduct","percentOff","description","title","text"],
+          "paths": [
+            "addToCart",
+            "soldOut",
+            "lowStock",
+            "quantityLabel",
+            "product_page_text",
+            "onSale",
+            "unavailable",
+            "added",
+            "viewProduct",
+            "percentOff",
+            "description",
+            "title",
+            "text"
+          ],
           "wordType": 1
         }
       ]
@@ -275,7 +317,9 @@
       ],
       "value": [
         {
-          "excluded_paths": ["$..discount.title"]
+          "excluded_paths": [
+            "$..discount.title"
+          ]
         }
       ]
     },
@@ -316,7 +360,11 @@
       ],
       "value": [
         {
-          "paths": ["$..merchandise.title", "$..merchandise.subtitle", "$..altText"],
+          "paths": [
+            "$..merchandise.title",
+            "$..merchandise.subtitle",
+            "$..altText"
+          ],
           "wordType": 1
         }
       ]
