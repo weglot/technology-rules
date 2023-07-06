@@ -33,6 +33,11 @@
           "wordType": 1
         },
         {
+          "selector": ".product-variants input",
+          "attribute": "value",
+          "wordType": 1
+        },
+        {
           "selector": "script[src*=extract-css-runtime]",
           "attribute": "src",
           "type": "URL",
