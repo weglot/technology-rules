@@ -38,58 +38,9 @@
           "wordType": 1
         },
         {
-          "selector": "script[src*=extract-css-runtime]",
-          "attribute": "src",
-          "type": "URL",
-          "forceURLFormat": "proxy"
-        },
-        {
           "selector": "script.sqs-form-block-context",
           "type": "JSON",
           "id": "squarespace-form-context"
-        }
-      ]
-    },
-    {
-      "type": "RAW",
-      "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 5
-        },
-        {
-          "type": "PATH_MATCH",
-          "payload": {
-            "type": "MATCH_REGEX",
-            "value": "extract-css-runtime(.+).js$"
-          }
-        }
-      ],
-      "value": [
-        {
-          "regex": "\"(?<url_proxy>https://assets.squarespace.com/universal/scripts-compressed/)\""
-        }
-      ]
-    },
-    {
-      "type": "RAW",
-      "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 5
-        },
-        {
-          "type": "PATH_MATCH",
-          "payload": {
-            "type": "MATCH_REGEX",
-            "value": "\\d+-[0-9a-f]+-min.(.+).js$"
-          }
-        }
-      ],
-      "value": [
-        {
-          "id": "squarespace-form-labels",
-          "regex": [{"value": "exports=(?<json>{.*?\"?[\\da-z]{32}\"?:.*?\"})},"}]
         }
       ]
     },
