@@ -37,6 +37,19 @@
           "payload": [ { "value": ".product-price .original-price" } ]
         }
       ]
+    },
+    {
+      "name": "Don't proxify scheduling blocks",
+      "value": [
+        {
+          "type": "excluded_blocks",
+          "payload": [
+            {
+              "value": ".acuity-block iframe[data-iframe-translate]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
