@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "common.schema.json",
-  "definitions": {
+  "defs": {
     "PluginName": {
       "title": "Plugin Name",
       "description": "The name of the plugin. It's only used for reporting and analytics",

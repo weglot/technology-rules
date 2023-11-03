@@ -1,0 +1,93 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "origins.schema.json",
+    "title": "Origin definitions",
+    "description": "This type of plugin defines how Connect should modify the request to the (real) origin.",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "title": {
+            "$ref": "common.schema.json#/defs/PluginName"
+        },
+        "origins": {
+            "title": "All origin definitions",
+            "type": "array",
+            "items": {
+                "title": "",
+                "description": "",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "condition": {
+                        "$ref": "condition.schema.json#/defs/ConditionArray"
+                    },
+                    "value": {
+                        "$ref": "#/defs/ValueArray"
+                    }
+                },
+                "required": [
+                    "value"
+                ]
+            }
+        }
+    },
+    "required": [
+        "$schema",
+        "title",
+        "origins"
+    ],
+    "defs": {
+        "ValueArray": {
+            "title": "If condition was true, apply these definitions",
+            "type": "array",
+            "description": "The rules for modifiying the origin",
+            "items": {
+                "$ref": "#/defs/Value"
+            }
+        },
+        "Redirect": {
+            "title": "Redirect request to origin",
+            "type": "object",
+            "additionalProperties": false,
+            "description": "Do not fetch the real origin at all; instead return a redirect response to the specified URL.",
+            "properties": {
+                "location": {
+                    "title": "The URL to redirect to",
+                    "type": "string"
+                },
+                "status": {
+                    "title": "The HTTP status code to use for the redirect",
+                    "type": "integer",
+                    "minimum": 300,
+                    "maximum": 399
+                }
+            }
+        },
+        "Value": {
+            "title": "",
+            "description": "",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "resourceType": {
+                    "title": "Override the type of resource that this origin should be considered as when fetched.",
+                    "type": "string"
+                },
+                "redirect": {
+                    "$ref": "#/defs/Redirect"
+                },
+                "protocol": {
+                    "title": "Override the protocol used to fetch the origin.",
+                    "type": "string",
+                    "enum": [
+                        "http:",
+                        "https:"
+                    ]
+                }
+            }
+        }
+    }
+}

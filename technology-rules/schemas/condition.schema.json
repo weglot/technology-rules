@@ -1,14 +1,14 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "condition.schema.json",
-  "definitions": {
+  "defs": {
     "ConditionArray": {
       "title": "Conditions",
       "description": "Conditions to be satisfied before the rule is applied",
       "type": "array",
       "default": [],
       "items": {
-        "$ref": "#/definitions/Condition"
+        "$ref": "#/defs/Condition"
       }
     },
     "Condition": {
@@ -24,6 +24,10 @@
             {
               "const": "FROM_DEFINITION_ID",
               "title": "Comes from a specific parent definition"
+            },
+            {
+              "const": "CDN_PROVIDER",
+              "title": "Only on a specific CDN provider"
             },
             {
               "const": "PATH_MATCH",
@@ -80,7 +84,7 @@
                 },
                 "payload": {
                   "description": "The URL of the resource we want to translate (without query string) needs to be in the list",
-                  "$ref": "#/definitions/PathMatch"
+                  "$ref": "#/defs/PathMatch"
                 }
               }
             },
@@ -91,7 +95,7 @@
                 },
                 "payload": {
                   "description": "The path of the resource we want to translate needs to fulfill a criteria",
-                  "$ref": "#/definitions/PathMatch"
+                  "$ref": "#/defs/PathMatch"
                 }
               }
             },
@@ -102,7 +106,18 @@
                 },
                 "payload": {
                   "description": "Only applies for pages served by the selected technology",
-                  "$ref": "common.schema.json#/definitions/TechnologyID"
+                  "$ref": "common.schema.json#/defs/TechnologyID"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "CDN_PROVIDER"
+                },
+                "payload": {
+                  "description": "Only applies for sites handled by the selected CDN provider",
+                  "$ref": "#/defs/CDNProvider"
                 }
               }
             },
@@ -113,7 +128,7 @@
                 },
                 "payload": {
                   "description": "Detect using the incoming headers from the source",
-                  "$ref": "#/definitions/HeadersSignature"
+                  "$ref": "#/defs/HeadersSignature"
                 }
               }
             },
@@ -179,9 +194,13 @@
           "default": "START_WITH",
           "enum": [
             "START_WITH",
+            "NOT_START_WITH",
             "END_WITH",
+            "NOT_END_WITH",
             "CONTAIN",
+            "NOT_CONTAIN",
             "IS_EXACTLY",
+            "NOT_IS_EXACTLY",
             "MATCH_REGEX"
           ],
           "description": "Refer to https://app.gitbook.com/@weglot/s/weglot-ninjas/core/api-reference for the meaning of each option"
@@ -210,6 +229,18 @@
         }
       },
       "required": ["headerName"]
+    },
+    "CDNProvider": {
+      "title": "CDN Provider",
+      "description": "Which CDN provider should the rule apply to",
+      "type": "string",
+      "default": "cloudflare",
+      "enum": [
+        "cloudflare",
+        "fly",
+        "fastly",
+        "stackpath"
+      ]
     }
   }
 }
