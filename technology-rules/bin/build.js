@@ -6,7 +6,7 @@ if (!fs.existsSync(buildDir)) {
   fs.mkdirSync(buildDir);
 }
 
-for (const type of ["translations", "urls"]) {
+for (const type of ["translations", "urls", "origins"]) {
   const acc = [];
   for (const filename of fs.readdirSync(`${root}/${type}`)) {
     const rules = require(`${root}/${type}/${filename}`, "utf-8");

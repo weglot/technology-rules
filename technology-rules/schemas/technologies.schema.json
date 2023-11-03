@@ -12,13 +12,13 @@
     "title": {
       "title": "Technology name",
       "description": "Give a name to that technology",
-      "$ref": "common.schema.json#/definitions/PluginName"
+      "$ref": "common.schema.json#/defs/PluginName"
     },
     "technology_id": {
-      "$ref": "common.schema.json#/definitions/TechnologyID"
+      "$ref": "common.schema.json#/defs/TechnologyID"
     },
     "condition": {
-      "$ref": "condition.schema.json#/definitions/ConditionArray"
+      "$ref": "condition.schema.json#/defs/ConditionArray"
     },
     "proxyHosts": {
       "type": "array",
@@ -43,7 +43,7 @@
           "conditions": {
             "type": "array",
             "items": {
-              "$ref": "condition.schema.json#/definitions/ConditionArray"
+              "$ref": "condition.schema.json#/defs/ConditionArray"
             }
           },
           "value": {
@@ -67,7 +67,7 @@
     "condition",
     "proxyHosts"
   ],
-  "definitions": {
+  "defs": {
     "HTMLAction": {
       "type": "object",
       "title": "HTML Action",
@@ -77,14 +77,14 @@
           "type": "array",
           "minLength": 1,
           "items": {
-            "$ref": "#/definitions/ResourceCall"
+            "$ref": "#/defs/ResourceCall"
           }
         },
         "actions": {
           "type": "array",
           "minLength": 1,
           "items": {
-            "$ref": "#/definitions/ResourceCall"
+            "$ref": "#/defs/ResourceCall"
           }
         }
       }

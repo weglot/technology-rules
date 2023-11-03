@@ -10,10 +10,10 @@
       "type": "string"
     },
     "title": {
-      "$ref": "common.schema.json#/definitions/PluginName"
+      "$ref": "common.schema.json#/defs/PluginName"
     },
     "examples": {
-      "$ref": "common.schema.json#/definitions/ExamplesURL"
+      "$ref": "common.schema.json#/defs/ExamplesURL"
     },
     "urls": {
       "title": "All urls definitions",
@@ -25,10 +25,10 @@
         "additionalProperties": false,
         "properties": {
           "condition": {
-            "$ref": "condition.schema.json#/definitions/ConditionArray"
+            "$ref": "condition.schema.json#/defs/ConditionArray"
           },
           "value": {
-            "$ref": "#/definitions/ValueArray"
+            "$ref": "#/defs/ValueArray"
           }
         },
         "required": ["value"]
@@ -36,13 +36,13 @@
     }
   },
   "required": ["$schema", "title", "urls"],
-  "definitions": {
+  "defs": {
     "ValueArray": {
       "title": "If condition was true, apply these definitions",
       "type": "array",
       "description": "Put here definitions to translate",
       "items": {
-        "$ref": "#/definitions/Value"
+        "$ref": "#/defs/Value"
       }
     },
     "Value": {

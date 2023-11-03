@@ -15,13 +15,13 @@
         "additionalProperties": false,
         "properties": {
           "type": {
-            "$ref": "common.schema.json#/definitions/Type"
+            "$ref": "common.schema.json#/defs/Type"
           },
           "condition": {
-            "$ref": "condition.schema.json#/definitions/ConditionArray"
+            "$ref": "condition.schema.json#/defs/ConditionArray"
           },
           "value": {
-            "$ref": "#/definitions/ValueArray"
+            "$ref": "#/defs/ValueArray"
           }
         },
         "required": ["type", "value"]
@@ -29,13 +29,13 @@
     }
   },
   "required": ["$schema", "title", "translations"],
-  "definitions": {
+  "defs": {
     "ValueArray": {
       "title": "If condition was true, apply these definitions",
       "type": "array",
       "description": "Put here definitions to translate",
       "items": {
-        "$ref": "#/definitions/Value"
+        "$ref": "#/defs/Value"
       }
     },
     "Value": {
@@ -63,22 +63,22 @@
         "paths": {
           "title": "",
           "description": "List of JSONPath strings that match this word type",
-          "$ref": "#/definitions/JSONPathArray"
+          "$ref": "#/defs/JSONPathArray"
         },
         "wordType": {
           "title": "Word Type",
           "description": "",
-          "$ref": "#/definitions/WordType"
+          "$ref": "#/defs/WordType"
         },
         "type": {
           "title": "Target type",
           "description": "Parse found matches with this type",
-          "$ref": "#/definitions/TargetType"
+          "$ref": "#/defs/TargetType"
         },
         "forceURLFormat": {
           "title": "URL format to force",
           "description": "Parse URL with this format",
-          "$ref": "#/definitions/ForceURLFormat"
+          "$ref": "#/defs/ForceURLFormat"
         }
       }
     },
