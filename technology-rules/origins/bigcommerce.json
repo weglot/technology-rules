@@ -1,0 +1,27 @@
+{
+    "$schema": "../schemas/origins.schema.json",
+    "title": "BigCommerce",
+    "origins": [
+        {
+            "condition": [
+                {
+                    "type": "TECHNOLOGY_ID",
+                    "payload": 3
+                },
+                {
+                    "type": "CDN_PROVIDER",
+                    "payload": "fly"
+                },
+                {
+                    "type": "URL_TYPE",
+                    "payload": "subdirectory"
+                }
+            ],
+            "value": [
+                {
+                    "protocol": "http:"
+                }
+            ]
+        }
+    ]
+}
