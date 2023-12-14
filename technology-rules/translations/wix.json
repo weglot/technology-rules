@@ -329,7 +329,7 @@
       ],
       "value": [
         {
-          "regex": "\"(?<url_proxy>https://static.parastorage.com/services/bookings-calendar-widget/(.+)/)\""
+          "regex": "\"(?<url_proxy>https://static.parastorage.com/services/bookings-calendar-widget/(.+?)/)\""
         }
       ]
     },
