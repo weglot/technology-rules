@@ -66,6 +66,12 @@
                 }
             }
         },
+        "Headers": {
+            "title": "Override headers",
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Headers to add or to override on the origin request."
+        },
         "Value": {
             "title": "",
             "description": "",
@@ -86,6 +92,9 @@
                         "http:",
                         "https:"
                     ]
+                },
+                "headers": {
+                    "$ref": "#/defs/Headers"
                 }
             }
         }
