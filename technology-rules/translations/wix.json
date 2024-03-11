@@ -2,10 +2,21 @@
   "translations": [
     {
       "type": "HTML",
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 6
+        }
+      ],
       "value": [
         {
           "id": "wix-viewer-model",
           "selector": "script#wix-viewer-model",
+          "type": "JSON"
+        },
+        {
+          "id": "wix-warmup-data",
+          "selector": "script#wix-warmup-data",
           "type": "JSON"
         }
       ]
@@ -45,16 +56,6 @@
             "$..13ee10c2-daec-c6d3-c20b-64b8195e9150.widgetUrl",
             "$..13ee10c2-daec-c6d3-c20b-64b8195e9150.mobileUrl"
           ]
-        }
-      ]
-    },
-    {
-      "type": "HTML",
-      "value": [
-        {
-          "id": "wix-warmup-data",
-          "selector": "script#wix-warmup-data",
-          "type": "JSON"
         }
       ]
     },
