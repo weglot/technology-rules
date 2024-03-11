@@ -40,11 +40,8 @@
           "name": {
             "type": "string"
           },
-          "conditions": {
-            "type": "array",
-            "items": {
-              "$ref": "condition.schema.json#/defs/ConditionArray"
-            }
+          "condition": {
+            "$ref": "condition.schema.json#/defs/ConditionArray"
           },
           "value": {
             "type": "array",
@@ -61,12 +58,7 @@
       }
     }
   },
-  "required": [
-    "$schema",
-    "title",
-    "condition",
-    "proxyHosts"
-  ],
+  "required": ["$schema", "title", "condition", "proxyHosts"],
   "defs": {
     "HTMLAction": {
       "type": "object",

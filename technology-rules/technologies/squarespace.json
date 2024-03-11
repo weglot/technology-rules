@@ -25,7 +25,7 @@
       "value": [
         {
           "type": "disable_cookie_encoding",
-          "payload": [ "Locked" ]
+          "payload": ["Locked"]
         }
       ]
     },
@@ -34,7 +34,7 @@
       "value": [
         {
           "type": "merged_selectors_remove",
-          "payload": [ { "value": ".product-price .original-price" } ]
+          "payload": [{ "value": ".product-price .original-price" }]
         }
       ]
     },
@@ -46,6 +46,28 @@
           "payload": [
             {
               "value": ".acuity-block iframe[data-iframe-translate]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Don't translate request id on 404",
+      "condition": [
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "/404"
+          }
+        }
+      ],
+      "value": [
+        {
+          "type": "excluded_blocks",
+          "payload": [
+            {
+              "value": "body > footer"
             }
           ]
         }
