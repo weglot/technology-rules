@@ -216,7 +216,7 @@
               "value": "Shopify.locale = \"(?<localeCode>[^\"]+)\";?"
             },
             {
-              "value": "Shopify.routes.root = \"(?<url>[^\"]+)\""
+              "value": "Shopify.routes.root = \"(?<url__ignoreIWTS>[^\"]+)\""
             },
             {
               "value": "strings(?:[: =]*)(?<json>[^}]+\\})(?:,|;|\n])"
