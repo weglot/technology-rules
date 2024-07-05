@@ -1,34 +1,62 @@
 {
-    "$schema": "../schemas/origins.schema.json",
-    "title": "Webflow",
-    "origins": [
+  "$schema": "../schemas/origins.schema.json",
+  "title": "Webflow",
+  "origins": [
+    {
+      "condition": [
         {
-            "condition": [
-                {
-                    "type": "TECHNOLOGY_ID",
-                    "payload": 13
-                },
-                {
-                    "type": "URL_TYPE",
-                    "payload": "subdirectory"
-                },
-                {
-                    "type": "CDN_PROVIDER",
-                    "payload": "cloudflare"
-                },
-                {
-                    "type": "PATH_MATCH",
-                    "payload": {
-                        "type": "NOT_START_WITH",
-                        "value": "/.wf_graphql/"
-                    }
-                }
-            ],
-            "value": [
-                {
-                    "protocol": "http:"
-                }
-            ]
+          "type": "TECHNOLOGY_ID",
+          "payload": 13
+        },
+        {
+          "type": "URL_TYPE",
+          "payload": "subdirectory"
+        },
+        {
+          "type": "CDN_PROVIDER",
+          "payload": "cloudflare"
+        },
+        {
+          "type": "TRANSLATION_URL_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "https:\\/\\/([^\\/]+\\.weglot\\.(io|st)).*"
+          }
         }
-    ]
+      ],
+      "value": [
+        {
+          "protocol": "https:"
+        }
+      ]
+    },
+    {
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 13
+        },
+        {
+          "type": "URL_TYPE",
+          "payload": "subdirectory"
+        },
+        {
+          "type": "CDN_PROVIDER",
+          "payload": "cloudflare"
+        },
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "NOT_START_WITH",
+            "value": "/.wf_graphql/"
+          }
+        }
+      ],
+      "value": [
+        {
+          "protocol": "http:"
+        }
+      ]
+    }
+  ]
 }

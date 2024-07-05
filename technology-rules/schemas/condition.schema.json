@@ -38,6 +38,10 @@
               "title": "Original URL match"
             },
             {
+              "const": "TRANSLATION_URL_MATCH",
+              "title": "Translation host match"
+            },
+            {
               "const": "TECHNOLOGY_ID",
               "title": "Website CMS technology"
             },
@@ -59,9 +63,9 @@
             }
           ]
         },
-      "payload": {
-        "title": ""
-      }
+        "payload": {
+          "title": ""
+        }
       },
       "dependencies": {
         "type": {
@@ -95,6 +99,17 @@
                 },
                 "payload": {
                   "description": "The path of the resource we want to translate needs to fulfill a criteria",
+                  "$ref": "#/defs/PathMatch"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "TRANSLATION_URL_MATCH"
+                },
+                "payload": {
+                  "description": "The translation URL of the resource we want to translate needs to fulfill a criteria",
                   "$ref": "#/defs/PathMatch"
                 }
               }
@@ -235,12 +250,7 @@
       "description": "Which CDN provider should the rule apply to",
       "type": "string",
       "default": "cloudflare",
-      "enum": [
-        "cloudflare",
-        "fly",
-        "fastly",
-        "stackpath"
-      ]
+      "enum": ["cloudflare", "fly", "fastly", "stackpath"]
     }
   }
 }
