@@ -39,7 +39,7 @@
             },
             {
               "const": "TRANSLATION_URL_MATCH",
-              "title": "Translation host match"
+              "title": "Translation URL match"
             },
             {
               "const": "TECHNOLOGY_ID",
