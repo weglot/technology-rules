@@ -17,6 +17,11 @@
           "type": {
             "$ref": "common.schema.json#/defs/Type"
           },
+          "label": {
+            "title": "Label",
+            "description": "A label to identify this translation",
+            "type": "string"
+          },
           "condition": {
             "$ref": "condition.schema.json#/defs/ConditionArray"
           },
