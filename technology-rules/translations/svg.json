@@ -2,6 +2,7 @@
   "translations": [
     {
       "type": "XML",
+      "label": "SVG",
       "condition": [
         {
           "type": "XML_ROOT_ELEMENT_NAME",
