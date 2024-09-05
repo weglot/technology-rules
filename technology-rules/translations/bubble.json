@@ -2,6 +2,7 @@
     "translations": [
         {
             "type": "HTML",
+            "label": "Bubble",
             "condition": [
                 {
                     "type": "TECHNOLOGY_ID",
@@ -23,6 +24,7 @@
         },
         {
             "type": "RAW",
+            "label": "Bubble",
             "condition": [
                 {
                     "type": "TECHNOLOGY_ID",
@@ -45,6 +47,7 @@
         },
         {
             "type": "JSON",
+            "label": "Bubble",
             "condition": [
                 {
                     "type": "TECHNOLOGY_ID",

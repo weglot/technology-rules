@@ -2,6 +2,7 @@
   "translations": [
     {
       "type": "HTML",
+      "label": "LD+JSON",
       "value": [
         {
           "id": "application-ld-json",

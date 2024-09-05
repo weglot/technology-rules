@@ -2,6 +2,7 @@
   "translations": [
     {
       "type": "JSON",
+      "label": "Shopify",
       "condition": [
         {
           "type": "TECHNOLOGY_ID",
@@ -26,6 +27,7 @@
     },
     {
       "type": "JSON",
+      "label": "Shopify",
       "condition": [
         {
           "type": "TECHNOLOGY_ID",
@@ -50,6 +52,7 @@
     },
     {
       "type": "JSON",
+      "label": "Shopify",
       "condition": [
         {
           "type": "TECHNOLOGY_ID",
@@ -96,6 +99,7 @@
     },
     {
       "type": "JSON",
+      "label": "Shopify",
       "condition": [
         {
           "type": "TECHNOLOGY_ID",
@@ -142,6 +146,7 @@
     },
     {
       "type": "XML",
+      "label": "Shopify",
       "condition": [
         {
           "type": "TECHNOLOGY_ID",
@@ -166,6 +171,7 @@
     },
     {
       "type": "XML",
+      "label": "Shopify",
       "condition": [
         {
           "type": "TECHNOLOGY_ID",
@@ -198,6 +204,7 @@
     },
     {
       "type": "HTML",
+      "label": "Shopify",
       "condition": [
         {
           "type": "TECHNOLOGY_ID",
@@ -228,6 +235,7 @@
     },
     {
       "type": "HTML",
+      "label": "Shopify",
       "condition": [
         {
           "type": "TECHNOLOGY_ID",
@@ -254,6 +262,7 @@
     },
     {
       "type": "HTML",
+      "label": "Shopify",
       "condition": [
         {
           "type": "TECHNOLOGY_ID",
@@ -280,6 +289,7 @@
     },
     {
       "type": "JSON",
+      "label": "Shopify",
       "condition": [
         {
           "type": "FROM_DEFINITION_ID",
@@ -309,6 +319,7 @@
     },
     {
       "type": "JSON",
+      "label": "Shopify",
       "condition": [
         {
           "type": "TECHNOLOGY_ID",
@@ -325,6 +336,7 @@
     },
     {
       "type": "HTML",
+      "label": "Shopify",
       "condition": [
         {
           "type": "TECHNOLOGY_ID",
@@ -352,6 +364,7 @@
     },
     {
       "type": "JSON",
+      "label": "Shopify",
       "condition": [
         {
           "type": "FROM_DEFINITION_ID",

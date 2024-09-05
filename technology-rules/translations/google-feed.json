@@ -2,6 +2,7 @@
   "translations": [
     {
       "type": "XML",
+      "label": "Google Feed",
       "condition": [
         {
           "type": "XML_ATTRIBUTE_VALUE",
