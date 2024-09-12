@@ -1,0 +1,47 @@
+{
+  "$schema": "../schemas/proxy.schema.json",
+  "title": "Wix proxy rules",
+  "proxy": [
+    {
+      "condition": [
+        {
+          "type": "TECHNOLOGY_ID",
+          "payload": 6
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "END_WITH",
+            "value": ".parastorage.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "END_WITH",
+            "value": ".wixapps.net"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "END_WITH",
+            "value": ".wixstatic.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "END_WITH",
+            "value": ".wix.com"
+          }
+        }
+      ],
+      "value": [
+        {
+          "action": "ALLOW_HOST"
+        }
+      ]
+    }
+  ]
+}

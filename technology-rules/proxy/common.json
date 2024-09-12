@@ -1,0 +1,29 @@
+{
+  "$schema": "../schemas/proxy.schema.json",
+  "title": "Common proxy rules",
+  "proxy": [
+    {
+      "condition": [
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "END_WITH",
+            "value": "feeds.adwordsrobot.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "END_WITH",
+            "value": "feeds.datafeedwatch.com"
+          }
+        }
+      ],
+      "value": [
+        {
+          "action": "ALLOW_HOST"
+        }
+      ]
+    }
+  ]
+}

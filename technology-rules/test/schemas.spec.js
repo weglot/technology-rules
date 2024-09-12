@@ -11,13 +11,14 @@ ajv.addKeyword("condition");
 ajv.addKeyword("technology_id");
 ajv.addKeyword("proxyHosts");
 ajv.addKeyword("settings");
+ajv.addKeyword("proxy");
 
 const root = `${__dirname}/..`;
 fs.readdirSync(`${root}/schemas/`)
   .map((file) => [file, require(`${root}/schemas/${file}`)])
   .map(([file, schema]) => ajv.addSchema(schema, `../schemas/${file}`));
 
-for (const schema of ["translations", "technologies", "urls", "origins"]) {
+for (const schema of ["translations", "technologies", "urls", "origins", "proxy"]) {
   for (const filename of fs.readdirSync(`${root}/${schema}`)) {
     const rules = require(`${root}/${schema}/${filename}`, "utf-8");
     console.log(`- ${schema}/${filename}`);
