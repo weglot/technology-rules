@@ -1,0 +1,77 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "proxy.schema.json",
+    "title": "Proxy definitions",
+    "description": "This type of plugin defines how Connect proxification should behave.",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "title": {
+            "$ref": "common.schema.json#/defs/PluginName"
+        },
+        "proxy": {
+            "title": "All proxy definitions",
+            "type": "array",
+            "items": {
+                "title": "",
+                "description": "",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "condition": {
+                        "$ref": "condition.schema.json#/defs/ConditionArray"
+                    },
+                    "value": {
+                        "$ref": "#/defs/ValueArray"
+                    }
+                },
+                "required": [
+                    "value"
+                ]
+            }
+        }
+    },
+    "required": [
+        "$schema",
+        "title",
+        "proxy"
+    ],
+    "defs": {
+        "ValueArray": {
+            "title": "If condition was true, apply these definitions",
+            "type": "array",
+            "description": "The proxy behavior rules",
+            "items": {
+                "$ref": "#/defs/Value"
+            }
+        },
+        "Value": {
+            "title": "",
+            "description": "",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "action": {
+                  "title": "Proxy action to apply if test is successful",
+                  "type": "string",
+                  "oneOf": [
+                    {
+                      "const": "ALLOW_HOST",
+                      "title": "Allow hosts passing this condition to be proxified"
+                    },
+                    {
+                      "const": "EXCLUDE_HOST",
+                      "title": "Exclude hosts passing this condition to be proxified (even if it matches an ALLOW_HOST condition"
+                    }
+                  ]
+                },
+                "match": {
+                  "$ref": "condition.schema.json#/defs/Condition"
+                }
+            }
+        }
+    }
+}
