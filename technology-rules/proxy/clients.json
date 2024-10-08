@@ -1,0 +1,617 @@
+{
+  "$schema": "../schemas/proxy.schema.json",
+  "title": "Temporary clients rules",
+  "proxy": [
+    {
+      "condition": [
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "cld.pt"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "conteudos.meo.pt"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.buildingdryer.be"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "storage.googleapis.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "wolbrook.myshopify.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "core.service.elfsight.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "pubmed.ncbi.nlm.nih.gov"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "emergencing.app"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.fva-service.de"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "gsf-wix-feeds.simprosysapps.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "designliving365.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.designliving365.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "glassyeurope.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "xml.thinkspain.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "app.witei.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.site.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "cetem.be"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "vanzijptechniek.nl"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "circularco.eu"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "myfeedexample.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "gsf-xml-feeds.simpshopifyapps.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.sekvens.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "sekvens.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "eneadeal.nl"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "geekeries.fr"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "valentinarinaldi.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.valentinarinaldi.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "feed.syewatches.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "conteudos.uzo.pt"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "cdn.commoninja.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "get.cpexp.de"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "twheels.ch"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "boticonline.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.tutrocito.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "digi-markets.de"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "feed.mulwi.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "stahlkunst.de"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "snapclimbing.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "pim.eziclean.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "shop-api.socialhead.io"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "tidlos-clothing.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "extensionsell.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "indicode-store.myshopify.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "festivalsupply.nl"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "wibi-api.azure-api.net"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.janedeboy.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "test1.fordebrothers.co.nz"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "escooterfix.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "ayen-label.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "leboutique24.de"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "skinlife.pt"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "recaro-gaming.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "feeds.shoptimised.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "emporioitalia.pt"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "spargut.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "expandsupps.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "sotris.gr"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "schipperwatch.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "httpnas.lengow.io"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "scandictrans.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "backoffice.wibi.com.kw"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "s3-ap-southeast-1.amazonaws.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.maiemgorras.es"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "ruzesport.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "bestinterior.fr"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "spyceez.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "fjoerd.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "woolfid.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "docs.google.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "eatsmallgiants.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "woodpox.be"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "my-mala.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "skroutzofficial.thinkplus.dev"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "d2hku29108hzuu.cloudfront.net"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.ioutletstore.pt"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "ioutletstore.pt"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.melimelihome.se"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.misstunica.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "static.shop.socialhead.io.s3-website-ap-southeast-1.amazonaws.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.adwordsrobot.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.azurahomedesign.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "azurahomedesign.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "la-compagnie-du-chauffage.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "eu.thebeautystore.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "appenzeller-gurt.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "youthandearth.com"
+          }
+        }
+      ],
+      "value": [
+        {
+          "action": "ALLOW_HOST"
+        }
+      ]
+    }
+  ]
+}

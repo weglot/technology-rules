@@ -8,7 +8,7 @@
           "type": "HOST_MATCH",
           "payload": {
             "type": "END_WITH",
-            "value": "feeds.adwordsrobot.com"
+            "value": "adwordsrobot.com"
           }
         },
         {
@@ -16,6 +16,20 @@
           "payload": {
             "type": "END_WITH",
             "value": "feeds.datafeedwatch.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "END_WITH",
+            "value": "files.channable.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "END_WITH",
+            "value": "feeds.lengow.io"
           }
         }
       ],
