@@ -605,6 +605,111 @@
             "type": "IS_EXACTLY",
             "value": "youthandearth.com"
           }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.treetime.pl"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "cdn.commoninja.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "oekobox-online.de"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.uni-europa.org"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "cite-europeenne-des-scenaristes.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "api.doards.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "www.safestay.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "hamiltonapps.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "api.localista.com.au"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "core.service.elfsight.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "static.elfsight.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "hpm.vistrom.dev"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "forms.hsforms.com"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "shisha8.server12.zwei.gmbh"
+          }
+        },
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "staging.upturnedy.com"
+          }
         }
       ],
       "value": [
