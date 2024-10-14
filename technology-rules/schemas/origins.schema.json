@@ -72,6 +72,15 @@
             "additionalProperties": true,
             "description": "Headers to add or to override on the origin request."
         },
+        "Cookies": {
+            "title": "Override cookie",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": true
+            },
+            "description": "Cookie to add to or remove from the origin request header."
+        },
         "Value": {
             "title": "",
             "description": "",
@@ -95,6 +104,9 @@
                 },
                 "headers": {
                     "$ref": "#/defs/Headers"
+                },
+                "cookies": {
+                    "$ref": "#/defs/Cookies"
                 }
             }
         }
