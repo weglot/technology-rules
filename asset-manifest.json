@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/technology-rules/static/css/main.669a3b38.chunk.css",
+    "main.js": "/technology-rules/static/js/main.660b598b.chunk.js",
+    "main.js.map": "/technology-rules/static/js/main.660b598b.chunk.js.map",
+    "runtime-main.js": "/technology-rules/static/js/runtime-main.ed49bb44.js",
+    "runtime-main.js.map": "/technology-rules/static/js/runtime-main.ed49bb44.js.map",
+    "static/css/2.bead013f.chunk.css": "/technology-rules/static/css/2.bead013f.chunk.css",
+    "static/js/2.9c3b4e7e.chunk.js": "/technology-rules/static/js/2.9c3b4e7e.chunk.js",
+    "static/js/2.9c3b4e7e.chunk.js.map": "/technology-rules/static/js/2.9c3b4e7e.chunk.js.map",
+    "index.html": "/technology-rules/index.html",
+    "static/css/2.bead013f.chunk.css.map": "/technology-rules/static/css/2.bead013f.chunk.css.map",
+    "static/css/main.669a3b38.chunk.css.map": "/technology-rules/static/css/main.669a3b38.chunk.css.map",
+    "static/js/2.9c3b4e7e.chunk.js.LICENSE.txt": "/technology-rules/static/js/2.9c3b4e7e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed49bb44.js",
+    "static/css/2.bead013f.chunk.css",
+    "static/js/2.9c3b4e7e.chunk.js",
+    "static/css/main.669a3b38.chunk.css",
+    "static/js/main.660b598b.chunk.js"
+  ]
+}
