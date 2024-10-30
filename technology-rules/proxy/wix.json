@@ -32,8 +32,8 @@
         {
           "type": "HOST_MATCH",
           "payload": {
-            "type": "END_WITH",
-            "value": ".wix.com"
+            "type": "IS_EXACTLY",
+            "value": "ecom.wix.com"
           }
         }
       ],
