@@ -7,16 +7,12 @@ and how we could translate as accurately as possible a resource to users.
 
 ## Tech
 
-This is a Yarn workspace with two separated packages:
-
-- `@weglot/technology-rules`: published technology rules on Github registry
-- `rules-builder`: a React.js app to visually edit JSON Schemas,
-[published on Github pages](https://weglot.github.io/technology-rules/)
+`@weglot/technology-rules` is published on Github registry
 
 We are using [JSON Schemas](https://json-schema.org/) to write and validate
 consistent rules, automatically tested with [ajv](https://ajv.js.org/) tool.
 
-These rules are currently used on more than 6k+ websites translated with Weglot.
+These rules are currently used on more than 110k+ websites translated with Weglot.
 
 ## Setup
 
@@ -24,16 +20,6 @@ These rules are currently used on more than 6k+ websites translated with Weglot.
 git clone https://github.com/weglot/technology-rules.git
 cd technology-rules
 yarn
-```
-
-Development usage
-
-```
-In technology-rules repo: 
-$ yarn rules link
-
-In connect-edge repo:
-$ yarn link "@weglot/technology-rules"
 ```
 
 ### Version
