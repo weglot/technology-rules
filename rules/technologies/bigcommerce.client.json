@@ -1,0 +1,46 @@
+{
+  "$schema": "../../schemas/technologies.schema.json",
+  "title": "BigCommerce",
+  "technology_id": 3,
+  "settings": [
+    {
+      "name": "BigCommerce default settings for all pages",
+      "value": [
+        {
+          "type": "search_forms",
+          "payload": "form[action='/search.php']"
+        },
+        {
+          "type": "search_parameter",
+          "payload": "search_query"
+        },
+        {
+          "type": "dynamics",
+          "payload": [
+            {
+              "value": ".quick-shop-details"
+            },
+            {
+              "value": "#QuickViewProductDetails"
+            },
+            {
+              "value": ".QuickViewModal"
+            },
+            {
+              "value": ".modalContainer"
+            },
+            {
+              "value": ".ng-checkout-container"
+            },
+            {
+              "value": ".previewCartAction"
+            },
+            {
+              "value": "#checkout-app"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

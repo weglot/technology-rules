@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/technologies.schema.json",
+  "title": "Jimdo",
+  "technology_id": 4,
+  "settings": [
+    {
+      "name": "Jimdo default settings for all pages",
+      "value": [
+        {
+          "type": "excluded_blocks",
+          "payload": [
+            { "value": "[data-display=\"cms-only\"]" },
+            { "value": ".j-admin-links" },
+            { "value": ".cc-m-status-empty" }
+          ]
+        }
+      ]
+    }
+  ]
+}

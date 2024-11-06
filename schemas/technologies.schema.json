@@ -58,7 +58,7 @@
       }
     }
   },
-  "required": ["$schema", "title", "condition", "proxyHosts"],
+  "required": ["$schema", "title"],
   "defs": {
     "HTMLAction": {
       "type": "object",
