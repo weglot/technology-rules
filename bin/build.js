@@ -15,8 +15,24 @@ for (const type of ["translations", "urls", "origins", "proxy"]) {
   fs.writeFileSync(`${buildDir}/${type}.json`, JSON.stringify(acc));
 }
 
-const technologies = [];
+const serverTechnologies = [];
+const clientTechnologies = [];
 for (const filename of fs.readdirSync(`${root}/rules/technologies`)) {
-  technologies.push(require(`${root}/rules/technologies/${filename}`, "utf-8"));
+  if (filename.includes(".server.json")) {
+    serverTechnologies.push(
+      require(`${root}/rules/technologies/${filename}`, "utf-8")
+    );
+    continue;
+  }
+  clientTechnologies.push(
+    require(`${root}/rules/technologies/${filename}`, "utf-8")
+  );
 }
-fs.writeFileSync(`${buildDir}/technologies.json`, JSON.stringify(technologies));
+fs.writeFileSync(
+  `${buildDir}/technologies.server.json`,
+  JSON.stringify(serverTechnologies)
+);
+fs.writeFileSync(
+  `${buildDir}/technologies.client.json`,
+  JSON.stringify(clientTechnologies)
+);

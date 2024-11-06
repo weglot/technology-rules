@@ -58,7 +58,10 @@
         { "const": 12, "title": "12 (Other)" },
         { "const": 13, "title": "13 (Webflow)" },
         { "const": 14, "title": "14 (Prestashop)" },
-        { "const": 15, "title": "15 (Magento)" }
+        { "const": 15, "title": "15 (Magento)" },
+        { "const": 16, "title": "16 (Square Online)" },
+        { "const": 17, "title": "17 (Bubble)" },
+        { "const": 18, "title": "18 (Salesforce)" }
       ]
     },
     "BodyReplacement": {

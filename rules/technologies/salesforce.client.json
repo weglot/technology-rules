@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schemas/technologies.schema.json",
+  "title": "Salesforce",
+  "technology_id": 18,
+  "settings": [
+    {
+      "name": "Salesforce default settings for all pages",
+      "value": [
+        {
+          "type": "ignoreDynamicFragments",
+          "payload": true
+        },
+        {
+          "type": "dynamicPushState",
+          "payload": true
+        },
+        {
+          "type": "merged_selectors_remove",
+          "payload": [
+            {
+              "value": ".themeProfileMenu"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

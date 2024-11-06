@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/technologies.schema.json",
+  "title": "Webflow",
+  "technology_id": 13,
+  "settings": [
+    {
+      "name": "Webflow default settings for all pages",
+      "value": [
+        {
+          "type": "excluded_blocks",
+          "payload": [{ "value": ".wg-element-wrapper" }]
+        }
+      ]
+    }
+  ]
+}

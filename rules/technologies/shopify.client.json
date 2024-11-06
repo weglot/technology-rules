@@ -1,0 +1,673 @@
+{
+  "$schema": "../../schemas/technologies.schema.json",
+  "title": "Shopify",
+  "technology_id": 2,
+  "proxyHosts": ["feeds.datafeedwatch.com", "feeds.adwordsrobot.com"],
+  "settings": [
+    {
+      "name": "Shopify default settings for all pages",
+      "value": [
+        {
+          "type": "extra_definitions",
+          "payload": [
+            {
+              "type": 1,
+              "selector": ".snize-color-swatch",
+              "attribute": "data-sntooltip"
+            },
+            {
+              "type": 1,
+              "selector": "button[data-pf-type=ProductATC]",
+              "attribute": "data-soldout"
+            },
+            {
+              "type": 1,
+              "selector": "button[data-pf-type=ProductATC]",
+              "attribute": "data-adding"
+            },
+            {
+              "type": 1,
+              "selector": "button[data-pf-type=ProductATC]",
+              "attribute": "data-added"
+            }
+          ]
+        },
+        {
+          "type": "search_forms",
+          "payload": "form[action='/pages/search-results'],form[action='/search']"
+        },
+        {
+          "type": "search_parameter",
+          "payload": "q"
+        },
+        {
+          "type": "cart_attributes",
+          "payload": ["lang", "Invoice Language"]
+        },
+        {
+          "type": "excluded_blocks",
+          "payload": [
+            {
+              "value": "input[type='radio']"
+            },
+            {
+              "value": ".money"
+            },
+            {
+              "value": ".price"
+            },
+            {
+              "value": ".product__prices"
+            },
+            {
+              "value": "#admin-bar-iframe"
+            },
+            {
+              "value": ".notranslate"
+            },
+            {
+              "value": ".skiptranslate"
+            },
+            {
+              "value": "#isp_refine_nevigation"
+            },
+            {
+              "value": "#isp_header_subtitle"
+            },
+            {
+              "value": ".isp_sorting_and_result_view_wrapper"
+            },
+            {
+              "value": "#isp_results_did_you_mean > span"
+            },
+            {
+              "value": ".isp_facet_show_hide_values"
+            },
+            {
+              "value": "#isp_main_search_box"
+            },
+            {
+              "value": ".snize-filter-variant-count"
+            },
+            {
+              "value": ".snize-search-results-header a"
+            },
+            {
+              "value": ".snize-search-results-header b"
+            },
+            {
+              "value": ".hc-author__text"
+            },
+            {
+              "value": ".hc-avatar__initials"
+            },
+            {
+              "value": ".hc-rating-chart__count"
+            },
+            {
+              "value": ".hc-rating-chart__percentage-value"
+            },
+            {
+              "value": ".yotpo-review-date"
+            },
+            {
+              "value": ".yotpo-user-name"
+            },
+            {
+              "value": ".yotpo-user-letter"
+            },
+            {
+              "value": ".yotpo .avg-score"
+            },
+            {
+              "value": ".yotpo .sr-only"
+            },
+            {
+              "value": ".yotpo-mandatory-mark"
+            }
+          ]
+        },
+        {
+          "type": "dynamics",
+          "payload": [
+            {
+              "value": ".shopify-payment-button button"
+            },
+            {
+              "value": "#isp_search_result_page_container"
+            },
+            {
+              "value": ".snize-ac-results"
+            },
+            {
+              "value": "#snize_results"
+            },
+            {
+              "value": ".snize-recommendation"
+            },
+            {
+              "value": ".snize-modal"
+            },
+            {
+              "value": ".snize-search-results-header"
+            },
+            {
+              "value": "div>span.cc-message"
+            },
+            {
+              "value": ".hc-widget"
+            },
+            {
+              "value": ".jdgm-rev-widg__header"
+            },
+            {
+              "value": ".jdgm-rev__body"
+            },
+            {
+              "value": ".jdgm-rev-title"
+            },
+            {
+              "value": ".yotpo-main-widget"
+            },
+            {
+              "value": "#swell-popup"
+            },
+            {
+              "value": ".swell-tab"
+            },
+            {
+              "value": ".yotpo-widget-override-css"
+            },
+            {
+              "value": ".cw-row"
+            },
+            {
+              "value": ".mini-popup-container"
+            },
+            {
+              "value": "email-field cw-form-control"
+            },
+            {
+              "value": "phone-field cw-form-control"
+            },
+            {
+              "value": ".sms-policy-text"
+            },
+            {
+              "value": ".wlo-content-holder"
+            },
+            {
+              "value": ".wlo-wheel-holder"
+            },
+            {
+              "value": ".yotpo-smsbump-modal__content"
+            },
+            {
+              "value": ".cw-compliance-text"
+            },
+            {
+              "value": "#saso-notifications"
+            },
+            {
+              "value": ".saso-cross-sell-popup"
+            },
+            {
+              "value": ".saso-cart-item-discount-notes"
+            },
+            {
+              "value": ".saso-cart-item-upsell-notes"
+            },
+            {
+              "value": ".saso-volume-discount-tiers"
+            },
+            {
+              "value": ".opw-leading-normal"
+            },
+            {
+              "value": ".opw-my-2.opw-leading-normal.opw-text-lg.opw-text-left"
+            },
+            {
+              "value": ".opinew-navbar.opw-flex.opw-items-center.opw-justify-between.opw-flex-wrap.opw-py-4.opw-px-6"
+            },
+            {
+              "value": ".main-content-container.opw--mx-1"
+            },
+            {
+              "value": ".opw-text-center.opw-text-sm.opw-border-solid.opw-border-0.opw-mt-3"
+            },
+            {
+              "value": ".summary-card-container.opw-mx-1"
+            },
+            {
+              "value": ".opw-reviews-container.opw-mt-3.opw--mx-1"
+            },
+            {
+              "value": ".opinew-reviews-title.opw-flex.opw-items-center.opw-flex-no-shrink.opw-mr-6"
+            },
+            {
+              "value": ".opw-flex.opw-flex-row-reverse"
+            },
+            {
+              "value": "#opinew-app-container"
+            },
+            {
+              "value": ".gem_dynamic-content"
+            },
+            {
+              "value": ".pp_tracking_content"
+            },
+            {
+              "value": ".pp_all_form_div"
+            },
+            {
+              "value": ".pp_tracking_result_title"
+            },
+            {
+              "value": ".progress-bar-style"
+            },
+            {
+              "value": ".pp_tracking_left"
+            },
+            {
+              "value": ".pp_num_status_show"
+            },
+            {
+              "value": ".pp_tracking_status_tips"
+            },
+            {
+              "value": ".pp_page_map_div"
+            },
+            {
+              "value": ".pp_tracking_result_parent"
+            },
+            {
+              "value": ".pp_tracking_right"
+            },
+            {
+              "value": ".pp_recommend_product_parent"
+            },
+            {
+              "value": ".currency-converter-cart-note"
+            },
+            {
+              "value": ".cbb-shipping-rates-calculator"
+            },
+            {
+              "value": ".cbb-frequently-bought-container"
+            },
+            {
+              "value": ".cbb-frequently-bought-discount-applied-message"
+            },
+            {
+              "value": ".cbb-also-bought-container"
+            },
+            {
+              "value": "#zonos"
+            },
+            {
+              "value": ".buddha-menu-item"
+            },
+            {
+              "value": ".R-GlobalModal"
+            },
+            {
+              "value": ".ruk-rating-snippet-count"
+            },
+            {
+              "value": ".R-ContentList-container"
+            },
+            {
+              "value": ".R-ReviewsList-container"
+            },
+            {
+              "value": ".R-SliderIndicator-group"
+            },
+            {
+              "value": ".R-TextBody"
+            },
+            {
+              "value": ".widgetId-reviewsio-carousel-widget"
+            },
+            {
+              "value": ".REVIEWSIO-FloatingMinimised"
+            },
+            {
+              "value": ".REVIEWSIO-FloatingMinimised__Container"
+            },
+            {
+              "value": ".reviewsio-carousel-widget"
+            },
+            {
+              "value": ".reviews-io-floating-widget"
+            },
+            {
+              "value": ".reviews_container"
+            },
+            {
+              "value": ".site-nav.style--sidebar .site-nav-container .subtitle"
+            },
+            {
+              "value": ".search-more"
+            },
+            {
+              "value": ".variant-quantity"
+            },
+            {
+              "value": ".lion-claimed-rewards-list"
+            },
+            {
+              "value": ".lion-header"
+            },
+            {
+              "value": ".lion-header__join-buttons"
+            },
+            {
+              "value": ".lion-header__join-today"
+            },
+            {
+              "value": ".lion-history-table"
+            },
+            {
+              "value": ".lion-integrated-page-section__heading-text"
+            },
+            {
+              "value": ".lion-loyalty-panel"
+            },
+            {
+              "value": ".lion-loyalty-splash"
+            },
+            {
+              "value": ".lion-loyalty-widget"
+            },
+            {
+              "value": ".lion-modal__content"
+            },
+            {
+              "value": ".lion-modal__header"
+            },
+            {
+              "value": ".lion-referral-widget"
+            },
+            {
+              "value": ".lion-rewards-list"
+            },
+            {
+              "value": ".lion-rules-list"
+            },
+            {
+              "value": ".lion-tier-overview"
+            },
+            {
+              "value": ".ccpops-popup__content__bottom-text"
+            },
+            {
+              "value": ".ccpops-popup__content__top-text"
+            },
+            {
+              "value": ".ccpops-trigger__text"
+            },
+            {
+              "value": ".ks-table-row"
+            },
+            {
+              "value": ".klaviyo-form"
+            },
+            {
+              "value": ".sca-fg-today-offer-title"
+            },
+            {
+              "value": ".sca-fg-today-offer-subtitle"
+            },
+            {
+              "value": ".sca-offer-info .sca-offer-title"
+            },
+            {
+              "value": ".sca-fg-tooltip"
+            },
+            {
+              "value": ".fg-section-title"
+            },
+            {
+              "value": ".bogos-gift-items .btn-add-to-cart"
+            },
+            {
+              "value": ".bogos-gift-items .selected-variant"
+            },
+            {
+              "value": ".sca-hidden-gift-popup .sca-disable-text"
+            },
+            {
+              "value": "#sca_fg_cart_message_items_section .content-promotion-message"
+            },
+            {
+              "value": ".sca-gift-thumbnail-title"
+            },
+            {
+              "value": ".bogos-bundles-quantity-break-widget-title"
+            },
+            {
+              "value": ".bogos-bundles-quantity-break-widget-description"
+            },
+            {
+              "value": ".bogos-bundle-quantity-break-title"
+            },
+            {
+              "value": ".bogos-bundle-quantity-break-tag"
+            },
+            {
+              "value": ".bogos-bundle-quantity-break-label"
+            },
+            {
+              "value": ".bogos-bundles-quantity-break-button-add"
+            },
+            {
+              "value": ".bogos-bundles-quantity-break-total-title"
+            },
+            {
+              "value": ".bogos-bundle-quantity-break-item-select-button"
+            },
+            {
+              "value": ".bogos-bundles-widget-title"
+            },
+            {
+              "value": ".bogos-bundles-widget-description"
+            },
+            {
+              "value": ".bogos-bundles-total-title"
+            },
+            {
+              "value": ".bogos-bundle-item-select-button"
+            },
+            {
+              "value": ".bogos-bundles-button-add"
+            },
+            {
+              "value": ".bogos-bundle-item-title"
+            },
+            {
+              "value": ".bogos-slider-info-title"
+            },
+            {
+              "value": ".bogos-slider-info-subtitle"
+            },
+            {
+              "value": ".bogos-slider-offer-title"
+            },
+            {
+              "value": ".bogos-gift-select-variant option:first-child"
+            },
+            {
+              "value": ".bogos-badge-title"
+            },
+            {
+              "value": ".bogos-offer-switch-title"
+            },
+            {
+              "value": ".fg-gift-thumbnail-offer-title"
+            },
+            {
+              "value": ".fg-gift-thumbnail-offer-footer-quantity"
+            },
+            {
+              "value": ".fg-gift-thumbnail-offer-time-title"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shopify additionnal settings for javascript integration",
+      "condition": [
+        {
+          "type": "INTEGRATION",
+          "payload": "javascript"
+        }
+      ],
+      "value": [
+        {
+          "type": "dynamics",
+          "payload": [
+            {
+              "value": "form.cart.ajaxcart"
+            },
+            {
+              "value": "form.cart-drawer"
+            },
+            {
+              "value": "#cross-sell"
+            },
+            {
+              "value": ".wheelio_holder"
+            },
+            {
+              "value": ".mini-cart"
+            },
+            {
+              "value": "#shopify-product-reviews"
+            },
+            {
+              "value": "#esc-oos-form"
+            },
+            {
+              "value": ".product__add-to-cart-button"
+            },
+            {
+              "value": "select.product-variants>option:not([value])"
+            },
+            {
+              "value": ".ui-autocomplete"
+            },
+            {
+              "value": ".shopify-payment-button__button"
+            },
+            {
+              "value": "#shopify-section-static-recently-viewed-products"
+            },
+            {
+              "value": "#recently-viewed-products"
+            },
+            {
+              "value": "#shopify-section-product-recommendations"
+            },
+            {
+              "value": ".action_button.add_to_cart"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mollie checkout exclusion",
+      "condition": [
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "/checkouts/([\\w]+)/forward"
+          }
+        }
+      ],
+      "value": [
+        {
+          "type": "dynamics",
+          "payload": [
+            {
+              "value": "#payment-form"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "Shopify Checkout settings",
+      "condition": [
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "/^/(d+/checkouts|checkouts/[a-z]{1,2})/(?:w{2}-)?w{32}/"
+          }
+        }
+      ],
+      "value": [
+        {
+          "type": "shopifyCheckout",
+          "payload": true
+        }
+      ]
+    },
+    {
+      "name": "When inside Loox Widget iframe",
+      "condition": [
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "loox.io"
+          }
+        },
+        {
+          "type": "IN_FRAME",
+          "payload": true
+        }
+      ],
+      "value": [
+        {
+          "type": "whitelist",
+          "payload": [
+            {
+              "value": "main-text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "When inside Loox Widget iframe AND proxy integration",
+      "condition": [
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "value": "loox.io"
+          }
+        },
+        {
+          "type": "IN_FRAME",
+          "payload": true
+        },
+        {
+          "type": "INTEGRATION",
+          "payload": "proxy"
+        }
+      ],
+      "value": [
+        {
+          "type": "dynamicPushState",
+          "payload": true
+        }
+      ]
+    }
+  ]
+}

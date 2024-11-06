@@ -76,6 +76,18 @@
             {
               "const": "URL_TYPE",
               "title": "Check if the site is on subdirectory or subdomain integration"
+            },
+            {
+              "const": "INTEGRATION",
+              "title": "Check the integration of the project (proxy or javascript)"
+            },
+            {
+              "const": "DOM_CONTAINS",
+              "title": "Check the if the dom contains an element using a css selector"
+            },
+            {
+              "const": "IN_FRAME",
+              "title": "Check the if the window is in an iFrame"
             }
           ]
         },
@@ -251,6 +263,42 @@
                 "payload": {
                   "type": "string",
                   "enum": ["subdirectory", "subdomain"]
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "INTEGRATION"
+                },
+                "payload": {
+                  "type": "string",
+                  "enum": ["proxy", "javascript"]
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "DOM_CONTAINS"
+                },
+                "payload": {
+                  "type": "object",
+                  "properties": {
+                    "selector": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "IN_FRAME"
+                },
+                "payload": {
+                  "type": "boolean"
                 }
               }
             }

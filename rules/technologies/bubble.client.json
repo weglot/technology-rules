@@ -1,0 +1,26 @@
+{
+  "$schema": "../../schemas/technologies.schema.json",
+  "title": "Bubble",
+  "technology_id": 17,
+  "settings": [
+    {
+      "name": "Bubble default settings for javascript integration",
+      "condition": [
+        {
+          "type": "INTEGRATION",
+          "payload": "javascript"
+        }
+      ],
+      "value": [
+        {
+          "type": "dynamics",
+          "payload": [
+            {
+              "value": ".content"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

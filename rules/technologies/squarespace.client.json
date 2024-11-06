@@ -1,0 +1,251 @@
+{
+  "$schema": "../../schemas/technologies.schema.json",
+  "title": "Squarespace",
+  "technology_id": 5,
+  "proxyHosts": [],
+  "settings": [
+    {
+      "name": "Squarespace default settings for all pages",
+      "value": [
+        {
+          "type": "dynamics",
+          "payload": [
+            {
+              "value": "#sqs-cart-container"
+            },
+            {
+              "value": "#checkout"
+            },
+            {
+              "value": ".sqs-widgets-confirmation"
+            },
+            {
+              "value": ".video-player"
+            },
+            {
+              "value": ".jdgm-widget"
+            },
+            {
+              "value": ".calendar-block"
+            },
+            {
+              "value": ".opentable-v2-block"
+            },
+            {
+              "value": ".blog-item-comments"
+            }
+          ]
+        },
+        {
+          "type": "excluded_blocks",
+          "payload": [
+            {
+              "value": "body.sqs-is-page-editing"
+            }
+          ]
+        },
+        {
+          "type": "merged_selectors_remove",
+          "payload": [
+            {
+              "value": ".plyr__menu__container"
+            },
+            {
+              "value": ".comment-btn-wrapper"
+            },
+            {
+              "value": ".product-price .original-price"
+            }
+          ]
+        },
+        {
+          "type": "extra_definitions",
+          "payload": [
+            {
+              "type": 1,
+              "selector": ".variant-select-wrapper",
+              "attribute": "data-text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Squarespace settings for proxy integration",
+      "condition": [
+        {
+          "type": "INTEGRATION",
+          "payload": "proxy"
+        }
+      ],
+      "value": [
+        {
+          "type": "dynamics",
+          "payload": [
+            {
+              "value": ".sqs-add-to-cart-button.cart-adding"
+            },
+            {
+              "value": ".sqs-add-to-cart-button.cart-added"
+            }
+          ]
+        },
+        {
+          "type": "excluded_blocks",
+          "payload": [
+            {
+              "value": ".comment-body"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Squarespace settings for javascript integration",
+      "condition": [
+        {
+          "type": "INTEGRATION",
+          "payload": "javascript"
+        }
+      ],
+      "value": [
+        {
+          "type": "dynamics",
+          "payload": [
+            {
+              "value": "[data-dynamic-strings]"
+            },
+            {
+              "value": ".sqs-add-to-cart-button"
+            },
+            {
+              "value": ".variant-select-wrapper"
+            }
+          ]
+        },
+        {
+          "type": "excluded_blocks",
+          "payload": [
+            {
+              "value": ".animation-segment-wrapper"
+            },
+            {
+              "value": ".animation-segment-parent-hidden > *"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Squarespace settings for cart page",
+      "condition": [
+        {
+          "type": "DOM_CONTAINS",
+          "payload": {
+            "selector": "#sqs-cart-root"
+          }
+        }
+      ],
+      "value": [
+        {
+          "type": "excluded_blocks",
+          "payload": [
+            {
+              "value": "#sqs-cart-container [class*=subtotalPrice]"
+            },
+            {
+              "value": "#sqs-cart-container .cart-container .item-price"
+            }
+          ]
+        },
+        {
+          "type": "force_translation",
+          "payload": ["#sqs-cart-container"]
+        }
+      ]
+    },
+    {
+      "name": "Squarespace settings for checkout page",
+      "condition": [
+        {
+          "type": "DOM_CONTAINS",
+          "payload": {
+            "selector": "#sqs-standard-checkout"
+          }
+        }
+      ],
+      "value": [
+        {
+          "type": "excluded_blocks",
+          "payload": [
+            {
+              "value": "#checkout span.money"
+            },
+            {
+              "value": "#checkout [data-test*=incomplete] [class^=PaymentCard-container]"
+            },
+            {
+              "value": "#checkout [data-test*=incomplete] [class^=CustomerAddress-container]"
+            },
+            {
+              "value": "#checkout [class^=CustomerInfoSection-email]"
+            },
+            {
+              "value": "#checkout [class^=GoogleResultsList]"
+            }
+          ]
+        },
+        {
+          "type": "force_translation",
+          "payload": ["#checkout"]
+        }
+      ]
+    },
+    {
+      "name": "Squarespace settings for order status page",
+      "condition": [
+        {
+          "type": "DOM_CONTAINS",
+          "payload": {
+            "selector": "#order-status-page-root"
+          }
+        }
+      ],
+      "value": [
+        {
+          "type": "excluded_blocks",
+          "payload": [
+            {
+              "value": "#order-status-page-root #order-number"
+            },
+            {
+              "value": "#order-status-page-root h2 + div > p"
+            }
+          ]
+        },
+        {
+          "type": "force_translation",
+          "payload": ["#order-status-page-root"]
+        }
+      ]
+    },
+    {
+      "name": "Disable Connect on the Squarespace site admin area",
+      "condition": [
+        {
+          "type": "HOST_MATCH",
+          "payload": {
+            "type": "END_WITH",
+            "value": "squarespace.com"
+          }
+        }
+      ],
+      "value": [
+        {
+          "type": "forceDisableConnect",
+          "payload": true
+        }
+      ]
+    }
+  ]
+}

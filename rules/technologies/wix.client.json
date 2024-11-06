@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/technologies.schema.json",
+  "title": "Wix",
+  "technology_id": 6,
+  "settings": [
+    {
+      "name": "Wix default settings for all pages",
+      "value": [
+        {
+          "type": "dynamicPushState",
+          "payload": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "../../schemas/technologies.schema.json",
+  "title": "Square Online",
+  "technology_id": 16,
+  "settings": [
+    {
+      "name": "Square Online default settings for all pages",
+      "value": [
+        {
+          "type": "dynamics",
+          "payload": [
+            { "value": ".w-container" },
+            { "value": ".w-wrapper" },
+            { "value": ".product-header" },
+            { "value": ".product-messages" },
+            { "value": ".error" },
+            { "value": "button" }
+          ]
+        }
+      ]
+    }
+  ]
+}
