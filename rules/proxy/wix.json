@@ -1,5 +1,5 @@
 {
-  "$schema": "../schemas/proxy.schema.json",
+  "$schema": "../../schemas/proxy.schema.json",
   "title": "Wix proxy rules",
   "proxy": [
     {

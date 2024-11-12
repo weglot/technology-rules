@@ -1,11 +1,13 @@
 {
-  "$schema": "../schemas/technologies.schema.json",
+  "$schema": "../../schemas/technologies.schema.json",
   "title": "Shopify",
   "condition": [
     {
-      "type": "HEADERS_SIGNATURE",
+      "type": "HEADER_MATCH",
       "payload": {
-        "headerName": "x-shopify-stage"
+        "name": "x-shopify-stage",
+        "type": "START_WITH",
+        "value": ""
       }
     }
   ],
@@ -41,7 +43,7 @@
           "type": "PATH_MATCH",
           "payload": {
             "type": "MATCH_REGEX",
-            "value": "/(\\d+)\/checkouts\/(\\w{32})"
+            "value": "/(\\d+)/checkouts/(\\w{32})"
           }
         }
       ],

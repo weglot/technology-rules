@@ -16,7 +16,7 @@ ajv.addKeyword("proxy");
 const root = `${__dirname}/..`;
 fs.readdirSync(`${root}/schemas/`)
   .map((file) => [file, require(`${root}/schemas/${file}`)])
-  .map(([file, schema]) => ajv.addSchema(schema, `../schemas/${file}`));
+  .map(([file, schema]) => ajv.addSchema(schema, `../../schemas/${file}`));
 
 for (const schema of [
   "translations",

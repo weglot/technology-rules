@@ -1,5 +1,5 @@
 {
-  "$schema": "../schemas/origins.schema.json",
+  "$schema": "../../schemas/origins.schema.json",
   "title": "Webflow",
   "origins": [
     {

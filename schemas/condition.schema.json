@@ -50,8 +50,8 @@
               "title": "Website CMS technology"
             },
             {
-              "const": "HEADERS_SIGNATURE",
-              "title": "Match incoming headers"
+              "const": "HEADER_MATCH",
+              "title": "Match incoming header"
             },
             {
               "const": "XML_ATTRIBUTE_VALUE",
@@ -154,11 +154,11 @@
             {
               "properties": {
                 "type": {
-                  "const": "HEADERS_SIGNATURE"
+                  "const": "HEADER_MATCH"
                 },
                 "payload": {
                   "description": "Detect using the incoming headers from the source",
-                  "$ref": "#/defs/HeadersSignature"
+                  "$ref": "#/defs/StringMatch"
                 }
               }
             },
@@ -239,26 +239,15 @@
           "title": "Value",
           "type": "string",
           "description": "E.g: /blog"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string",
+          "description": "Field which could be concerned (eg. header name)"
         }
       },
       "required": ["type", "value"],
       "title": "String Match"
-    },
-    "HeadersSignature": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "headerName": {
-          "title": "Header name",
-          "type": "string"
-        },
-        "regexMatch": {
-          "title": "",
-          "type": "string",
-          "description": "If provided, the header value should match this RegExp string. Leave empty to only check for presence"
-        }
-      },
-      "required": ["headerName"]
     },
     "CDNProvider": {
       "title": "CDN Provider",
