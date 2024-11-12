@@ -1,5 +1,5 @@
 {
-  "$schema": "../schemas/urls.schema.json",
+  "$schema": "../../schemas/urls.schema.json",
   "title": "Shopify",
   "urls": [
     {

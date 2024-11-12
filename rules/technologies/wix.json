@@ -1,12 +1,14 @@
 {
-  "$schema": "../schemas/technologies.schema.json",
+  "$schema": "../../schemas/technologies.schema.json",
   "title": "Wix",
   "technology_id": 6,
   "condition": [
     {
-      "type": "HEADERS_SIGNATURE",
+      "type": "HEADER_MATCH",
       "payload": {
-        "headerName": "x-wix-request-id"
+        "name": "x-wix-request-id",
+        "type": "START_WITH",
+        "value": ""
       }
     }
   ],

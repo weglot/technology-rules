@@ -1,25 +1,26 @@
 {
-    "$schema": "../schemas/origins.schema.json",
-    "title": "Remove Akamai cookie for Preview and Editor proxies",
-    "origins": [
-      {
-        "condition": [
-          {
-            "type": "TRANSLATION_URL_MATCH",
-            "payload": {
-              "type": "MATCH_REGEX",
-              "value": "https:\\/\\/([^\\/]+\\.weglot\\.(io|st)).*"
+  "$schema": "../../schemas/origins.schema.json",
+  "title": "Remove Akamai cookie for Preview and Editor proxies",
+  "origins": [
+    {
+      "condition": [
+        {
+          "type": "TRANSLATION_URL_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "https:\\/\\/([^\\/]+\\.weglot\\.(io|st)).*"
+          }
+        }
+      ],
+      "value": [
+        {
+          "cookies": [
+            {
+              "name": "ak_bmsc"
             }
-          }
-        ],
-        "value": [
-          {
-            "cookies": [{
-                "name": "ak_bmsc"
-            }]
-          }
-        ]
-      }
-    ]
-  }
-  
+          ]
+        }
+      ]
+    }
+  ]
+}
