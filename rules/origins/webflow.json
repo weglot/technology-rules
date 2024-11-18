@@ -17,10 +17,10 @@
           "payload": "cloudflare"
         },
         {
-          "type": "TRANSLATION_URL_MATCH",
+          "type": "TRANSLATION_HOST_MATCH",
           "payload": {
             "type": "MATCH_REGEX",
-            "value": "https:\\/\\/([^\\/]+\\.weglot\\.(io|st)).*"
+            "value": "([^\\/]+\\.weglot\\.(io|st)).*"
           }
         }
       ],

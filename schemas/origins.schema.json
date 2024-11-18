@@ -72,6 +72,18 @@
             "additionalProperties": true,
             "description": "Headers to add or to override on the origin request."
         },
+        "Language": {
+            "title": "Override page language",
+            "type": "object",
+            "additionalProperties": false,
+            "description": "Instructions for how to override the translation language on incoming original-language (subdirectory) requests.",
+            "properties": {
+                "useReferer": {
+                    "title": "Use the referer header's language to determine the language",
+                    "type": "boolean"
+                }
+            }
+        },
         "Cookies": {
             "title": "Override cookie",
             "type": "array",
@@ -93,6 +105,9 @@
                 },
                 "redirect": {
                     "$ref": "#/defs/Redirect"
+                },
+                "language": {
+                    "$ref": "#/defs/Language"
                 },
                 "protocol": {
                     "title": "Override the protocol used to fetch the origin.",

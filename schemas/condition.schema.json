@@ -31,27 +31,39 @@
             },
             {
               "const": "HOST_MATCH",
-              "title": "URL host match"
+              "title": "Match the (original-language) URL hostname of the page being translated"
             },
             {
               "const": "PATH_MATCH",
-              "title": "URL path match"
+              "title": "Match the (original-language) URL path (excluding search, ID) of the page being translated"
             },
             {
               "const": "URI_MATCH",
-              "title": "Original URL match"
+              "title": "Full string match on the (original-language) URL string of the page being translated"
             },
             {
               "const": "TRANSLATION_URL_MATCH",
-              "title": "Translation host match"
+              "title": "Full string match on the URL string of the page being translated"
+            },
+            {
+              "const": "TRANSLATION_HOST_MATCH",
+              "title": "Match the URL hostname of the page being translated"
+            },
+            {
+              "const": "TRANSLATION_PATH_MATCH",
+              "title": "Match the URL pathname (not counting query, hash) of the page being translated"
             },
             {
               "const": "TECHNOLOGY_ID",
               "title": "Website CMS technology"
             },
             {
-              "const": "HEADER_MATCH",
-              "title": "Match incoming header"
+              "const": "RESPONSE_HEADER_MATCH",
+              "title": "Match header in the response from the origin website"
+            },
+            {
+              "const": "REQUEST_HEADER_MATCH",
+              "title": "Match header in the request sent to the origin website"
             },
             {
               "const": "XML_ATTRIBUTE_VALUE",
@@ -121,6 +133,28 @@
             {
               "properties": {
                 "type": {
+                  "const": "TRANSLATION_HOST_MATCH"
+                },
+                "payload": {
+                  "description": "The translation URL hostname of the resource we want to translate needs to fulfill a criteria",
+                  "$ref": "#/defs/StringMatch"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "TRANSLATION_PATH_MATCH"
+                },
+                "payload": {
+                  "description": "Match the path (excluding search, ID) of the page being translated",
+                  "$ref": "#/defs/StringMatch"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
                   "const": "TRANSLATION_URL_MATCH"
                 },
                 "payload": {
@@ -154,10 +188,21 @@
             {
               "properties": {
                 "type": {
-                  "const": "HEADER_MATCH"
+                  "const": "RESPONSE_HEADER_MATCH"
                 },
                 "payload": {
                   "description": "Detect using the incoming headers from the source",
+                  "$ref": "#/defs/StringMatch"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "REQUEST_HEADER_MATCH"
+                },
+                "payload": {
+                  "description": "Detect using the headers sent to the source from the client",
                   "$ref": "#/defs/StringMatch"
                 }
               }
