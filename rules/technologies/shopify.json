@@ -3,7 +3,7 @@
   "title": "Shopify",
   "condition": [
     {
-      "type": "HEADER_MATCH",
+      "type": "RESPONSE_HEADER_MATCH",
       "payload": {
         "name": "x-shopify-stage",
         "type": "START_WITH",

@@ -3,7 +3,7 @@
   "title": "Squarespace",
   "condition": [
     {
-      "type": "HEADER_MATCH",
+      "type": "RESPONSE_HEADER_MATCH",
       "payload": {
         "name": "x-via",
         "type": "MATCH_REGEX",
@@ -11,7 +11,7 @@
       }
     },
     {
-      "type": "HEADER_MATCH",
+      "type": "RESPONSE_HEADER_MATCH",
       "payload": {
         "name": "x-contextid",
         "type": "MATCH_REGEX",
