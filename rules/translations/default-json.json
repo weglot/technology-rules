@@ -1,8 +1,17 @@
-{ 
+{
   "translations": [
     {
       "type": "JSON",
       "label": "Default JSON",
+      "condition": [
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "NOT_END_WITH",
+            "value": ".map"
+          }
+        }
+      ],
       "value": [
         {
           "paths": [
