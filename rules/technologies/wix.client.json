@@ -11,6 +11,25 @@
           "payload": true
         }
       ]
+    },
+    {
+      "name": "Wix settings for javascript integration",
+      "condition": [
+        {
+          "type": "INTEGRATION",
+          "payload": "javascript"
+        }
+      ],
+      "value": [
+        {
+          "type": "dynamics",
+          "payload": [
+            {
+              "value": "#SITE_CONTAINER"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
