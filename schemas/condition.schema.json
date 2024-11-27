@@ -8,7 +8,17 @@
       "type": "array",
       "default": [],
       "items": {
-        "$ref": "#/defs/Condition"
+        "oneOf": [
+          {
+            "$ref": "#/defs/Condition"
+          },
+          {
+            "type": "array",
+            "items": {
+              "$ref": "#/defs/Condition"
+            }
+          }
+        ]
       }
     },
     "Condition": {
