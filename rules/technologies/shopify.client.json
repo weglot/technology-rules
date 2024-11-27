@@ -620,17 +620,19 @@
     {
       "name": "When inside Loox Widget iframe",
       "condition": [
-        {
-          "type": "HOST_MATCH",
-          "payload": {
-            "type": "IS_EXACTLY",
-            "value": "loox.io"
+        [
+          {
+            "type": "HOST_MATCH",
+            "payload": {
+              "type": "IS_EXACTLY",
+              "value": "loox.io"
+            }
+          },
+          {
+            "type": "IN_FRAME",
+            "payload": true
           }
-        },
-        {
-          "type": "IN_FRAME",
-          "payload": true
-        }
+        ]
       ],
       "value": [
         {
@@ -646,21 +648,23 @@
     {
       "name": "When inside Loox Widget iframe AND proxy integration",
       "condition": [
-        {
-          "type": "HOST_MATCH",
-          "payload": {
-            "type": "IS_EXACTLY",
-            "value": "loox.io"
+        [
+          {
+            "type": "HOST_MATCH",
+            "payload": {
+              "type": "IS_EXACTLY",
+              "value": "loox.io"
+            }
+          },
+          {
+            "type": "IN_FRAME",
+            "payload": true
+          },
+          {
+            "type": "INTEGRATION",
+            "payload": "proxy"
           }
-        },
-        {
-          "type": "IN_FRAME",
-          "payload": true
-        },
-        {
-          "type": "INTEGRATION",
-          "payload": "proxy"
-        }
+        ]
       ],
       "value": [
         {
