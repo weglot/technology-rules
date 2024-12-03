@@ -606,7 +606,7 @@
           "type": "PATH_MATCH",
           "payload": {
             "type": "MATCH_REGEX",
-            "value": "/^/(d+/checkouts|checkouts/[a-z]{1,2})/(?:w{2}-)?w{32}/"
+            "value": "^/(d+/checkouts|checkouts/[a-z]{1,2})/(?:w{2}-)?w{32}"
           }
         }
       ],
