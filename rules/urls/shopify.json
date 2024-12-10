@@ -1,12 +1,16 @@
 {
   "$schema": "../../schemas/urls.schema.json",
   "title": "Shopify",
+  "technology_id": 2,
   "urls": [
     {
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 2
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "MATCH_REGEX",
+            "value": "^/checkouts/(?:[\\w]{32})(/.*)?$"
+          }
         }
       ],
       "value": [

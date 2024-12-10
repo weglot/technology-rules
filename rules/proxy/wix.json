@@ -1,13 +1,10 @@
 {
   "$schema": "../../schemas/proxy.schema.json",
   "title": "Wix proxy rules",
+  "technology_id": 6,
   "proxy": [
     {
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
         {
           "type": "HOST_MATCH",
           "payload": {
