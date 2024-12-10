@@ -1,14 +1,10 @@
 {
+  "$schema": "../../schemas/translations.schema.json",
+  "technology_id": 5,
   "translations": [
     {
       "type": "HTML",
       "label": "Squarespace",
-      "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 5
-        }
-      ],
       "value": [
         {
           "id": "squarespace-context",
@@ -56,11 +52,9 @@
       ],
       "value": [
         {
-          "paths": [
-            "$.*"
-           ],
+          "paths": ["$.*"],
           "type": "HTML",
-          "transforms": {"name": "templateVariables"}
+          "transforms": { "name": "templateVariables" }
         }
       ]
     },
@@ -71,18 +65,11 @@
         {
           "type": "FROM_DEFINITION_ID",
           "payload": "squarespace-product-variants"
-        },
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 5
         }
       ],
       "value": [
         {
-          "paths": [
-            "$.*.optionValues.*.value",
-            "$.*.attributes.*"
-           ],
+          "paths": ["$.*.optionValues.*.value", "$.*.attributes.*"],
           "wordType": 1
         }
       ]
@@ -94,10 +81,6 @@
         {
           "type": "FROM_DEFINITION_ID",
           "payload": "squarespace-context"
-        },
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 5
         }
       ],
       "value": [
@@ -132,10 +115,6 @@
       "label": "Squarespace",
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 5
-        },
-        {
           "type": "PATH_MATCH",
           "payload": {
             "type": "END_WITH",
@@ -159,10 +138,6 @@
       "label": "Squarespace",
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 5
-        },
-        {
           "type": "PATH_MATCH",
           "payload": {
             "type": "END_WITH",
@@ -185,10 +160,6 @@
       "label": "Squarespace",
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 5
-        },
-        {
           "type": "PATH_MATCH",
           "payload": {
             "type": "IS_EXACTLY",
@@ -208,10 +179,6 @@
       "label": "Squarespace",
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 5
-        },
-        {
           "type": "PATH_MATCH",
           "payload": {
             "type": "END_WITH",
@@ -229,10 +196,6 @@
       "type": "JSON",
       "label": "Squarespace",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 5
-        },
         {
           "type": "PATH_MATCH",
           "payload": {
@@ -268,11 +231,9 @@
           "wordType": 1
         },
         {
-          "paths": [
-            "$.localizedStrings.*.*"
-          ],
+          "paths": ["$.localizedStrings.*.*"],
           "type": "HTML",
-          "transforms": {"name": "templateVariables"}
+          "transforms": { "name": "templateVariables" }
         }
       ]
     },
@@ -280,10 +241,6 @@
       "type": "JSON",
       "label": "Squarespace",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 5
-        },
         {
           "type": "PATH_MATCH",
           "payload": {
@@ -294,11 +251,7 @@
       ],
       "value": [
         {
-          "paths": [
-            "$.error",
-            "$.errors.*",
-            "$.message"
-          ],
+          "paths": ["$.error", "$.errors.*", "$.message"],
           "wordType": 1
         }
       ]

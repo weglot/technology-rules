@@ -1,13 +1,11 @@
 {
+  "$schema": "../../schemas/translations.schema.json",
+  "technology_id": 2,
   "translations": [
     {
       "type": "JSON",
       "label": "Shopify",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 2
-        },
         {
           "type": "PATH_MATCH",
           "payload": {
@@ -18,9 +16,7 @@
       ],
       "value": [
         {
-          "paths": [
-            "$.paymentInstruments.*.domain"
-          ],
+          "paths": ["$.paymentInstruments.*.domain"],
           "type": "URL"
         }
       ]
@@ -29,10 +25,6 @@
       "type": "JSON",
       "label": "Shopify",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 2
-        },
         {
           "type": "PATH_MATCH",
           "payload": {
@@ -43,9 +35,7 @@
       ],
       "value": [
         {
-          "paths": [
-            "$..classicThankYouPageUrl"
-          ],
+          "paths": ["$..classicThankYouPageUrl"],
           "type": "URL"
         }
       ]
@@ -54,10 +44,6 @@
       "type": "JSON",
       "label": "Shopify",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 2
-        },
         {
           "type": "PATH_MATCH",
           "payload": {
@@ -102,10 +88,6 @@
       "label": "Shopify",
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 2
-        },
-        {
           "type": "PATH_MATCH",
           "payload": {
             "type": "MATCH_REGEX",
@@ -129,17 +111,11 @@
           "wordType": 1
         },
         {
-          "paths": [
-            "$.product.images[*].src",
-            "$.product.image[*].src"
-          ],
+          "paths": ["$.product.images[*].src", "$.product.image[*].src"],
           "wordType": 6
         },
         {
-          "paths": [
-            "$.product.images[*].alt",
-            "$.product.image[*].alt"
-          ],
+          "paths": ["$.product.images[*].alt", "$.product.image[*].alt"],
           "wordType": 7
         }
       ]
@@ -149,10 +125,6 @@
       "label": "Shopify",
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 2
-        },
-        {
           "type": "XML_ROOT_ELEMENT_NAME",
           "payload": {
             "selector": "products"
@@ -161,10 +133,7 @@
       ],
       "value": [
         {
-          "paths": [
-            "title",
-            "description"
-          ],
+          "paths": ["title", "description"],
           "wordType": 1
         }
       ]
@@ -174,10 +143,6 @@
       "label": "Shopify",
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 2
-        },
-        {
           "type": "XML_ROOT_ELEMENT_NAME",
           "payload": {
             "selector": "hash"
@@ -186,18 +151,11 @@
       ],
       "value": [
         {
-          "paths": [
-            "title",
-            "body-html",
-            "product-type",
-            "alt"
-          ],
+          "paths": ["title", "body-html", "product-type", "alt"],
           "wordType": 1
         },
         {
-          "paths": [
-            "src"
-          ],
+          "paths": ["src"],
           "wordType": 6
         }
       ]
@@ -206,10 +164,6 @@
       "type": "HTML",
       "label": "Shopify",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 2
-        },
         {
           "type": "URL_TYPE",
           "payload": "subdirectory"
@@ -238,10 +192,6 @@
       "label": "Shopify",
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 2
-        },
-        {
           "type": "URL_TYPE",
           "payload": "subdomain"
         }
@@ -263,12 +213,6 @@
     {
       "type": "HTML",
       "label": "Shopify",
-      "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 2
-        }
-      ],
       "value": [
         {
           "id": "shopify-cart-template",
@@ -320,17 +264,9 @@
     {
       "type": "JSON",
       "label": "Shopify",
-      "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 2
-        }
-      ],
       "value": [
         {
-          "excluded_paths": [
-            "$..discount.title"
-          ]
+          "excluded_paths": ["$..discount.title"]
         }
       ]
     },
@@ -338,17 +274,19 @@
       "type": "HTML",
       "label": "Shopify",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 2
-        },
-        {
-          "type": "PATH_MATCH",
-          "payload": {
-            "type": "START_WITH",
-            "value": "/checkouts"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 2
+          },
+          {
+            "type": "PATH_MATCH",
+            "payload": {
+              "type": "START_WITH",
+              "value": "/checkouts"
+            }
           }
-        }
+        ]
       ],
       "value": [
         {

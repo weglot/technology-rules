@@ -1,14 +1,10 @@
 {
+  "$schema": "../../schemas/translations.schema.json",
+  "technology_id": 6,
   "translations": [
     {
       "type": "HTML",
       "label": "Wix",
-      "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        }
-      ],
       "value": [
         {
           "id": "wix-viewer-model",
@@ -80,10 +76,6 @@
       "type": "JSON",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
         {
           "type": "URI_MATCH",
           "payload": {
@@ -161,10 +153,6 @@
       "label": "Wix",
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
           "type": "URI_MATCH",
           "payload": {
             "type": "START_WITH",
@@ -188,10 +176,6 @@
       "type": "JSON",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
         {
           "type": "PATH_MATCH",
           "payload": {
@@ -217,10 +201,6 @@
       "type": "JSON",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
         {
           "type": "PATH_MATCH",
           "payload": {
@@ -255,10 +235,6 @@
       "label": "Wix",
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
           "type": "PATH_MATCH",
           "payload": {
             "type": "IS_EXACTLY",
@@ -282,10 +258,6 @@
       "label": "Wix",
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
           "type": "PATH_MATCH",
           "payload": {
             "type": "START_WITH",
@@ -304,10 +276,6 @@
       "type": "JSON",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
         {
           "type": "PATH_MATCH",
           "payload": {
@@ -328,10 +296,6 @@
       "label": "Wix",
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
           "type": "PATH_MATCH",
           "payload": {
             "type": "MATCH_REGEX",
@@ -350,10 +314,6 @@
       "label": "Wix",
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
           "type": "PATH_MATCH",
           "payload": {
             "type": "MATCH_REGEX",
@@ -371,10 +331,6 @@
       "type": "HTML",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
         {
           "type": "PATH_MATCH",
           "payload": {
@@ -415,10 +371,6 @@
         {
           "type": "FROM_DEFINITION_ID",
           "payload": "cartwidget-messages"
-        },
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
         }
       ],
       "value": [
@@ -450,10 +402,6 @@
       "label": "Wix",
       "condition": [
         {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
           "type": "URI_MATCH",
           "payload": {
             "type": "MATCH_REGEX",
@@ -471,10 +419,6 @@
       "type": "JSON",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
         {
           "type": "PATH_MATCH",
           "payload": {

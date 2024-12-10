@@ -5,6 +5,12 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "technology_id": {
+      "$ref": "common.schema.json#/defs/TechnologyID"
+    },
     "translations": {
       "title": "",
       "type": "array",
@@ -33,7 +39,7 @@
       }
     }
   },
-  "required": ["$schema", "title", "translations"],
+  "required": ["$schema", "translations"],
   "defs": {
     "ValueArray": {
       "title": "If condition was true, apply these definitions",
@@ -63,7 +69,24 @@
         },
         "regex": {
           "title": "A regular expression",
-          "type": "string"
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": ["value"],
+                "additionalProperties": false
+              }
+            }
+          ]
         },
         "paths": {
           "title": "",
@@ -84,6 +107,23 @@
           "title": "URL format to force",
           "description": "Parse URL with this format",
           "$ref": "#/defs/ForceURLFormat"
+        },
+        "excluded_paths": {
+          "title": "Excluded paths",
+          "description": "List of JSONPath strings that should be excluded from the translation",
+          "$ref": "#/defs/JSONPathArray"
+        },
+        "transforms": {
+          "title": "Transforms",
+          "description": "Transforms to apply to the value",
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Transform name",
+              "description": "Name of the transform to apply",
+              "type": "string"
+            }
+          }
         }
       }
     },

@@ -1,13 +1,10 @@
 {
   "$schema": "../../schemas/proxy.schema.json",
   "title": "Wordpress proxy rules",
+  "technology_id": 1,
   "proxy": [
     {
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 1
-        },
         {
           "type": "HOST_MATCH",
           "payload": {
