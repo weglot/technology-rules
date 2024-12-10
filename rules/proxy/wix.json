@@ -11,29 +11,8 @@
         {
           "type": "HOST_MATCH",
           "payload": {
-            "type": "END_WITH",
-            "value": ".parastorage.com"
-          }
-        },
-        {
-          "type": "HOST_MATCH",
-          "payload": {
-            "type": "END_WITH",
-            "value": ".wixapps.net"
-          }
-        },
-        {
-          "type": "HOST_MATCH",
-          "payload": {
-            "type": "END_WITH",
-            "value": ".wixstatic.com"
-          }
-        },
-        {
-          "type": "HOST_MATCH",
-          "payload": {
-            "type": "IS_EXACTLY",
-            "value": "ecom.wix.com"
+            "type": "MATCH_REGEX",
+            "value": "(?:\\.parastorage\\.com|\\.wixapps\\.net|\\.wixstatic\\.com|^ecom\\.wix\\.com$)"
           }
         }
       ],

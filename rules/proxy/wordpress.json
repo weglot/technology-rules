@@ -4,17 +4,19 @@
   "proxy": [
     {
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 1
-        },
-        {
-          "type": "HOST_MATCH",
-          "payload": {
-            "type": "END_WITH",
-            "value": ".algolia.net"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 1
+          },
+          {
+            "type": "HOST_MATCH",
+            "payload": {
+              "type": "END_WITH",
+              "value": ".algolia.net"
+            }
           }
-        }
+        ]
       ],
       "value": [
         {

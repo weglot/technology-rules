@@ -80,52 +80,32 @@
       "type": "JSON",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
-          "type": "URI_MATCH",
-          "payload": {
-            "type": "START_WITH",
-            "value": "https://siteassets.parastorage.com/pages/singlePage"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 6
+          },
+          {
+            "type": "URI_MATCH",
+            "payload": {
+              "type": "MATCH_REGEX",
+              "value": "^https:\\/\\/siteassets\\.parastorage\\.com\\/(?:pages\\/singlePage|pages\\/fixedPage|pages\\/pages\\/viewerViewModeJson|singlePage|pages\\/pages\\/thunderbolt)$"
+            }
           }
-        },
-        {
-          "type": "URI_MATCH",
-          "payload": {
-            "type": "START_WITH",
-            "value": "https://siteassets.parastorage.com/pages/fixedPage"
+        ],
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 6
+          },
+          {
+            "type": "URI_MATCH",
+            "payload": {
+              "type": "MATCH_REGEX",
+              "value": "https://pages.wixstatic.com/sites/([\\w_]+).json.z"
+            }
           }
-        },
-        {
-          "type": "URI_MATCH",
-          "payload": {
-            "type": "START_WITH",
-            "value": "https://siteassets.parastorage.com/pages/pages/viewerViewModeJson"
-          }
-        },
-        {
-          "type": "URI_MATCH",
-          "payload": {
-            "type": "START_WITH",
-            "value": "https://siteassets.parastorage.com/singlePage"
-          }
-        },
-        {
-          "type": "URI_MATCH",
-          "payload": {
-            "type": "START_WITH",
-            "value": "https://siteassets.parastorage.com/pages/pages/thunderbolt"
-          }
-        },
-        {
-          "type": "URI_MATCH",
-          "payload": {
-            "type": "MATCH_REGEX",
-            "value": "https://pages.wixstatic.com/sites/([\\w_]+).json.z"
-          }
-        }
+        ]
       ],
       "value": [
         {
@@ -160,17 +140,19 @@
       "type": "JSON",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
-          "type": "URI_MATCH",
-          "payload": {
-            "type": "START_WITH",
-            "value": "https://wixlabs-wix-faq-11.appspot.com/api/"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 6
+          },
+          {
+            "type": "URI_MATCH",
+            "payload": {
+              "type": "START_WITH",
+              "value": "https://wixlabs-wix-faq-11.appspot.com/api/"
+            }
           }
-        }
+        ]
       ],
       "value": [
         {
@@ -188,17 +170,19 @@
       "type": "JSON",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
-          "type": "PATH_MATCH",
-          "payload": {
-            "type": "START_WITH",
-            "value": "/_api/wix-ecommerce-storefront-web/api"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 6
+          },
+          {
+            "type": "PATH_MATCH",
+            "payload": {
+              "type": "START_WITH",
+              "value": "/_api/wix-ecommerce-storefront-web/api"
+            }
           }
-        }
+        ]
       ],
       "value": [
         {
@@ -217,31 +201,19 @@
       "type": "JSON",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
-          "type": "PATH_MATCH",
-          "payload": {
-            "type": "START_WITH",
-            "value": "/_serverless/comments-web-translations-proxy/comments-ooi/"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 6
+          },
+          {
+            "type": "PATH_MATCH",
+            "payload": {
+              "type": "MATCH_REGEX",
+              "value": "\\/(?:_serverless\\/comments-web-translations-proxy\\/comments-ooi|services\\/communities-blog-translations|services\\/bookings-calendar-widget)\\/.*"
+            }
           }
-        },
-        {
-          "type": "PATH_MATCH",
-          "payload": {
-            "type": "START_WITH",
-            "value": "/services/communities-blog-translations/"
-          }
-        },
-        {
-          "type": "PATH_MATCH",
-          "payload": {
-            "type": "START_WITH",
-            "value": "/services/bookings-calendar-widget/"
-          }
-        }
+        ]
       ],
       "value": [
         {
@@ -254,10 +226,12 @@
       "type": "JSON",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 6
+          }
+        ],
         {
           "type": "PATH_MATCH",
           "payload": {
@@ -281,17 +255,19 @@
       "type": "JSON",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
-          "type": "PATH_MATCH",
-          "payload": {
-            "type": "START_WITH",
-            "value": "/_api/communities-blog-node-api/_api/posts/content"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 6
+          },
+          {
+            "type": "PATH_MATCH",
+            "payload": {
+              "type": "START_WITH",
+              "value": "/_api/communities-blog-node-api/_api/posts/content"
+            }
           }
-        }
+        ]
       ],
       "value": [
         {
@@ -304,17 +280,19 @@
       "type": "JSON",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
-          "type": "PATH_MATCH",
-          "payload": {
-            "type": "START_WITH",
-            "value": "/_api/communities-blog-node-api/_api/blogs/this"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 6
+          },
+          {
+            "type": "PATH_MATCH",
+            "payload": {
+              "type": "START_WITH",
+              "value": "/_api/communities-blog-node-api/_api/blogs/this"
+            }
           }
-        }
+        ]
       ],
       "value": [
         {
@@ -327,17 +305,19 @@
       "type": "RAW",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
-          "type": "PATH_MATCH",
-          "payload": {
-            "type": "MATCH_REGEX",
-            "value": "BookingCalendar(.*).bundle.min.js$"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 6
+          },
+          {
+            "type": "PATH_MATCH",
+            "payload": {
+              "type": "MATCH_REGEX",
+              "value": "BookingCalendar(.*).bundle.min.js$"
+            }
           }
-        }
+        ]
       ],
       "value": [
         {
@@ -349,17 +329,19 @@
       "type": "RAW",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
-          "type": "PATH_MATCH",
-          "payload": {
-            "type": "MATCH_REGEX",
-            "value": "wixstores-client-worker/(.+)/viewerScript.bundle.min.js$"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 6
+          },
+          {
+            "type": "PATH_MATCH",
+            "payload": {
+              "type": "MATCH_REGEX",
+              "value": "wixstores-client-worker/(.+)/viewerScript.bundle.min.js$"
+            }
           }
-        }
+        ]
       ],
       "value": [
         {
@@ -371,17 +353,19 @@
       "type": "HTML",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
-          "type": "PATH_MATCH",
-          "payload": {
-            "type": "CONTAIN",
-            "value": "storefront/cartwidgetPopup"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 6
+          },
+          {
+            "type": "PATH_MATCH",
+            "payload": {
+              "type": "CONTAIN",
+              "value": "storefront/cartwidgetPopup"
+            }
           }
-        }
+        ]
       ],
       "value": [
         {
@@ -449,17 +433,19 @@
       "type": "HTML",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
-          "type": "URI_MATCH",
-          "payload": {
-            "type": "MATCH_REGEX",
-            "value": "ecom.wixapps.net/storefront/checkout"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 6
+          },
+          {
+            "type": "URI_MATCH",
+            "payload": {
+              "type": "MATCH_REGEX",
+              "value": "ecom.wixapps.net/storefront/checkout"
+            }
           }
-        }
+        ]
       ],
       "value": [
         {
@@ -471,17 +457,19 @@
       "type": "JSON",
       "label": "Wix",
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 6
-        },
-        {
-          "type": "PATH_MATCH",
-          "payload": {
-            "type": "MATCH_REGEX",
-            "value": "wixstores-client-checkout/(.+)/assets/locale/checkout/messages_en.json$"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 6
+          },
+          {
+            "type": "PATH_MATCH",
+            "payload": {
+              "type": "MATCH_REGEX",
+              "value": "wixstores-client-checkout/(.+)/assets/locale/checkout/messages_en.json$"
+            }
           }
-        }
+        ]
       ],
       "value": [
         {

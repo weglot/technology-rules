@@ -1,70 +1,74 @@
 {
-    "$schema": "../../schemas/origins.schema.json",
-    "title": "Get translation language from referer from on original-language incoming requests",
-    "origins": [
+  "$schema": "../../schemas/origins.schema.json",
+  "title": "Get translation language from referer from on original-language incoming requests",
+  "origins": [
+    {
+      "condition": [
         {
-            "condition": [
-                {
-                    "type": "REQUEST_HEADER_MATCH",
-                    "payload": {
-                        "type": "IS_EXACTLY",
-                        "name": "X-Requested-With",
-                        "value": "XMLHttpRequest"
-                    }
-                }
-            ],
-            "value": [
-                {
-                    "language": {
-                        "useReferer": true
-                    }
-                }
-            ]
-        },
-        {
-            "condition": [
-                    {
-                      "type": "TECHNOLOGY_ID",
-                      "payload": 6
-                    },
-                    {
-                        "type": "REQUEST_HEADER_MATCH",
-                        "payload": {
-                            "name": "X-Wix-Brand",
-                            "type": "START_WITH",
-                            "value": ""
-                        }
-                    }
-            ],
-            "value": [
-                {
-                    "language": {
-                        "useReferer": true
-                    }
-                }
-            ]
-        },
-        {
-            "condition": [
-                    {
-                      "type": "TECHNOLOGY_ID",
-                      "payload": 2
-                    },
-                    {
-                        "type": "TRANSLATION_PATH_MATCH",
-                        "payload": {
-                            "type": "MATCH_REGEX",
-                            "value": "^/localization$"
-                        }
-                    }
-            ],
-            "value": [
-                {
-                    "language": {
-                        "useReferer": true
-                    }
-                }
-            ]
+          "type": "REQUEST_HEADER_MATCH",
+          "payload": {
+            "type": "IS_EXACTLY",
+            "name": "X-Requested-With",
+            "value": "XMLHttpRequest"
+          }
         }
-    ]
+      ],
+      "value": [
+        {
+          "language": {
+            "useReferer": true
+          }
+        }
+      ]
+    },
+    {
+      "condition": [
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 6
+          },
+          {
+            "type": "REQUEST_HEADER_MATCH",
+            "payload": {
+              "name": "X-Wix-Brand",
+              "type": "START_WITH",
+              "value": ""
+            }
+          }
+        ]
+      ],
+      "value": [
+        {
+          "language": {
+            "useReferer": true
+          }
+        }
+      ]
+    },
+    {
+      "condition": [
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 2
+          },
+          {
+            "type": "TRANSLATION_PATH_MATCH",
+            "payload": {
+              "type": "MATCH_REGEX",
+              "value": "^/localization$"
+            }
+          }
+        ]
+      ],
+      "value": [
+        {
+          "language": {
+            "useReferer": true
+          }
+        }
+      ]
+    }
+  ]
 }

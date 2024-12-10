@@ -4,25 +4,39 @@
   "origins": [
     {
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 13
-        },
-        {
-          "type": "URL_TYPE",
-          "payload": "subdirectory"
-        },
-        {
-          "type": "CDN_PROVIDER",
-          "payload": "cloudflare"
-        },
-        {
-          "type": "TRANSLATION_HOST_MATCH",
-          "payload": {
-            "type": "MATCH_REGEX",
-            "value": "([^\\/]+\\.weglot\\.(io|st)).*"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 13
+          },
+          {
+            "type": "URL_TYPE",
+            "payload": "subdirectory"
           }
-        }
+        ],
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 13
+          },
+          {
+            "type": "CDN_PROVIDER",
+            "payload": "cloudflare"
+          }
+        ],
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 13
+          },
+          {
+            "type": "TRANSLATION_HOST_MATCH",
+            "payload": {
+              "type": "MATCH_REGEX",
+              "value": "([^\\/]+\\.weglot\\.(io|st)).*"
+            }
+          }
+        ]
       ],
       "value": [
         {
@@ -32,25 +46,39 @@
     },
     {
       "condition": [
-        {
-          "type": "TECHNOLOGY_ID",
-          "payload": 13
-        },
-        {
-          "type": "URL_TYPE",
-          "payload": "subdirectory"
-        },
-        {
-          "type": "CDN_PROVIDER",
-          "payload": "cloudflare"
-        },
-        {
-          "type": "PATH_MATCH",
-          "payload": {
-            "type": "NOT_START_WITH",
-            "value": "/.wf_graphql/"
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 13
+          },
+          {
+            "type": "URL_TYPE",
+            "payload": "subdirectory"
           }
-        }
+        ],
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 13
+          },
+          {
+            "type": "CDN_PROVIDER",
+            "payload": "cloudflare"
+          }
+        ],
+        [
+          {
+            "type": "TECHNOLOGY_ID",
+            "payload": 13
+          },
+          {
+            "type": "PATH_MATCH",
+            "payload": {
+              "type": "NOT_START_WITH",
+              "value": "/.wf_graphql/"
+            }
+          }
+        ]
       ],
       "value": [
         {
