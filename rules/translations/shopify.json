@@ -274,19 +274,13 @@
       "type": "HTML",
       "label": "Shopify",
       "condition": [
-        [
-          {
-            "type": "TECHNOLOGY_ID",
-            "payload": 2
-          },
-          {
-            "type": "PATH_MATCH",
-            "payload": {
-              "type": "START_WITH",
-              "value": "/checkouts"
-            }
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "START_WITH",
+            "value": "/checkouts"
           }
-        ]
+        }
       ],
       "value": [
         {
