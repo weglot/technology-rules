@@ -124,6 +124,9 @@
             },
             {
               "value": ".yotpo-mandatory-mark"
+            },
+            {
+              "value": ".price-list"
             }
           ]
         },
