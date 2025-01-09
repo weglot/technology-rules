@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/technologies.schema.json",
+  "title": "Magento",
+  "technology_id": 15,
+  "settings": [
+    {
+      "name": "Magento default settings for all pages",
+      "value": [
+        {
+          "type": "excluded_blocks",
+          "payload": [
+            {
+              "value": ".price"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
