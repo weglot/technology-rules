@@ -8,7 +8,7 @@
       "type": "array",
       "default": [],
       "items": {
-        "oneOf": [
+        "anyOf": [
           {
             "$ref": "#/defs/Condition"
           },
@@ -17,8 +17,56 @@
             "items": {
               "$ref": "#/defs/Condition"
             }
+          },
+          {
+            "$ref": "#/defs/OperatorAnd"
+          },
+          {
+            "$ref": "#/defs/OperatorOr"
           }
         ]
+      }
+    },
+    "OperatorAnd": {
+      "type": "object",
+      "properties": {
+        "and": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/defs/Condition"
+              },
+              {
+                "$ref": "#/defs/OperatorAnd"
+              },
+              {
+                "$ref": "#/defs/OperatorOr"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "OperatorOr": {
+      "type": "object",
+      "properties": {
+        "or": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/defs/Condition"
+              },
+              {
+                "$ref": "#/defs/OperatorAnd"
+              },
+              {
+                "$ref": "#/defs/OperatorOr"
+              }
+            ]
+          }
+        }
       }
     },
     "Condition": {
@@ -98,6 +146,10 @@
             {
               "const": "IN_FRAME",
               "title": "Check the if the window is in an iFrame"
+            },
+            {
+              "const": "INCOMING_PROXY_FORMAT",
+              "title": "Checks which format of proxy we are in"
             }
           ]
         },
@@ -272,7 +324,10 @@
                 },
                 "payload": {
                   "type": "string",
-                  "enum": ["subdirectory", "subdomain"]
+                  "enum": [
+                    "subdirectory",
+                    "subdomain"
+                  ]
                 }
               }
             },
@@ -283,7 +338,10 @@
                 },
                 "payload": {
                   "type": "string",
-                  "enum": ["proxy", "javascript"]
+                  "enum": [
+                    "proxy",
+                    "javascript"
+                  ]
                 }
               }
             },
@@ -315,7 +373,10 @@
           ]
         }
       },
-      "required": ["payload", "type"]
+      "required": [
+        "payload",
+        "type"
+      ]
     },
     "StringMatch": {
       "type": "object",
@@ -349,7 +410,10 @@
           "description": "Field which could be concerned (eg. header name)"
         }
       },
-      "required": ["type", "value"],
+      "required": [
+        "type",
+        "value"
+      ],
       "title": "String Match"
     },
     "CDNProvider": {
@@ -357,7 +421,12 @@
       "description": "Which CDN provider should the rule apply to",
       "type": "string",
       "default": "cloudflare",
-      "enum": ["cloudflare", "fly", "fastly", "stackpath"]
+      "enum": [
+        "cloudflare",
+        "fly",
+        "fastly",
+        "stackpath"
+      ]
     }
   }
 }
