@@ -108,6 +108,10 @@
               "title": "Match the URL hostname of the page being translated"
             },
             {
+              "const": "SOURCE_CONTEXT",
+              "title": "Match attributes of the context in which the translation request was made to Weglot"
+            },
+            {
               "const": "TRANSLATION_PATH_MATCH",
               "title": "Match the URL pathname (not counting query, hash) of the page being translated"
             },
@@ -212,6 +216,29 @@
                 "payload": {
                   "description": "The translation URL hostname of the resource we want to translate needs to fulfill a criteria",
                   "$ref": "#/defs/StringMatch"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "SOURCE_CONTEXT"
+                },
+                "payload": {
+                  "description": "The translation request must have been made in a certain context",
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "render",
+                        "editor"
+                      ]
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  }
                 }
               }
             },
