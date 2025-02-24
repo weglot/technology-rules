@@ -15,30 +15,18 @@
             "payload": "cloudflare"
           },
           {
-            "type": "TRANSLATION_HOST_MATCH",
+            "type": "SOURCE_CONTEXT",
             "payload": {
-              "type": "MATCH_REGEX",
-              "value": "([^\\/]+\\.weglot\\.(io|st)).*"
+              "type": "render",
+              "value": false
             }
-          }
-        ]
-      ],
-      "value": [
-        {
-          "protocol": "https:"
-        }
-      ]
-    },
-    {
-      "condition": [
-        [
-          {
-            "type": "URL_TYPE",
-            "payload": "subdirectory"
           },
           {
-            "type": "CDN_PROVIDER",
-            "payload": "cloudflare"
+            "type": "SOURCE_CONTEXT",
+            "payload": {
+              "type": "editor",
+              "value": false
+            }
           },
           {
             "type": "PATH_MATCH",
