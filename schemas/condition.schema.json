@@ -232,7 +232,8 @@
                       "type": "string",
                       "enum": [
                         "render",
-                        "editor"
+                        "editor",
+                        "preview"
                       ]
                     },
                     "value": {
