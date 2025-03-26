@@ -206,7 +206,8 @@
             {
               "value": "Shopify.locale = \"(?<localeCode>[^\"]+)\";?"
             }
-          ]
+          ],
+          "id": "shopify-vars"
         }
       ]
     },
