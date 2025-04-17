@@ -87,6 +87,7 @@
         {
           "paths": [
             "$.collection.title",
+            "$.cookieSettings.cookieBannerManageCookiesLabel",
             "$.cookieSettings.cookieBannerText",
             "$.cookieSettings.cookieBannerCtaText",
             "$.cookieSettings.cookieBannerOptOutCtaText",
