@@ -1,14 +1,12 @@
 {
   "name": "@weglot/technology-rules",
-  "version": "4.5.0",
   "main": "index.js",
   "repository": "git@github.com:weglot/technology-rules.git",
   "author": "Weglot <support@weglot.com>",
   "license": "MIT",
   "scripts": {
     "build": "node bin/build.js",
-    "test": "node test/schemas.spec.js",
-    "postversion": "git push --tags && git push && echo \"Successfully released version $npm_package_version!\""
+    "test": "node test/schemas.spec.js"
   },
   "devDependencies": {
     "ajv": "^8.17.1"
