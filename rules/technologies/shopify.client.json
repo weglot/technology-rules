@@ -60,6 +60,15 @@
               "value": ".product__prices"
             },
             {
+              "value": ".price-list"
+            },
+            {
+              "value": ".cart-drawer__button-price"
+            },
+            {
+              "value": ".sr-only"
+            },
+            {
               "value": "#admin-bar-iframe"
             },
             {
@@ -120,13 +129,7 @@
               "value": ".yotpo .avg-score"
             },
             {
-              "value": ".yotpo .sr-only"
-            },
-            {
               "value": ".yotpo-mandatory-mark"
-            },
-            {
-              "value": ".price-list"
             }
           ]
         },
