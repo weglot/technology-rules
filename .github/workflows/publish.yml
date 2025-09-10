@@ -27,7 +27,7 @@ jobs:
         run: yarn build
 
       - name: Set version package
-        run: npm version ${{ github.ref_name }}
+        run: npm version --no-git-tag-version ${{ github.ref_name }}
 
       - name: Publish on Github registry
         run: yarn publish
