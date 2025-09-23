@@ -25,19 +25,21 @@
           "transforms": { "name": "html" }
         },
         {
-          "selector": ".product-variants option",
-          "attribute": "value",
-          "wordType": 1
-        },
-        {
-          "selector": ".product-variants input",
-          "attribute": "value",
+          "selector": ".product-variants [data-selected-value]",
+          "attribute": "data-selected-value",
           "wordType": 1
         },
         {
           "selector": "script.sqs-form-block-context",
           "type": "JSON",
           "id": "squarespace-form-context"
+        },
+        {
+          "selector": ".product-detail[data-localized-strings]",
+          "attribute": "data-localized-strings",
+          "type": "JSON",
+          "transforms": { "name": "html" },
+          "id": "squarespace-product-strings"
         }
       ]
     },
@@ -70,6 +72,22 @@
       "value": [
         {
           "paths": ["$.*.optionValues.*.value", "$.*.attributes.*"],
+          "wordType": 1
+        }
+      ]
+    },
+    {
+      "type": "JSON",
+      "label": "Squarespace",
+      "condition": [
+        {
+          "type": "FROM_DEFINITION_ID",
+          "payload": "squarespace-product-strings"
+        }
+      ],
+      "value": [
+        {
+          "paths": ["$.*"],
           "wordType": 1
         }
       ]
