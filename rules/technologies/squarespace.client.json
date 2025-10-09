@@ -188,6 +188,12 @@
               "value": "#checkout [data-test*=incomplete] [class^=CustomerAddress-container]"
             },
             {
+              "value": "#checkout [aria-labelledby=payment-options-select]"
+            },
+            {
+              "value": "#checkout [class^=PaymentSection]"
+            },
+            {
               "value": "#checkout [class^=CustomerInfoSection-email]"
             },
             {
