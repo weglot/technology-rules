@@ -154,6 +154,10 @@
             {
               "const": "INCOMING_PROXY_FORMAT",
               "title": "Checks which format of proxy we are in"
+            },
+            {
+              "const": "MAIN_RECORD_MATCH",
+              "title": "String matching on the main record (subdirectory origin host) of the project"
             }
           ]
         },
@@ -182,6 +186,17 @@
                 },
                 "payload": {
                   "description": "The host of the resource we want to translate needs to be fulfill a criteria",
+                  "$ref": "#/defs/StringMatch"
+                }
+              }
+            },
+            {
+              "properties": {
+                "type": {
+                  "const": "MAIN_RECORD_MATCH"
+                },
+                "payload": {
+                  "description": "The subdirectory origin host of the project needs to fulfill certain criteria",
                   "$ref": "#/defs/StringMatch"
                 }
               }

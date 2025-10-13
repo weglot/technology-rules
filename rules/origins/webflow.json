@@ -15,6 +15,13 @@
             "payload": "cloudflare"
           },
           {
+            "type": "MAIN_RECORD_MATCH",
+            "payload": {
+              "type": "NOT_IS_EXACTLY",
+              "value": "cdn.webflow.com"
+            }
+          },
+          {
             "type": "SOURCE_CONTEXT",
             "payload": {
               "type": "render",
