@@ -170,7 +170,7 @@
         {
           "type": "DOM_CONTAINS",
           "payload": {
-            "selector": "#sqs-standard-checkout"
+            "selector": "#checkout"
           }
         }
       ],
