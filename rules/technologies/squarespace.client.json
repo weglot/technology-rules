@@ -33,6 +33,9 @@
             },
             {
               "value": ".blog-item-comments"
+            },
+            {
+              "value": "[data-dynamic-strings]"
             }
           ]
         },
@@ -112,9 +115,6 @@
         {
           "type": "dynamics",
           "payload": [
-            {
-              "value": "[data-dynamic-strings]"
-            },
             {
               "value": ".sqs-add-to-cart-button"
             },
