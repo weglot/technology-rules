@@ -30,11 +30,6 @@
           "wordType": 1
         },
         {
-          "selector": "script.sqs-form-block-context",
-          "type": "JSON",
-          "id": "squarespace-form-context"
-        },
-        {
           "selector": ".product-detail[data-localized-strings]",
           "attribute": "data-localized-strings",
           "type": "JSON",
@@ -227,32 +222,6 @@
         {
           "paths": ["$.comments.*.body"],
           "type": "HTML"
-        }
-      ]
-    },
-    {
-      "type": "JSON",
-      "label": "Squarespace",
-      "condition": [
-        {
-          "type": "FROM_DEFINITION_ID",
-          "payload": "squarespace-form-context"
-        }
-      ],
-      "value": [
-        {
-          "paths": [
-            "$.formSubmitButtonText",
-            "$.formSubmissionMessage.html",
-            "$..label",
-            "$.localizedStrings.*"
-          ],
-          "wordType": 1
-        },
-        {
-          "paths": ["$.localizedStrings.*.*"],
-          "type": "HTML",
-          "transforms": { "name": "templateVariables" }
         }
       ]
     },
