@@ -100,6 +100,10 @@
               "value": ".comment-body"
             }
           ]
+        },
+        {
+          "type": "force_translation",
+          "payload": ["form [data-dynamic-strings]"]
         }
       ]
     },
@@ -188,12 +192,6 @@
               "value": "#checkout [data-test*=incomplete] [class^=CustomerAddress-container]"
             },
             {
-              "value": "#checkout [aria-labelledby=payment-options-select]"
-            },
-            {
-              "value": "#checkout [class^=PaymentSection]"
-            },
-            {
               "value": "#checkout [class^=CustomerInfoSection-email]"
             },
             {
@@ -204,6 +202,10 @@
         {
           "type": "force_translation",
           "payload": ["#checkout"]
+        },
+        {
+          "type": "enable_in_place_setters",
+          "payload": true
         }
       ]
     },
