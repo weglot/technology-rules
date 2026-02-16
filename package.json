@@ -9,7 +9,7 @@
     "test": "node test/schemas.spec.js"
   },
   "devDependencies": {
-    "ajv": "^8.17.1"
+    "ajv": "^8.18.0"
   },
   "files": [
     "dist/",
