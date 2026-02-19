@@ -15,6 +15,20 @@
   "proxyHosts": ["feeds.datafeedwatch.com", "feeds.adwordsrobot.com"],
   "settings": [
     {
+      "name": "Shopify assets exclusion",
+      "value": [
+        {
+          "type": "excluded_attributes",
+          "payload": [
+            {
+              "selector": "script[src*=$host/cdn/shopifycloud]",
+              "attributes": ["src"]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Mollie checkout exclusion",
       "condition": [
         {
