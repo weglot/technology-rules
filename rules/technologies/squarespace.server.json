@@ -36,7 +36,19 @@
       "value": [
         {
           "type": "merged_selectors_remove",
-          "payload": [{ "value": ".product-price .original-price" }]
+          "payload": [
+            {
+              "value": ".product-price .original-price"
+            }
+          ]
+        },
+        {
+          "type": "excluded_blocks",
+          "payload": [
+            {
+              "value": ".product-list-item-price"
+            }
+          ]
         }
       ]
     },

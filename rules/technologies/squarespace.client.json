@@ -44,6 +44,9 @@
           "payload": [
             {
               "value": "body.sqs-is-page-editing"
+            },
+            {
+              "value": ".product-list-item-price"
             }
           ]
         },
