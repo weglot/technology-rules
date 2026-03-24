@@ -24,4 +24,5 @@ yarn
 
 ### Version
 
-Upgrade package version in right workspace and create a tag `vX.X.X`
+[Create a new release](https://github.com/weglot/technology-rules/releases)
+on Github and create new tag as vX.X.X when selecting it
