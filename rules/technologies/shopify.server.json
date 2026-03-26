@@ -74,6 +74,24 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Prevent JS script injection on Sandbox tracking pages",
+      "condition": [
+        {
+          "type": "PATH_MATCH",
+          "payload": {
+            "type": "CONTAIN",
+            "value": "/sandbox/modern"
+          }
+        }
+      ],
+      "value": [
+        {
+          "type": "auto_inject_script",
+          "payload": false
+        }
+      ]
     }
   ]
 }
