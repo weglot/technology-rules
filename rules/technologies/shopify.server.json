@@ -15,6 +15,21 @@
   "proxyHosts": ["feeds.datafeedwatch.com", "feeds.adwordsrobot.com"],
   "settings": [
     {
+      "name": "Shopify excluded paths",
+      "value": [
+        {
+          "type": "excluded_paths",
+          "payload": [
+            {
+              "type": "CONTAIN",
+              "value": "/customer_authentication/",
+              "exclusion_behavior": "NOT_TRANSLATED"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Shopify assets exclusion",
       "value": [
         {
