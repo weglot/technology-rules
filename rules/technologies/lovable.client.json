@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/technologies.schema.json",
+  "title": "Lovable",
+  "technology_id": 24,
+  "settings": [
+    {
+      "name": "Lovable default settings for all pages",
+      "value": [
+        {
+          "type": "dynamics",
+          "payload": [
+            {
+              "value": "body"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
