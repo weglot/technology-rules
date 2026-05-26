@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/urls.schema.json",
   "title": "Shopify",
-  "technology_id": 2,
+  "technology": "Shopify",
   "urls": [
     {
       "condition": [

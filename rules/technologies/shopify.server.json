@@ -1,6 +1,7 @@
 {
   "$schema": "../../schemas/technologies.schema.json",
   "title": "Shopify",
+  "technology": "Shopify",
   "condition": [
     {
       "type": "RESPONSE_HEADER_MATCH",
@@ -11,7 +12,6 @@
       }
     }
   ],
-  "technology_id": 2,
   "proxyHosts": ["feeds.datafeedwatch.com", "feeds.adwordsrobot.com"],
   "settings": [
     {

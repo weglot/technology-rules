@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/technologies.schema.json",
   "title": "Framer",
-  "technology_id": 25,
+  "technology": "Framer",
   "settings": [
     {
       "name": "Framer default settings for all pages",

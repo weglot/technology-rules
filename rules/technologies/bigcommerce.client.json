@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/technologies.schema.json",
   "title": "BigCommerce",
-  "technology_id": 3,
+  "technology": "BigCommerce",
   "settings": [
     {
       "name": "BigCommerce default settings for all pages",

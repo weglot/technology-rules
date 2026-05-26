@@ -1,6 +1,7 @@
 {
   "$schema": "../../schemas/technologies.schema.json",
   "title": "Squarespace",
+  "technology": "Squarespace",
   "condition": [
     {
       "type": "RESPONSE_HEADER_MATCH",
@@ -19,7 +20,6 @@
       }
     }
   ],
-  "technology_id": 5,
   "proxyHosts": [],
   "settings": [
     {

@@ -1,6 +1,6 @@
 {
   "$schema": "../../schemas/translations.schema.json",
-  "technology_id": 17,
+  "technology": "Bubble",
   "translations": [
     {
       "type": "HTML",

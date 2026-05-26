@@ -1,6 +1,6 @@
 {
   "$schema": "../../schemas/translations.schema.json",
-  "technology_id": 5,
+  "technology": "Squarespace",
   "translations": [
     {
       "type": "HTML",

@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/technologies.schema.json",
   "title": "Shopify",
-  "technology_id": 2,
+  "technology": "Shopify",
   "proxyHosts": ["feeds.datafeedwatch.com", "feeds.adwordsrobot.com"],
   "settings": [
     {

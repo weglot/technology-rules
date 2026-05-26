@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/technologies.schema.json",
   "title": "Webflow",
-  "technology_id": 13,
+  "technology": "Webflow",
   "settings": [
     {
       "name": "Webflow default settings for all pages",

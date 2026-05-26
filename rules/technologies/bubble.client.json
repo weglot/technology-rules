@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/technologies.schema.json",
   "title": "Bubble",
-  "technology_id": 17,
+  "technology": "Bubble",
   "settings": [
     {
       "name": "Bubble default settings for javascript integration",

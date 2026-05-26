@@ -116,7 +116,7 @@
               "title": "Match the URL pathname (not counting query, hash) of the page being translated"
             },
             {
-              "const": "TECHNOLOGY_ID",
+              "const": "TECHNOLOGY",
               "title": "Website CMS technology"
             },
             {
@@ -245,11 +245,7 @@
                   "properties": {
                     "type": {
                       "type": "string",
-                      "enum": [
-                        "render",
-                        "editor",
-                        "preview"
-                      ]
+                      "enum": ["render", "editor", "preview"]
                     },
                     "value": {
                       "type": "boolean"
@@ -283,11 +279,11 @@
             {
               "properties": {
                 "type": {
-                  "const": "TECHNOLOGY_ID"
+                  "const": "TECHNOLOGY"
                 },
                 "payload": {
                   "description": "Only applies for pages served by the selected technology",
-                  "$ref": "common.schema.json#/defs/TechnologyID"
+                  "$ref": "common.schema.json#/defs/Technology"
                 }
               }
             },
@@ -367,10 +363,7 @@
                 },
                 "payload": {
                   "type": "string",
-                  "enum": [
-                    "subdirectory",
-                    "subdomain"
-                  ]
+                  "enum": ["subdirectory", "subdomain"]
                 }
               }
             },
@@ -381,10 +374,7 @@
                 },
                 "payload": {
                   "type": "string",
-                  "enum": [
-                    "proxy",
-                    "javascript"
-                  ]
+                  "enum": ["proxy", "javascript"]
                 }
               }
             },
@@ -416,10 +406,7 @@
           ]
         }
       },
-      "required": [
-        "payload",
-        "type"
-      ]
+      "required": ["payload", "type"]
     },
     "StringMatch": {
       "type": "object",
@@ -453,10 +440,7 @@
           "description": "Field which could be concerned (eg. header name)"
         }
       },
-      "required": [
-        "type",
-        "value"
-      ],
+      "required": ["type", "value"],
       "title": "String Match"
     },
     "CDNProvider": {
@@ -464,12 +448,7 @@
       "description": "Which CDN provider should the rule apply to",
       "type": "string",
       "default": "cloudflare",
-      "enum": [
-        "cloudflare",
-        "fly",
-        "fastly",
-        "stackpath"
-      ]
+      "enum": ["cloudflare", "fly", "fastly", "stackpath"]
     }
   }
 }

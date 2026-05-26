@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/technologies.schema.json",
   "title": "Salesforce",
-  "technology_id": 18,
+  "technology": "Salesforce",
   "settings": [
     {
       "name": "Salesforce default settings for all pages",
