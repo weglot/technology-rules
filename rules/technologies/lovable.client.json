@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/technologies.schema.json",
   "title": "Lovable",
-  "technology_id": 24,
+  "technology": "Lovable",
   "settings": [
     {
       "name": "Lovable default settings for all pages",

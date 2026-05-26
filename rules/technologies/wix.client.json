@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/technologies.schema.json",
   "title": "Wix",
-  "technology_id": 6,
+  "technology": "Wix",
   "settings": [
     {
       "name": "Wix default settings for all pages",

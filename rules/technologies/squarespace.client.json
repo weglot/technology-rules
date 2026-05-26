@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/technologies.schema.json",
   "title": "Squarespace",
-  "technology_id": 5,
+  "technology": "Squarespace",
   "proxyHosts": [],
   "settings": [
     {

@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "technologies.schema.json",
   "title": "Technology",
-  "description": "This type of plugin applies the right technology_id to any resource that we need to translate later on. It also allows for defining 'proxy hosts', which Weglot connect uses to fake a domain and to replace hosts in the payloads. It's applied earlier in the process",
+  "description": "This type of plugin applies the right technology to any resource that we need to translate later on. It also allows for defining 'proxy hosts', which Weglot connect uses to fake a domain and to replace hosts in the payloads. It's applied earlier in the process",
   "type": "object",
   "additionalProperties": false,
   "properties": {
@@ -14,8 +14,8 @@
       "description": "Give a name to that technology",
       "$ref": "common.schema.json#/defs/PluginName"
     },
-    "technology_id": {
-      "$ref": "common.schema.json#/defs/TechnologyID"
+    "technology": {
+      "$ref": "common.schema.json#/defs/Technology"
     },
     "condition": {
       "$ref": "condition.schema.json#/defs/ConditionArray"

@@ -1,6 +1,6 @@
 {
   "$schema": "../../schemas/translations.schema.json",
-  "technology_id": 6,
+  "technology": "Wix",
   "translations": [
     {
       "type": "HTML",

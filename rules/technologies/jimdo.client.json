@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/technologies.schema.json",
   "title": "Jimdo",
-  "technology_id": 4,
+  "technology": "Jimdo",
   "settings": [
     {
       "name": "Jimdo default settings for all pages",

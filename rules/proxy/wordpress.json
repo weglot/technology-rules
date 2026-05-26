@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/proxy.schema.json",
   "title": "Wordpress proxy rules",
-  "technology_id": 1,
+  "technology": "WordPress",
   "proxy": [
     {
       "condition": [

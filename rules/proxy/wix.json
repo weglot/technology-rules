@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/proxy.schema.json",
   "title": "Wix proxy rules",
-  "technology_id": 6,
+  "technology": "Wix",
   "proxy": [
     {
       "condition": [

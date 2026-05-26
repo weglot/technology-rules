@@ -8,7 +8,7 @@ ajv.addKeyword("urls");
 ajv.addKeyword("origins");
 ajv.addKeyword("defs");
 ajv.addKeyword("condition");
-ajv.addKeyword("technology_id");
+ajv.addKeyword("technology");
 ajv.addKeyword("proxyHosts");
 ajv.addKeyword("settings");
 ajv.addKeyword("proxy");

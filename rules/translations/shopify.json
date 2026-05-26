@@ -1,6 +1,6 @@
 {
   "$schema": "../../schemas/translations.schema.json",
-  "technology_id": 2,
+  "technology": "Shopify",
   "translations": [
     {
       "type": "JSON",

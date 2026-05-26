@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/technologies.schema.json",
   "title": "Magento",
-  "technology_id": 15,
+  "technology": "Magento",
   "settings": [
     {
       "name": "Magento default settings for all pages",

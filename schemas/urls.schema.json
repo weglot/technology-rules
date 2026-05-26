@@ -9,8 +9,8 @@
     "$schema": {
       "type": "string"
     },
-    "technology_id": {
-      "$ref": "common.schema.json#/defs/TechnologyID"
+    "technology": {
+      "$ref": "common.schema.json#/defs/Technology"
     },
     "title": {
       "$ref": "common.schema.json#/defs/PluginName"

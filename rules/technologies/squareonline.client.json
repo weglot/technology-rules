@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/technologies.schema.json",
   "title": "Square Online",
-  "technology_id": 16,
+  "technology": "Square Online",
   "settings": [
     {
       "name": "Square Online default settings for all pages",
