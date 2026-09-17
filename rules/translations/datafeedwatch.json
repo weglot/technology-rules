@@ -2,7 +2,7 @@
   "translations": [
     {
       "type": "XML",
-      "label": "Data feed",
+      "label": "def: datafeedwatch",
       "condition": [
         {
           "type": "XML_ATTRIBUTE_VALUE",

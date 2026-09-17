@@ -2,7 +2,7 @@
   "translations": [
     {
       "type": "JSON",
-      "label": "Default JSON",
+      "label": "def: default-json",
       "condition": [
         {
           "type": "PATH_MATCH",

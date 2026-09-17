@@ -2,7 +2,7 @@
   "translations": [
     {
       "type": "HTML",
-      "label": "LD+JSON",
+      "label": "def: ld-json",
       "value": [
         {
           "id": "application-ld-json",
@@ -32,10 +32,7 @@
           "forceURLFormat": "siteSettings"
         },
         {
-          "paths": [
-            "$.name",
-            "$.description"
-          ],
+          "paths": ["$.name", "$.description"],
           "wordType": 1
         }
       ]

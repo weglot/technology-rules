@@ -2,7 +2,7 @@
   "translations": [
     {
       "type": "XML",
-      "label": "Google Feed",
+      "label": "def: google-feed",
       "condition": [
         {
           "type": "XML_ATTRIBUTE_VALUE",
