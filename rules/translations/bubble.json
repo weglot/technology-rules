@@ -4,7 +4,6 @@
   "translations": [
     {
       "type": "HTML",
-      "label": "Bubble",
       "condition": [
         {
           "type": "URL_TYPE",
@@ -22,7 +21,6 @@
     },
     {
       "type": "RAW",
-      "label": "Bubble",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -41,7 +39,7 @@
     },
     {
       "type": "JSON",
-      "label": "Bubble",
+      "label": "def: dynamic-js",
       "condition": [
         {
           "type": "FROM_DEFINITION_ID",

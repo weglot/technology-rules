@@ -4,7 +4,7 @@
   "translations": [
     {
       "type": "HTML",
-      "label": "Squarespace",
+      "label": "def: context",
       "value": [
         {
           "id": "squarespace-context",
@@ -40,7 +40,7 @@
     },
     {
       "type": "JSON",
-      "label": "Squarespace",
+      "label": "def: form-labels",
       "condition": [
         {
           "type": "FROM_DEFINITION_ID",
@@ -57,7 +57,7 @@
     },
     {
       "type": "JSON",
-      "label": "Squarespace",
+      "label": "def: product-variants",
       "condition": [
         {
           "type": "FROM_DEFINITION_ID",
@@ -73,7 +73,7 @@
     },
     {
       "type": "JSON",
-      "label": "Squarespace",
+      "label": "def: product-strings",
       "condition": [
         {
           "type": "FROM_DEFINITION_ID",
@@ -89,7 +89,7 @@
     },
     {
       "type": "JSON",
-      "label": "Squarespace",
+      "label": "def: context",
       "condition": [
         {
           "type": "FROM_DEFINITION_ID",
@@ -126,7 +126,7 @@
     },
     {
       "type": "JSON",
-      "label": "Squarespace",
+      "label": "def: search",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -149,7 +149,7 @@
     },
     {
       "type": "JSON",
-      "label": "Squarespace",
+      "label": "def: cart",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -171,7 +171,7 @@
     },
     {
       "type": "JSON",
-      "label": "Squarespace",
+      "label": "def: popup-overlay",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -190,7 +190,7 @@
     },
     {
       "type": "JSON",
-      "label": "Squarespace",
+      "label": "def: template",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -208,7 +208,7 @@
     },
     {
       "type": "JSON",
-      "label": "Squarespace",
+      "label": "def: comment",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -227,7 +227,7 @@
     },
     {
       "type": "JSON",
-      "label": "Squarespace",
+      "label": "def: form",
       "condition": [
         {
           "type": "PATH_MATCH",

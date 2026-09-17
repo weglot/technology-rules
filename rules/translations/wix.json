@@ -4,7 +4,7 @@
   "translations": [
     {
       "type": "HTML",
-      "label": "Wix",
+      "label": "def: viewer-model",
       "value": [
         {
           "id": "wix-viewer-model",
@@ -20,7 +20,7 @@
     },
     {
       "type": "JSON",
-      "label": "Wix",
+      "label": "def: viewer-model",
       "condition": [
         {
           "type": "FROM_DEFINITION_ID",
@@ -59,7 +59,7 @@
     },
     {
       "type": "JSON",
-      "label": "Wix",
+      "label": "def: warmup-data",
       "condition": [
         {
           "type": "FROM_DEFINITION_ID",
@@ -74,7 +74,7 @@
     },
     {
       "type": "JSON",
-      "label": "Wix",
+      "label": "def: page",
       "condition": [
         {
           "type": "URI_MATCH",
@@ -150,7 +150,7 @@
     },
     {
       "type": "JSON",
-      "label": "Wix",
+      "label": "def: faq",
       "condition": [
         {
           "type": "URI_MATCH",
@@ -174,7 +174,7 @@
     },
     {
       "type": "JSON",
-      "label": "Wix",
+      "label": "def: catalog",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -199,7 +199,7 @@
     },
     {
       "type": "JSON",
-      "label": "Wix",
+      "label": "def: comments",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -232,7 +232,7 @@
     },
     {
       "type": "JSON",
-      "label": "Wix",
+      "label": "def: blog",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -255,7 +255,7 @@
     },
     {
       "type": "JSON",
-      "label": "Wix",
+      "label": "def: blog",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -274,7 +274,7 @@
     },
     {
       "type": "JSON",
-      "label": "Wix",
+      "label": "def: blog",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -293,7 +293,7 @@
     },
     {
       "type": "RAW",
-      "label": "Wix",
+      "label": "def: bookings-calendar",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -311,7 +311,7 @@
     },
     {
       "type": "RAW",
-      "label": "Wix",
+      "label": "def: cartwidget-popup",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -329,7 +329,7 @@
     },
     {
       "type": "HTML",
-      "label": "Wix",
+      "label": "def: cartwidget-popup",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -347,7 +347,7 @@
     },
     {
       "type": "RAW",
-      "label": "Wix",
+      "label": "def: cartwidget-messages",
       "condition": [
         {
           "type": "PATH_MATCH",
@@ -366,7 +366,7 @@
     },
     {
       "type": "JSON",
-      "label": "Wix",
+      "label": "def: cartwidget-messages",
       "condition": [
         {
           "type": "FROM_DEFINITION_ID",
@@ -399,7 +399,7 @@
     },
     {
       "type": "HTML",
-      "label": "Wix",
+      "label": "def: checkout",
       "condition": [
         {
           "type": "URI_MATCH",
@@ -417,7 +417,7 @@
     },
     {
       "type": "JSON",
-      "label": "Wix",
+      "label": "def: checkout",
       "condition": [
         {
           "type": "PATH_MATCH",
