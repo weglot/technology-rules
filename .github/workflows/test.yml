@@ -3,6 +3,9 @@ name: Test
 on:
   pull_request:
 
+env:
+  NODE_AUTH_TOKEN: ${{ github.token }}
+
 jobs:
   test:
     name: Check JSON Schemas and build
@@ -17,8 +20,6 @@ jobs:
           node-version-file: ".nvmrc"
           registry-url: https://npm.pkg.github.com/
           scope: "@weglot"
-        env:
-          NODE_AUTH_TOKEN: ${{ github.token }}
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
