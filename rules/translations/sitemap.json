@@ -2,7 +2,7 @@
   "translations": [
     {
       "type": "XML",
-      "label": "def: sitemap",
+      "label": "Sitemap",
       "condition": [
         {
           "type": "XML_ATTRIBUTE_VALUE",

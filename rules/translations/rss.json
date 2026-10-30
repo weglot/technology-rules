@@ -2,7 +2,7 @@
   "translations": [
     {
       "type": "XML",
-      "label": "def: rss",
+      "label": "RSS",
       "condition": [
         {
           "type": "XML_ATTRIBUTE_VALUE",
