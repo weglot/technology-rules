@@ -44,6 +44,20 @@
       ]
     },
     {
+      "name": "Shopify exit link script: keep original host as site",
+      "value": [
+        {
+          "type": "url_replace_remove",
+          "payload": [
+            {
+              "value": "script[data-source-attribution=\"shopify.exit_interstitial\"]",
+              "url_regex": "^[\\w.-]+$"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Mollie checkout exclusion",
       "condition": [
         {
